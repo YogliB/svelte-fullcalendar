@@ -1,9 +1,8 @@
 {
-	"name": "TODO",
-	"description": "TODO",
-	"license": "TODO",
-	"repository": "TODO",
-	"svelte": "src/components/components.module.js",
+	"name": "svelte-fullcalendar",
+	"description": "A component wrapper around FullCalendar",
+	"license": "MIT",
+	"repository": "https://github.com/YogliB/svelte-fullcalendar",
 	"module": "dist/index.min.mjs",
 	"main": "dist/index.min.js",
 	"devDependencies": {
@@ -54,7 +53,7 @@
 		"svelte"
 	],
 	"files": [
-		"src/components",
+		"src",
 		"dist/index.min.mjs",
 		"dist/index.min.js"
 	],
