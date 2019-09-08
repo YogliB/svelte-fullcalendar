@@ -5,9 +5,11 @@
 	onMount(() => {
 		const calendarEl = document.getElementById('calendar');
 
-		new Calendar(calendarEl, {
+		const calendar = new Calendar(calendarEl, {
 			plugins: [],
 		});
+
+		calendar.render();
 	});
 </script>
 
