@@ -1,11 +1,18 @@
 <script>
-  export let name = 'stranger';
+	import { onMount } from 'svelte';
+	import { Calendar } from '@fullcalendar/core';
+
+	onMount(() => {
+		const calendarEl = document.getElementById('calendar');
+
+		new Calendar(calendarEl, {
+			plugins: [],
+		});
+	});
 </script>
 
 <style>
-  h1 {
-    color: purple;
-  }
+
 </style>
 
-<h1>Hello {name}!</h1>
+<div id="calendar" />
