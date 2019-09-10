@@ -5,7 +5,6 @@ import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
 import babel from 'rollup-plugin-babel';
-import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 const name = pkg.name
@@ -37,15 +36,15 @@ export default {
 				},
 		  ],
 	plugins: [
-		postcss({
-			extract: true,
-		}),
 		babel({
 			runtimeHelpers: true,
 		}),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
+			css: (css) => {
+				css.write('public/bundle.css');
+			},
 		}),
 
 		// If you have external dependencies installed from
@@ -53,7 +52,11 @@ export default {
 		// some cases you'll need additional configuration —
 		// consult the documentation for details:
 		// https://github.com/rollup/rollup-plugin-commonjs
-		resolve(),
+		resolve({
+			browser: true,
+			dedupe: (importee) =>
+				importee === 'svelte' || importee.startsWith('svelte/'),
+		}),
 		commonjs({
 			include: ['node_modules/**'],
 		}),
