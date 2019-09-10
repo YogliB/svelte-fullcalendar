@@ -1,7 +1,6 @@
 <script>
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
-	import dayGridPlugin from '@fullcalendar/daygrid';
 
 	export let buttonText = null;
 	export let views = null;

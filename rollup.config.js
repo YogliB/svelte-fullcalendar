@@ -13,28 +13,21 @@ const name = pkg.name
 	.replace(/-\w/g, (m) => m[1].toUpperCase());
 
 export default {
-	input: !production ? 'src/main.js' : 'src/components/components.module.js',
-	output: !production
-		? {
-				sourcemap: true,
-				format: 'iife',
-				name: 'app',
-				file: 'public/bundle.js',
-		  }
-		: [
-				{
-					file: pkg.module,
-					format: 'es',
-					sourcemap: true,
-					name,
-				},
-				{
-					file: pkg.main,
-					format: 'umd',
-					sourcemap: true,
-					name,
-				},
-		  ],
+	input: 'src/FullCalendar.svelte',
+	output: [
+		{
+			file: pkg.module,
+			format: 'es',
+			sourcemap: true,
+			name,
+		},
+		{
+			file: pkg.main,
+			format: 'umd',
+			sourcemap: true,
+			name,
+		},
+	],
 	plugins: [
 		babel({
 			runtimeHelpers: true,

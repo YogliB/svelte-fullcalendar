@@ -1,16 +1,15 @@
 {
-	"name": "svelte-fullcalendar",
+	"browserslist": [
+		"defaults"
+	],
+	"dependencies": {
+		"@fullcalendar/core": "4.3.1"
+	},
 	"description": "A component wrapper around FullCalendar",
-	"license": "MIT",
-	"repository": "https://github.com/YogliB/svelte-fullcalendar",
-	"module": "dist/index.min.mjs",
-	"main": "dist/index.min.js",
 	"devDependencies": {
 		"@babel/core": "7.6.0",
-		"@babel/plugin-syntax-dynamic-import": "7.2.0",
 		"@babel/plugin-transform-runtime": "7.6.0",
 		"@babel/preset-env": "7.6.0",
-		"@pyoner/svelte-types": "3.4.4-2",
 		"@testing-library/jest-dom": "4.1.0",
 		"@testing-library/svelte": "1.8.0",
 		"@types/jest": "24.0.18",
@@ -34,24 +33,8 @@
 		"rollup-plugin-svelte": "5.1.0",
 		"rollup-plugin-terser": "5.1.1",
 		"sirv-cli": "0.4.4",
-		"svelte": "3.12.0",
-		"svelte-preprocess": "3.1.0"
+		"svelte": "3.12.0"
 	},
-	"scripts": {
-		"lint": "eslint --color ./**/*.js",
-		"test": "jest --verbose",
-		"autobuild": "rollup -c -w",
-		"start:dev": "sirv public --single --dev",
-		"dev": "run-p start:dev autobuild",
-		"build": "rollup -c",
-		"prepublishOnly": "npm run build"
-	},
-	"browserslist": [
-		"defaults"
-	],
-	"keywords": [
-		"svelte"
-	],
 	"files": [
 		"src",
 		"dist/index.min.mjs",
@@ -62,18 +45,32 @@
 			"pre-commit": "lint-staged"
 		}
 	},
+	"keywords": [
+		"svelte"
+	],
+	"license": "MIT",
 	"lint-staged": {
-		"*.{js, svelte}": [
-			"eslint --fix",
-			"git add"
-		],
 		"*.{html, css, scss, stylus, js, ts, json, yml, md}": [
 			"prettier --write",
 			"git add"
+		],
+		"*.{js, svelte}": [
+			"eslint --fix",
+			"git add"
 		]
 	},
-	"dependencies": {
-		"@fullcalendar/core": "4.3.1",
-		"@fullcalendar/daygrid": "4.3.0"
-	}
+	"main": "dist/index.min.js",
+	"module": "dist/index.min.mjs",
+	"name": "svelte-fullcalendar",
+	"repository": "https://github.com/YogliB/svelte-fullcalendar",
+	"scripts": {
+		"autobuild": "rollup -c -w",
+		"build": "rollup -c",
+		"dev": "run-p start:dev autobuild",
+		"lint": "eslint --color ./**/*.js",
+		"prepublishOnly": "npm run build",
+		"start:dev": "sirv public --single --dev",
+		"test": "jest --verbose"
+	},
+	"version": "0.0.1"
 }
