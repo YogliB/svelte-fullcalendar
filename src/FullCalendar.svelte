@@ -120,6 +120,7 @@
 	export let selectMinDistance = null;
 	export let timeZoneParam = null;
 	export let titleRangeSeparator = null;
+	export let schedulerLicenseKey = null;
 
 	const dispatch = createEventDispatcher();
 	let calendar;
