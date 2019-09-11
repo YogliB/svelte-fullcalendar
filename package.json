@@ -62,5 +62,5 @@
 		"prepublishOnly": "npm run lint && npm run build",
 		"start:dev": "sirv public --single --dev"
 	},
-	"version": "0.0.1"
+	"version": "0.0.2"
 }
