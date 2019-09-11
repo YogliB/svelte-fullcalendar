@@ -4,7 +4,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
-import babel from 'rollup-plugin-babel';
 
 const production = !process.env.ROLLUP_WATCH;
 const name = pkg.name
@@ -29,9 +28,6 @@ export default {
 		},
 	],
 	plugins: [
-		babel({
-			runtimeHelpers: true,
-		}),
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
