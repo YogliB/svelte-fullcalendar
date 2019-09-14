@@ -170,6 +170,12 @@
 	export function getAPI() {
 		return calendar;
 	}
+
+	$: ($$props) => {
+		for (const propName of Object.keys($$props)) {
+			calendar.setOption(propName, $$props[propName]);
+		}
+	};
 </script>
 
 <div id="calendar" />
