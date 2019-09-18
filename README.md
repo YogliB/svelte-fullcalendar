@@ -8,8 +8,8 @@ This component is released under a MIT license, the same license the standard ve
 
 Useful links:
 
--   [Example project]() (the code in this guide loosely follows it) // TODO
--   [Runnable project]() in a code playground
+-   [Example project]() (the code in this guide loosely follows it)
+-   [Runnable project](https://codesandbox.io/s/svelte-fullcalendar-example-2jme6) in a code playground
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
@@ -134,19 +134,3 @@ export default class DemoApp extends Svelte.Component {
 ```
 
 Also, make sure all the correct stylesheets are being included.
-
-## TypeScript
-
-Svelte goes really well with [TypeScript]! To show you how to integrate the two, we've prepared [another sample project &raquo;][typescript project]
-
-[svelte]: https://Sveltejs.org/
-[webpack]: https://webpack.js.org/
-[babel]: https://babeljs.io/
-[sass]: https://sass-lang.com/
-[example project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/Svelte
-[demoapp.jsx]: https://github.com/fullcalendar/fullcalendar-example-projects/blob/master/Svelte/src/DemoApp.jsx
-[sass-loader]: https://github.com/webpack-contrib/sass-loader#readme
-[docs toc]: https://fullcalendar.io/docs#toc
-[callback-method-binding]: https://medium.com/@pauloesteves8/es6-classes-binding-public-class-fields-and-event-handling-in-Svelte-2e1e39b1d498
-[typescript]: https://www.typescriptlang.org/
-[typescript project]: https://github.com/fullcalendar/fullcalendar-example-projects/tree/master/Svelte-typescript
