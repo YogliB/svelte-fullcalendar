@@ -1,5 +1,5 @@
 <script>
-	import FullCalendar from 'svelte-fullcalendar';
+	import FullCalendar from './components/FullCalendar.svelte';
 	import dayGridPlugin from '@fullcalendar/daygrid';
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
@@ -20,7 +20,7 @@
 	}
 
 	function gotoPast() {
-		let calendarApi = this.calendarComponentRef.getApi();
+		let calendarApi = calendarComponentRef.getAPI();
 		calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
 	}
 

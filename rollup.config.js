@@ -4,6 +4,7 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 const name = pkg.name
@@ -12,29 +13,41 @@ const name = pkg.name
 	.replace(/-\w/g, (m) => m[1].toUpperCase());
 
 export default {
-	input: 'src/FullCalendar.svelte',
-	output: [
-		{
-			file: pkg.module,
-			format: 'es',
-			sourcemap: true,
-			name,
-		},
-		{
-			file: pkg.main,
-			format: 'umd',
-			sourcemap: true,
-			name,
-		},
-	],
+	input: !production ? 'src/main.js' : 'src/components/FullCalendar.svelte',
+	output: !production
+		? {
+				sourcemap: true,
+				format: 'iife',
+				name: 'app',
+				file: 'public/bundle.js',
+		  }
+		: [
+				{
+					file: pkg.module,
+					format: 'es',
+					sourcemap: true,
+					name,
+				},
+				{
+					file: pkg.main,
+					format: 'umd',
+					sourcemap: true,
+					name,
+				},
+		  ],
 	plugins: [
 		svelte({
 			// enable run-time checks when not in production
 			dev: !production,
+			// we'll extract any component CSS out into
+			// a separate file — better for performance
 			css: (css) => {
 				css.write('public/bundle.css');
 			},
 		}),
+
+		// Added for FullCalendar
+		postcss(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
