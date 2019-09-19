@@ -1,4 +1,4 @@
-export const calendarOptions = {
+const calendarOptions = {
 	allDayDefault: null,
 	allDayHtml: null,
 	allDayMaintainDuration: null,
@@ -120,7 +120,7 @@ export const calendarOptions = {
 	windowResizeDelay: null,
 };
 
-export const calendarOptionsArray = Object.keys(calendarOptions);
+const calendarOptionsArray = Object.keys(calendarOptions);
 
 export function getCalendarProps(props) {
 	const calendarProps = {};

@@ -1,7 +1,8 @@
 <script>
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
-	import { calendarOptions, calendarOptionsArray } from './helpers';
+	import deepEqual from 'fast-deep-equal';
+	import { getCalendarProps } from './helpers';
 
 	// General Props
 	let classes = null;
@@ -137,126 +138,11 @@
 	let removals = [];
 
 	onMount(() => {
+		const calendarProps = getCalendarProps($$props);
+		oldProps = getCalendarProps($$props);
+
 		calendar = new Calendar(calendarEl, {
-			buttonText,
-			views,
-			plugins,
-			header,
-			footer,
-			customButtons,
-			buttonIcons,
-			themeSystem,
-			bootstrapFontAwesome,
-			firstDay,
-			dir,
-			weekends,
-			hiddenDays,
-			fixedWeekCount,
-			weekNumbers,
-			weekNumbersWithinDays,
-			weekNumberCalculation,
-			businessHours,
-			showNonCurrentDates,
-			height,
-			contentHeight,
-			aspectRatio,
-			handleWindowResize,
-			windowResizeDelay,
-			eventLimit,
-			eventLimitClick,
-			timeZone,
-			now,
-			defaultView,
-			allDaySlot,
-			allDayText,
-			slotDuration,
-			slotLabelFormat,
-			slotLabelInterval,
-			snapDuration,
-			scrollTime,
-			minTime,
-			maxTime,
-			slotEventOverlap,
-			listDayFormat,
-			listDayAltFormat,
-			noEventsMessage,
-			defaultDate,
-			nowIndicator,
-			visibleRange,
-			validRange,
-			dateIncrement,
-			dateAlignment,
-			duration,
-			dayCount,
-			locales,
-			locale,
-			eventTimeFormat,
-			columnHeader,
-			columnHeaderFormat,
-			columnHeaderText,
-			columnHeaderHtml,
-			titleFormat,
-			weekLabel,
-			displayEventTime,
-			displayEventEnd,
-			eventLimitText,
-			dayPopoverFormat,
-			navLinks,
-			navLinkDayClick,
-			navLinkWeekClick,
-			selectable,
-			selectMirror,
-			unselectAuto,
-			unselectCancel,
-			defaultAllDayEventDuration,
-			defaultTimedEventDuration,
-			cmdFormatter,
-			defaultRangeSeparator,
-			selectConstraint,
-			selectOverlap,
-			selectAllow,
-			editable,
-			eventStartEditable,
-			eventDurationEditable,
-			eventConstraint,
-			eventOverlap,
-			eventAllow,
-			eventClassName,
-			eventClassNames,
-			eventBackgroundColor,
-			eventBorderColor,
-			eventTextColor,
-			eventColor,
-			events,
-			eventSources,
-			allDayDefault,
-			startParam,
-			endParam,
-			lazyFetching,
-			nextDayThreshold,
-			eventOrder,
-			rerenderDelay,
-			dragRevertDuration,
-			dragScroll,
-			longPressDelay,
-			eventLongPressDelay,
-			droppable,
-			dropAccept,
-			eventDataTransform,
-			allDayMaintainDuration,
-			eventResizableFromStart,
-			timeGridEventMinHeight,
-			allDayHtml,
-			eventDragMinDistance,
-			eventSourceFailure,
-			eventSourceSuccess,
-			forceEventDuration,
-			progressiveEventRendering,
-			selectLongPressDelay,
-			selectMinDistance,
-			timeZoneParam,
-			titleRangeSeparator,
-			schedulerLicenseKey,
+			...calendarProps,
 			datesRender: (event) => dispatch('datesRender', event),
 			datesDestroy: (event) => dispatch('datesDestroy', event),
 			dayRender: (event) => dispatch('dayRender', event),
@@ -296,6 +182,30 @@
 
 	export function getAPI() {
 		return calendar;
+	}
+
+	$: {
+		if (calendar) {
+			let calendarProps = getCalendarProps($$props);
+			updates = {};
+			removals = [];
+
+			for (let propName in oldProps) {
+				if (!(propName in calendarProps)) {
+					removals.push(propName);
+				}
+			}
+
+			for (let propName in calendarProps) {
+				if (!deepEqual(calendarProps[propName], oldProps[propName])) {
+					updates[propName] = calendarProps[propName];
+				}
+			}
+
+			calendar.mutateOptions(updates, removals, false, deepEqual);
+
+			oldProps = getCalendarProps($$props);
+		}
 	}
 </script>
 
