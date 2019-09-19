@@ -8,7 +8,7 @@
 		"@fullcalendar/daygrid": "4.3.0",
 		"@fullcalendar/interaction": "4.3.0",
 		"@fullcalendar/timegrid": "4.3.0",
-		"eslint": "6.3.0",
+		"eslint": "6.4.0",
 		"eslint-config-prettier": "6.2.0",
 		"eslint-plugin-jest": "22.17.0",
 		"eslint-plugin-svelte3": "2.7.3",
