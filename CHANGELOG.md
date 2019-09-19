@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2019-09-19
+
+-   Add the `Svelte` property to `package.json` for better Svelte integration.
+
+## [0.0.3] - 2019-09-19
+
+-   Add the option to change calendar options dynamically.
+-   Add `class` & `style` props.
+
 ## [0.0.2] - 2019-09-12
 
 ### Added

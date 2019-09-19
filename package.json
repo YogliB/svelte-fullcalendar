@@ -50,6 +50,7 @@
 	"main": "dist/index.min.js",
 	"module": "dist/index.min.mjs",
 	"name": "svelte-fullcalendar",
+	"svelte": "src/components/FullCalendar.svelte",
 	"repository": "https://github.com/YogliB/svelte-fullcalendar",
 	"scripts": {
 		"lint": "eslint --color .",
@@ -57,8 +58,8 @@
 		"autobuild": "rollup -c -w",
 		"build": "rollup -c",
 		"dev": "run-p start:dev autobuild",
-		"prepublishOnly": "npm run lint && npm run build",
+		"prepublishOnly": "npm run build",
 		"start:dev": "sirv public --single --dev"
 	},
-	"version": "0.0.2"
+	"version": "0.0.4"
 }
