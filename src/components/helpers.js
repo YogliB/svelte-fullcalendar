@@ -121,3 +121,15 @@ export const calendarOptions = {
 };
 
 export const calendarOptionsArray = Object.keys(calendarOptions);
+
+export function getCalendarProps(props) {
+	const calendarProps = {};
+
+	for (const key of Object.keys(props)) {
+		if (calendarOptionsArray.includes(key)) {
+			calendarProps[key] = props[key];
+		}
+	}
+
+	return calendarProps;
+}
