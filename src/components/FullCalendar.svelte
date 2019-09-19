@@ -132,6 +132,9 @@
 	const dispatch = createEventDispatcher();
 	let calendarEl;
 	let calendar;
+	let oldProps = {};
+	let updates = {};
+	let removals = [];
 
 	onMount(() => {
 		const calendarProps = {};
