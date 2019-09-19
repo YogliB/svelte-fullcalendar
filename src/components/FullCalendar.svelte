@@ -1,6 +1,7 @@
 <script>
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
+	import { calendarOptions, calendarOptionsArray } from './helpers';
 
 	export let buttonText = null,
 		views = null,
@@ -123,13 +124,20 @@
 		schedulerLicenseKey = null;
 
 	const dispatch = createEventDispatcher();
+	let calendarEl;
 	let calendar;
 
 	onMount(() => {
-		const calendarEl = document.getElementById('calendar');
+		const calendarProps = {};
+
+		for (const key of Object.keys($$props)) {
+			if (calendarOptionsArray.includes(key)) {
+				calendarProps[key] = $$props[key];
+			}
+		}
 
 		calendar = new Calendar(calendarEl, {
-			...$$props,
+			...calendarProps,
 			datesRender: (event) => dispatch('datesRender', event),
 			datesDestroy: (event) => dispatch('datesDestroy', event),
 			dayRender: (event) => dispatch('dayRender', event),
@@ -170,11 +178,6 @@
 	export function getAPI() {
 		return calendar;
 	}
-
-	$: () => {
-		console.log('weekends', weekends);
-		calendar.setOption('weekends', weekends);
-	};
 </script>
 
-<div id="calendar" />
+<div bind:this={calendarEl} />

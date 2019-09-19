@@ -28,12 +28,14 @@
 		if (
 			confirm('Would you like to add an event to ' + arg.dateStr + ' ?')
 		) {
-			calendarEvents: calendarEvents.concat({
-				// creates a new array
-				title: 'New Event',
-				start: arg.date,
-				allDay: arg.allDay,
-			});
+			calendarEvents = [
+				...calendarEvents,
+				{
+					title: 'New Event',
+					start: arg.date,
+					allDay: arg.allDay,
+				},
+			];
 		}
 	}
 </script>
@@ -63,12 +65,12 @@
 	</div>
 	<div class="demo-app-calendar">
 		<FullCalendar
+			bind:this={calendarComponentRef}
 			defaultView="dayGridMonth"
 			header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
 			plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-			bind:this={calendarComponentRef}
 			weekends={calendarWeekends}
 			events={calendarEvents}
-			dateClick={handleDateClick} />
+			on:dateClick={(event) => handleDateClick(event.detail)} />
 	</div>
 </div>
