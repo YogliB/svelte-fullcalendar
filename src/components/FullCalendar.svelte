@@ -3,6 +3,12 @@
 	import { Calendar } from '@fullcalendar/core';
 	import { calendarOptions, calendarOptionsArray } from './helpers';
 
+	// General Props
+	let classes = [];
+	export { classes as class };
+	export let style = null;
+
+	// FullCalendar Props
 	export let buttonText = null,
 		views = null,
 		plugins = null,
@@ -180,4 +186,4 @@
 	}
 </script>
 
-<div bind:this={calendarEl} />
+<div bind:this={calendarEl} class={classes} {style} />
