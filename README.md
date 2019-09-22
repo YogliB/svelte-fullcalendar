@@ -8,7 +8,7 @@
 
 ## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
 
-FullCalendar seamlessly integrates with the [Svelte] JavaScript compiler and the Sapper JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [Sapper](https://sapper.svelte.dev) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is released under a MIT license, the same license the standard version of FullCalendar uses.
 
