@@ -1,3 +1,9 @@
+[![Build Status](https://travis-ci.com/YogliB/svelte-fullcalendar.svg?branch=master)](https://travis-ci.com/YogliB/svelte-fullcalendar)
+[![Known Vulnerabilities](https://snyk.io/test/github/YogliB/svelte-fullcalendar/badge.svg)](https://snyk.io/test/github/YogliB/svelte-fullcalendar)
+[![install size](https://badgen.net/packagephobia/install/svelte-fullcalendar)](https://packagephobia.now.sh/result?p=svelte-fullcalendar)
+[![npm package version](https://badgen.net/npm/v/svelte-fullcalendar)](https://npm.im/svelte-fullcalendar)
+
+
 # svelte-fullcalendar
 
 ## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
