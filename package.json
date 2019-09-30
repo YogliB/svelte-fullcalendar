@@ -10,7 +10,7 @@
 		"@fullcalendar/timegrid": "4.3.0",
 		"@testing-library/jest-dom": "4.1.0",
 		"@testing-library/svelte": "1.8.0",
-		"eslint": "6.4.0",
+		"eslint": "6.5.0",
 		"eslint-config-prettier": "6.2.0",
 		"eslint-plugin-jest": "22.17.0",
 		"eslint-plugin-svelte3": "2.7.3",
