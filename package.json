@@ -63,7 +63,7 @@
 	"repository": "https://github.com/YogliB/svelte-fullcalendar",
 	"scripts": {
 		"lint": "eslint --color --ignore-path .gitignore .",
-		"test": "jest --verbose",
+		"test": "jest",
 		"autobuild": "rollup -c -w",
 		"build": "rollup -c",
 		"dev": "run-p start:dev autobuild",
