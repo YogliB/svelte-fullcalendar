@@ -5,18 +5,22 @@
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
+		"@babel/core": "7.6.0",
+		"@babel/plugin-syntax-dynamic-import": "7.2.0",
+		"@babel/plugin-transform-runtime": "7.6.0",
+		"@babel/preset-env": "7.6.0",
 		"@fullcalendar/daygrid": "4.3.0",
 		"@fullcalendar/interaction": "4.3.0",
 		"@fullcalendar/timegrid": "4.3.0",
 		"@testing-library/jest-dom": "4.1.0",
 		"@testing-library/svelte": "1.8.0",
+		"babel-jest": "24.9.0",
 		"eslint": "6.4.0",
 		"eslint-config-prettier": "6.2.0",
 		"eslint-plugin-jest": "22.17.0",
 		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "3.0.5",
 		"jest": "24.9.0",
-		"jest-transform-svelte": "2.1.0",
 		"lint-staged": "9.2.5",
 		"npm-run-all": "4.1.5",
 		"prettier": "1.18.2",
@@ -29,7 +33,8 @@
 		"rollup-plugin-svelte": "5.1.0",
 		"rollup-plugin-terser": "5.1.1",
 		"sirv-cli": "0.4.4",
-		"svelte": "3.12.0"
+		"svelte": "3.12.0",
+		"svelte-jest": "0.3.1"
 	},
 	"files": [
 		"src",

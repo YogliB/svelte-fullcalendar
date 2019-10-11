@@ -1,12 +1,8 @@
 module.exports = {
-  transform: {
-    '^.+\\.svelte$': 'jest-transform-svelte',
-  },
-  moduleFileExtensions: ['js', 'svelte'],
-  bail: false,
-  verbose: false,
-  setupFilesAfterEnv: [
-    '@testing-library/svelte/cleanup-after-each',
-    '@testing-library/jest-dom/extend-expect',
-  ],
+	transform: {
+		'^.+\\.js$': 'babel-jest',
+		'^.+\\.svelte$': 'svelte-jest',
+	},
+	moduleFileExtensions: ['js', 'json', 'svelte'],
+	setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
 };

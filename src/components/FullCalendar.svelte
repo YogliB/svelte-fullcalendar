@@ -1,7 +1,7 @@
 <script>
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
-	import deepEqual from 'fast-deep-equal';
+	import * as deepEqual from 'fast-deep-equal';
 	import { getCalendarProps } from './helpers';
 
 	// General Props
