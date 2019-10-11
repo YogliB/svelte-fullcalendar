@@ -12,10 +12,14 @@ it('should render without crashing', () => {
 });
 
 it('should have updatable props', () => {
-	const { container } = render(FullCalendar, { props: { plugins: PLUGINS } });
+	const { container, rerender } = render(FullCalendar, {
+		props: { plugins: PLUGINS },
+	});
 	expect(isWeekendsRendered(container)).toBe(true);
-	const { component } = container;
-	component.$set({ weekends: false });
+
+	rerender({
+		props: { plugins: PLUGINS, weekends: false },
+	});
 	expect(isWeekendsRendered(container)).toBe(false);
 });
 
