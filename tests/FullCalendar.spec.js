@@ -1,17 +1,17 @@
-import { render, fireEvent } from '@testing-library/svelte';
+import { render } from '@testing-library/svelte';
 import FullCalendar from '../src/components/FullCalendar.svelte';
 import daygridPlugin from '@fullcalendar/daygrid';
-// import '@testing-library/jest-dom/extend-expect';
+import '@testing-library/jest-dom/extend-expect';
 
 const PLUGINS = [daygridPlugin];
 const NOW_DATE = new Date();
 
-it('should render without crashing', () => {
+it('Should render without crashing', () => {
 	const { container } = render(FullCalendar, { props: { plugins: PLUGINS } });
 	expect(getHeaderToolbarEl(container)).toBeTruthy();
 });
 
-it('should have updatable props', () => {
+it('Should have updatable props', () => {
 	const { container, rerender } = render(FullCalendar, {
 		props: { plugins: PLUGINS },
 	});
@@ -23,22 +23,10 @@ it('should have updatable props', () => {
 	expect(isWeekendsRendered(container)).toBe(false);
 });
 
-it('should accept a callback', () => {
-	let called = false;
-	const callback = () => {
-		called = true;
-	};
-	const { container } = render(FullCalendar, { props: { plugins: PLUGINS } });
-	const { component } = container;
-
-	component.$on('viewSkeletonRender', callback);
-
-	expect(called).toBe(true);
-});
-
 it('should expose an API', function() {
-	const { container } = render(FullCalendar, { props: { plugins: PLUGINS } });
-	const { component } = container;
+	const { component } = render(FullCalendar, {
+		props: { plugins: PLUGINS },
+	});
 	let calendarApi = component.getAPI();
 	expect(calendarApi).toBeTruthy();
 
@@ -47,32 +35,50 @@ it('should expose an API', function() {
 	expect(calendarApi.getDate().valueOf()).toBe(newDate.valueOf());
 });
 
-it("won't rerender toolbar if didn't change", function() {
-	const { container } = render(FullCalendar, {
+it('Should accept a callback', () => {
+	let called = false;
+	const callback = () => {
+		called = true;
+	};
+	const { component } = render(FullCalendar, { props: { plugins: PLUGINS } });
+
+	component.$on('datesRender', callback);
+
+	let calendarApi = component.getAPI();
+	let newDate = new Date(Date.UTC(2000, 0, 1));
+	calendarApi.gotoDate(newDate);
+
+	expect(called).toBe(true);
+});
+
+it("Won't rerender toolbar if didn't change", function() {
+	const { container, rerender } = render(FullCalendar, {
 		props: { plugins: PLUGINS, header: buildToolbar() },
 	});
 
 	let headerEl = getHeaderToolbarEl(container);
 
-	const { component } = container;
-
-	component.$set({ header: buildToolbar() });
-	expect(getHeaderToolbarEl(container)).toBe(headerEl);
+	rerender({ props: { plugins: PLUGINS, header: buildToolbar() } });
+	expect(getHeaderToolbarEl(container).toString()).toBe(headerEl.toString());
 });
 
-it("won't rerender events if didn't change", function() {
-	const { container } = render(FullCalendar, {
+it("Won't rerender events if didn't change", function() {
+	const { container, rerender } = render(FullCalendar, {
 		props: {
 			plugins: PLUGINS,
 			events: [buildEvent()],
 		},
 	});
-	const { component } = container;
 
 	let eventEl = getFirstEventEl(container);
 
-	component.$set({ events: [buildEvent()] });
-	expect(getFirstEventEl(container)).toBe(eventEl);
+	rerender({
+		props: {
+			plugins: PLUGINS,
+			events: [buildEvent()],
+		},
+	});
+	expect(getFirstEventEl(container).toString()).toBe(eventEl.toString());
 });
 
 // FullCalendar data utils

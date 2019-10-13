@@ -209,4 +209,4 @@
 	}
 </script>
 
-<div bind:this={calendarEl} class={classes} {style} />
+<div id="calendar" bind:this={calendarEl} class={classes} {style} />
