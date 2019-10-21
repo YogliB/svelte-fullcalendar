@@ -111,23 +111,18 @@ To do something like this, you'll need to get ahold of the component's ref (shor
 
 ## Scheduler
 
-How do you use [FullCalendar Scheduler's](premium) premium plugins with Svelte? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
+How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) premium plugins with Svelte? They are no different than any other plugin. Just follow the same instructions as you did `dayGridPlugin` in the above example. Also, make sure to include your `schedulerLicenseKey`:
 
-```jsx
-import Svelte from 'Svelte';
+```html
+<script>
 import FullCalendar from '@fullcalendar/Svelte';
 import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+</script>
 
-export default class DemoApp extends Svelte.Component {
-	render() {
-		return (
-			<FullCalendar
-				schedulerLicenseKey="XXX"
-				plugins={[resourceTimelinePlugin]}
-			/>
-		);
-	}
-}
+<FullCalendar
+	      schedulerLicenseKey="XXX"
+	      plugins={[resourceTimelinePlugin]}
+/>
 ```
 
 Also, make sure all the correct stylesheets are being included.
