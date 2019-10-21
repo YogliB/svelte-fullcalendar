@@ -71,29 +71,22 @@ The `<FullCalendar>` component is equipped with [all of FullCalendar's options](
 
 ## Callbacks
 
-A callback function can be passed into a Svelte component and it will be called when something happens. For example, the [dateClick](dateClick) handler is called whenever the user clicks on a date:
+A callback function can be passed into a Svelte component and it will be called when something happens. For example, the [dateClick](https://fullcalendar.io/docs/dateClick) handler is called whenever the user clicks on a date:
 
-```jsx
+```html
+<script>
 import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
-export default class DemoApp extends Svelte.Component {
-	render() {
-		return (
-			<FullCalendar
-				dateClick={this.handleDateClick}
-				plugins={[dayGridPlugin, interactionPlugin]}
-			/>
-		);
-	}
+function handleDateClick(arg) {
+	alert(arg.dateStr);
+};
+</script>
 
-	handleDateClick = (arg) => {
-		// bind with an arrow function
-		alert(arg.dateStr);
-	};
-}
+<FullCalendar
+	      on:dateClick={handleDateClick}
+	      plugins={[dayGridPlugin, interactionPlugin]}
+/>
 ```
-
-Make sure your callbacks methods are [bound to your component's context][callback-method-binding]!
 
 ## Accessing FullCalendar's API
 
