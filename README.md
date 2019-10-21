@@ -55,9 +55,9 @@ The prefixed `~` tells Sass to look in the `node_modules` directory.
 
 ## Props
 
-The `<FullCalendar>` component is equipped with [all of FullCalendar's options][docs toc]! Just pass them in as props. Example:
+The `<FullCalendar>` component is equipped with [all of FullCalendar's options](https://fullcalendar.io/docs#toc)! Just pass them in as props. Example:
 
-```jsx
+```html
 <FullCalendar
 	defaultView="dayGridMonth"
 	plugins={calendarPlugins}
