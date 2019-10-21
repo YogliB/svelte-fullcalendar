@@ -25,7 +25,7 @@ The first step is to install the FullCalendar-related dependencies. You'll need 
 npm install --save svelte-fullcalendar @fullcalendar/daygrid
 ```
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte]):
+You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
 
 ```html
 import Svelte from 'Svelte'; import FullCalendar from '@fullcalendar/Svelte';
