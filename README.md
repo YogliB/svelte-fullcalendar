@@ -42,9 +42,9 @@ You must initialized your calendar with at least one plugin that provides a view
 
 ## CSS
 
-The above example includes a `.scss` file from _JavaScript_. To get this to work with Webpack, you need to set up `style-loader`, `css-loader`, `sass-loader`, and `node-sass`. [More info &raquo;][sass-loader]
+The above example includes a `.scss` file from _JavaScript_. To get this to work with Rollup, you need to install `rollup-plugin-postcss` and `node-sass`, and set the `postcss` plugin in your `rollup.config.js` file (See an example [here](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/rollup.config.js)).
 
-You must then manually include the stylesheets for FullCalendar's core and plugins. In `main.scss`:
+You must then manually include the stylesheets for FullCalendar's core and plugins. In `fullcalendar.scss`:
 
 ```scss
 @import '~@fullcalendar/core/main.css';
