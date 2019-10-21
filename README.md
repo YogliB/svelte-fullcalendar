@@ -96,21 +96,17 @@ This is especially useful for controlling the current date. The [defaultDate](de
 
 To do something like this, you'll need to get ahold of the component's ref (short for "reference"). Once you do that, you call the `getApi` method of the "current" component instance:
 
-```jsx
-export default class DemoApp extends Svelte.Component {
-	calendarRef = Svelte.createRef();
-
-	render() {
-		return (
-			<FullCalendar ref={this.calendarRef} plugins={[dayGridPlugin]} />
-		);
+```html
+<script>
+	let componentRef = null;
+	
+	function someMethod() {
+		const calendarAPI = calendarRef.getAPI();
+		calendarAPI.next();
 	}
+</script>
 
-	someMethod() {
-		let calendarApi = this.calendarRef.current.getApi();
-		calendarApi.next();
-	}
-}
+<FullCalendar bind:this={calendarRef} plugins={[dayGridPlugin]} />
 ```
 
 ## Scheduler
