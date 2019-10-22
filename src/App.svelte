@@ -4,8 +4,6 @@
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
-	import './fullcalendar.scss';
-
 	let plugins = [dayGridPlugin, timeGridPlugin, interactionPlugin];
 	let calendarComponentRef;
 
@@ -41,6 +39,10 @@
 </script>
 
 <style>
+	@import url("https://unpkg.com/@fullcalendar/core/main.css");
+	@import url("https://unpkg.com/@fullcalendar/daygrid/main.css");
+	@import url("https://unpkg.com/@fullcalendar/timegrid/main.css");
+
 	.demo-app {
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 		font-size: 14px;

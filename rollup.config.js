@@ -1,7 +1,6 @@
 import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import resolve from 'rollup-plugin-node-resolve';
-import postcss from 'rollup-plugin-postcss';
 import svelte from 'rollup-plugin-svelte';
 import { terser } from 'rollup-plugin-terser';
 import pkg from './package.json';
@@ -45,9 +44,6 @@ export default {
 				css.write('public/bundle.css');
 			},
 		}),
-
-		// Added for FullCalendar
-		postcss(),
 
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
