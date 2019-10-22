@@ -126,3 +126,8 @@ import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 ```
 
 Also, make sure all the correct stylesheets are being included.
+
+
+## TODO
+
+- Add tests
