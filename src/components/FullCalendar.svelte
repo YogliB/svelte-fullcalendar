@@ -191,13 +191,13 @@
 			updates = {};
 			removals = [];
 
-			for (let propName in oldProps) {
+			for (const propName in oldProps) {
 				if (!(propName in calendarProps)) {
 					removals.push(propName);
 				}
 			}
 
-			for (let propName in calendarProps) {
+			for (const propName in calendarProps) {
 				if (!deepEqual(calendarProps[propName], oldProps[propName])) {
 					updates[propName] = calendarProps[propName];
 				}
