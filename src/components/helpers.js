@@ -123,9 +123,9 @@ const calendarOptions = [
 export function getCalendarProps(props) {
 	const calendarProps = {};
 
-	for (const key of Object.keys(props)) {
-		if (calendarOptions.includes(key)) {
-			calendarProps[key] = props[key];
+	for (const propName in props) {
+		if (calendarOptions.includes(propName)) {
+			calendarProps[propName] = props[propName];
 		}
 	}
 
