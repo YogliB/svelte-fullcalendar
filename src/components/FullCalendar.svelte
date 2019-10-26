@@ -133,13 +133,14 @@
 	const dispatch = createEventDispatcher();
 	let calendarEl;
 	let calendar;
+	let calendarProps = {};
 	let oldProps = {};
 	let updates = {};
 	let removals = [];
 
 	onMount(() => {
-		const calendarProps = getCalendarProps($$props);
-		oldProps = getCalendarProps($$props);
+		calendarProps = getCalendarProps($$props);
+		oldProps = { ...calendarProps };
 
 		calendar = new Calendar(calendarEl, {
 			...calendarProps,
@@ -186,7 +187,7 @@
 
 	$: {
 		if (calendar) {
-			let calendarProps = getCalendarProps($$props);
+			calendarProps = getCalendarProps($$props);
 			updates = {};
 			removals = [];
 
@@ -204,7 +205,7 @@
 
 			calendar.mutateOptions(updates, removals, false, deepEqual);
 
-			oldProps = getCalendarProps($$props);
+			oldProps = { ...calendarProps };
 		}
 	}
 </script>
