@@ -32,7 +32,7 @@
 		"rollup-plugin-scss": "1.0.2",
 		"rollup-plugin-svelte": "5.1.0",
 		"rollup-plugin-terser": "5.1.2",
-		"sirv-cli": "0.4.4",
+		"sirv-cli": "0.4.5",
 		"svelte": "3.12.1",
 		"svelte-jest": "0.3.1"
 	},
