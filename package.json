@@ -7,7 +7,7 @@
 	"devDependencies": {
 		"@babel/core": "7.7.2",
 		"@babel/plugin-syntax-dynamic-import": "7.7.4",
-		"@babel/plugin-transform-runtime": "7.6.2",
+		"@babel/plugin-transform-runtime": "7.7.4",
 		"@babel/preset-env": "7.7.4",
 		"@fullcalendar/daygrid": "4.3.0",
 		"@fullcalendar/interaction": "4.3.0",
