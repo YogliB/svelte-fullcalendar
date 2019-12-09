@@ -51,12 +51,13 @@
 	"repository": "https://github.com/YogliB/svelte-fullcalendar",
 	"scripts": {
 		"build": "rollup -c",
+		"cy:open": "cypress open",
+		"cy:run": "cypress run",
 		"dev": "rollup -c -w",
 		"lint": "eslint --color --ignore-path .gitignore .",
 		"prepublishOnly": "npm run build",
-		"start": "sirv public --single",
-		"start:dev": "sirv public --single --dev",
-		"test": "jest"
+		"start": "sirv public",
+		"test": "start-server-and-test dev http://localhost:5000 cy:run"
 	},
 	"svelte": "src/components/FullCalendar.svelte",
 	"version": "0.0.4"
