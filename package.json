@@ -11,7 +11,7 @@
 		"@testing-library/cypress": "5.0.2",
 		"cypress": "3.7.0",
 		"eslint": "6.4.0",
-		"eslint-config-prettier": "6.5.0",
+		"eslint-config-prettier": "6.7.0",
 		"eslint-plugin-cypress": "2.7.0",
 		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "3.0.9",
