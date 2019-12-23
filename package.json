@@ -27,7 +27,7 @@
 		"rollup-plugin-terser": "5.1.2",
 		"sirv-cli": "0.4.4",
 		"start-server-and-test": "1.10.6",
-		"svelte": "3.12.1"
+		"svelte": "3.16.5"
 	},
 	"files": [
 		"src",
