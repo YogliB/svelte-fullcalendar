@@ -3,7 +3,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import pkg from './package.json';
 import resolve from 'rollup-plugin-node-resolve';
-import rollup_start_dev from './rollup_start_dev';
 import svelte from 'rollup-plugin-svelte';
 
 const production = !process.env.ROLLUP_WATCH;

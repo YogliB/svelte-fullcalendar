@@ -39,9 +39,9 @@
 </script>
 
 <style>
-	@import url("https://unpkg.com/@fullcalendar/core/main.css");
-	@import url("https://unpkg.com/@fullcalendar/daygrid/main.css");
-	@import url("https://unpkg.com/@fullcalendar/timegrid/main.css");
+	@import url('https://unpkg.com/@fullcalendar/core/main.css');
+	@import url('https://unpkg.com/@fullcalendar/daygrid/main.css');
+	@import url('https://unpkg.com/@fullcalendar/timegrid/main.css');
 
 	.demo-app {
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
