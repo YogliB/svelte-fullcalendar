@@ -69,10 +69,11 @@
 		<FullCalendar
 			bind:this={calendarComponentRef}
 			defaultView="dayGridMonth"
-			header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
-			plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-			weekends={calendarWeekends}
 			events={calendarEvents}
-			on:dateClick={(event) => handleDateClick(event.detail)} />
+			header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
+			height={800}
+			on:dateClick={(event) => handleDateClick(event.detail)}
+			plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
+			weekends={calendarWeekends} />
 	</div>
 </div>
