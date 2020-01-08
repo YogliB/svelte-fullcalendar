@@ -33,10 +33,10 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 	import FullCalendar from 'svelte-fullcalendar';
 	import dayGridPlugin from '@fullcalendar/daygrid';
 
-	import './fullcalendar.scss' // rollup must be configured to do this
+	import './fullcalendar.scss'; // rollup must be configured to do this
 </script>
 
-<FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+<FullCalendar defaultView="dayGridMonth" plugins="{[" dayGridPlugin ]} />
 ```
 
 You must initialized your calendar with at least one plugin that provides a view!
@@ -59,15 +59,9 @@ The prefixed `~` tells Sass to look in the `node_modules` directory.
 The `<FullCalendar>` component is equipped with [all of FullCalendar's options](https://fullcalendar.io/docs#toc)! Just pass them in as props. Example:
 
 ```html
-<FullCalendar
-	defaultView="dayGridMonth"
-	plugins={calendarPlugins}
-	weekends={false}
-	events={[
-		{ title: 'event 1', date: '2019-04-01' },
-		{ title: 'event 2', date: '2019-04-02' },
-	]}
-/>
+<FullCalendar defaultView="dayGridMonth" plugins={calendarPlugins}
+weekends={false} events={[ { title: 'event 1', date: '2019-04-01' }, { title:
+'event 2', date: '2019-04-02' }, ]} />
 ```
 
 ## Callbacks
@@ -76,16 +70,17 @@ A callback function can be passed into a Svelte component and it will be called 
 
 ```html
 <script>
-import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
+	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
-function handleDateClick(arg) {
-	alert(arg.dateStr);
-};
+	function handleDateClick(arg) {
+		alert(arg.dateStr);
+	}
 </script>
 
 <FullCalendar
-	      on:dateClick={handleDateClick}
-	      plugins={[dayGridPlugin, interactionPlugin]}
+	on:dateClick="{handleDateClick}"
+	plugins="{[dayGridPlugin,"
+	interactionPlugin]}
 />
 ```
 
@@ -100,14 +95,14 @@ To do something like this, you'll need to get ahold of the component's ref (shor
 ```html
 <script>
 	let componentRef = null;
-	
+
 	function someMethod() {
 		const calendarAPI = calendarRef.getAPI();
 		calendarAPI.next();
 	}
 </script>
 
-<FullCalendar bind:this={calendarRef} plugins={[dayGridPlugin]} />
+<FullCalendar bind:this="{calendarRef}" plugins="{[dayGridPlugin]}" />
 ```
 
 ## Scheduler
@@ -116,19 +111,11 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 
 ```html
 <script>
-import FullCalendar from 'svelte-fullcalendar';
-import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+	import FullCalendar from 'svelte-fullcalendar';
+	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 </script>
 
-<FullCalendar
-	      schedulerLicenseKey="XXX"
-	      plugins={[resourceTimelinePlugin]}
-/>
+<FullCalendar schedulerLicenseKey="XXX" plugins="{[resourceTimelinePlugin]}" />
 ```
 
 Also, make sure all the correct stylesheets are being included.
-
-
-## TODO
-
-- Add tests
