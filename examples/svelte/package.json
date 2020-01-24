@@ -10,7 +10,7 @@
 		"rollup-plugin-postcss": "2.0.4",
 		"rollup-plugin-svelte": "5.1.1",
 		"rollup-plugin-terser": "5.2.0",
-		"svelte": "3.17.2",
+		"svelte": "3.17.3",
 		"svelte-preprocess": "3.3.0"
 	},
 	"dependencies": {
