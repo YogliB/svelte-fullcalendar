@@ -14,7 +14,7 @@
 		"eslint-config-prettier": "6.10.0",
 		"eslint-plugin-cypress": "2.9.0",
 		"eslint-plugin-svelte3": "2.7.3",
-		"husky": "4.2.2",
+		"husky": "4.2.3",
 		"lint-staged": "10.0.7",
 		"moment": "2.24.0",
 		"prettier": "1.19.1",
