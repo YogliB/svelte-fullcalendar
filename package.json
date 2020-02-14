@@ -31,7 +31,7 @@
 		"svelte": "3.18.2"
 	},
 	"files": [
-		"src",
+		"src/components",
 		"dist/index.min.mjs",
 		"dist/index.min.js"
 	],
@@ -65,5 +65,5 @@
 		"test": "start-server-and-test dev http://localhost:5000 cy:run"
 	},
 	"svelte": "src/components/FullCalendar.svelte",
-	"version": "0.0.6"
+	"version": "0.1.0"
 }
