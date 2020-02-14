@@ -63,6 +63,7 @@ const calendarOptions = [
 	'fixedWeekCount',
 	'footer',
 	'forceEventDuration',
+	'googleCalendarApiKey',
 	'handleWindowResize',
 	'header',
 	'height',
