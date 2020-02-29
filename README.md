@@ -36,7 +36,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 	import './fullcalendar.scss'; // rollup must be configured to do this
 </script>
 
-<FullCalendar defaultView="dayGridMonth" plugins="{[" dayGridPlugin ]} />
+<FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
 ```
 
 You must initialized your calendar with at least one plugin that provides a view!
