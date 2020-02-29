@@ -70,6 +70,7 @@ A callback function can be passed into a Svelte component and it will be called 
 
 ```html
 <script>
+        import dayGridPlugin from '@fullcalendar/daygrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
 	function handleDateClick(arg) {
@@ -78,9 +79,8 @@ A callback function can be passed into a Svelte component and it will be called 
 </script>
 
 <FullCalendar
-	on:dateClick="{handleDateClick}"
-	plugins="{[dayGridPlugin,"
-	interactionPlugin]}
+	on:dateClick={handleDateClick}
+	plugins={[dayGridPlugin, interactionPlugin]}
 />
 ```
 
