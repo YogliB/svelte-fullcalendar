@@ -1,17 +1,17 @@
 <script>
-	import FullCalendar from './components/FullCalendar.svelte';
+	import { FullCalendar, Draggable } from './components/components.module.js';
 	import dayGridPlugin from '@fullcalendar/daygrid';
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
 	let plugins = [dayGridPlugin, timeGridPlugin, interactionPlugin];
 	let calendarComponentRef;
-
 	let calendarWeekends = true;
 	let calendarEvents = [
 		// initial event data
 		{ title: 'Event Now', start: new Date() },
 	];
+	let eventData = { title: 'my event', duration: '02:00' };
 
 	function toggleWeekends() {
 		calendarWeekends = !calendarWeekends;
@@ -56,24 +56,40 @@
 		margin: 0 auto;
 		max-width: 900px;
 	}
+
+	:global(.draggable) {
+		color: white;
+		background: #3788D8;
+		    width: fit-content;
+			padding: 1rem
+	}
 </style>
 
 <div class="demo-app">
 	<div class="demo-app-top">
-		<button on:click={toggleWeekends}>toggle weekends</button>
+		<button on:click="{toggleWeekends}">toggle weekends</button>
 		&nbsp;
-		<button on:click={gotoPast}>go to a date in the past</button>
+		<button on:click="{gotoPast}">go to a date in the past</button>
 		&nbsp; (also, click a date/time to add an event)
 	</div>
+
+	<div>
+		<Draggable {eventData} class="draggable">
+			Drag me in Week or Day view!
+		</Draggable>
+	</div>
+
 	<div class="demo-app-calendar">
-		<FullCalendar
-			bind:this={calendarComponentRef}
-			defaultView="dayGridMonth"
-			events={calendarEvents}
-			header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
-			height={800}
-			on:dateClick={(event) => handleDateClick(event.detail)}
-			plugins={[dayGridPlugin, timeGridPlugin, interactionPlugin]}
-			weekends={calendarWeekends} />
+		<FullCalendar bind:this={calendarComponentRef}
+		defaultView="dayGridMonth"
+		droppable={true} 
+		editable={true} 
+		events={calendarEvents}
+		header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
+		height={800} 
+		plugins={plugins}
+		weekends={calendarWeekends}
+		on:dateClick={(event) => handleDateClick(event.detail)}
+		/>
 	</div>
 </div>
