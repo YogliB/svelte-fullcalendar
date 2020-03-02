@@ -1,5 +1,5 @@
 <script>
-	import { FullCalendar, Draggable } from './components/components.module.js';
+	import FullCalendar, { Draggable } from './components/components.module.js';
 	import dayGridPlugin from '@fullcalendar/daygrid';
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
