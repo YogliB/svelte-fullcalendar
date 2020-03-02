@@ -140,7 +140,9 @@ Here is a simple usage example:
 	import interactionPlugin from '@fullcalendar/interaction';
 </script>
 
-<Draggable eventData={{ title: 'my event', duration: '02:00' }}></Draggable>
+<Draggable eventData={{ title: 'my event', duration: '02:00' }}>
+	Drag me!
+</Draggable>
 
 <FullCalendar
 	schedulerLicenseKey="XXX"
