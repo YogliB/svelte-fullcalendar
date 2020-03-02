@@ -41,7 +41,10 @@
 		}
 	},
 	"keywords": [
-		"svelte"
+		"svelte",
+		"calendar",
+		"scheduler",
+		"fullcalendar"
 	],
 	"license": "MIT",
 	"lint-staged": {
