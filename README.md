@@ -36,7 +36,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 	import './fullcalendar.scss'; // rollup must be configured to do this
 </script>
 
-<FullCalendar defaultView="dayGridMonth" plugins={[ dayGridPlugin ]} />
+<FullCalendar defaultView="dayGridMonth" plugins="{[" dayGridPlugin ]} />
 ```
 
 You must initialized your calendar with at least one plugin that provides a view!
@@ -70,7 +70,7 @@ A callback function can be passed into a Svelte component and it will be called 
 
 ```html
 <script>
-        import dayGridPlugin from '@fullcalendar/daygrid';
+	import dayGridPlugin from '@fullcalendar/daygrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
 	function handleDateClick(arg) {
@@ -79,8 +79,9 @@ A callback function can be passed into a Svelte component and it will be called 
 </script>
 
 <FullCalendar
-	on:dateClick={handleDateClick}
-	plugins={[dayGridPlugin, interactionPlugin]}
+	on:dateClick="{handleDateClick}"
+	plugins="{[dayGridPlugin,"
+	interactionPlugin]}
 />
 ```
 
@@ -119,3 +120,31 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 ```
 
 Also, make sure all the correct stylesheets are being included.
+
+## Draggable external events
+
+You'll need to install the `interactionPlugin`:
+
+```bash
+npm install @fullcalendar/interaction
+```
+
+See the [official docs](https://fullcalendar.io/docs/external-dragging) for all available props.
+
+Here is a simple usage example:
+
+```html
+<script>
+	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
+	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+	import interactionPlugin from '@fullcalendar/interaction';
+</script>
+
+<Draggable eventData={{ title: 'my event', duration: '02:00' }}></Draggable>
+
+<FullCalendar
+	schedulerLicenseKey="XXX"
+	plugins="{[resourceTimelinePlugin, interactionPlugin]}"
+	droppable="{true}"
+/>
+```
