@@ -56,7 +56,10 @@
 	"main": "dist/index.min.js",
 	"module": "dist/index.min.mjs",
 	"name": "svelte-fullcalendar",
-	"repository": "https://github.com/YogliB/svelte-fullcalendar",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/YogliB/svelte-fullcalendar.git"
+	},
 	"scripts": {
 		"build": "rollup -c",
 		"cy:open": "cypress open",
@@ -68,5 +71,5 @@
 		"test": "start-server-and-test dev http://localhost:5000 cy:run"
 	},
 	"svelte": "src/components/components.module.js",
-	"version": "0.2.0"
+	"version": "0.2.1"
 }
