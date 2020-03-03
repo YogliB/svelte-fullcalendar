@@ -3,6 +3,7 @@
 	import dayGridPlugin from '@fullcalendar/daygrid';
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
+	
 	let plugins = [dayGridPlugin, timeGridPlugin, interactionPlugin];
 	let calendarComponentRef;
 	let calendarWeekends = true;
