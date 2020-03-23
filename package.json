@@ -17,7 +17,7 @@
 		"husky": "4.2.3",
 		"lint-staged": "10.0.8",
 		"moment": "2.24.0",
-		"prettier": "1.19.1",
+		"prettier": "2.0.2",
 		"rollup": "1.32.0",
 		"rollup-plugin-commonjs": "10.1.0",
 		"rollup-plugin-livereload": "1.0.4",
