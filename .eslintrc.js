@@ -1,7 +1,7 @@
 module.exports = {
 	env: {
 		browser: true,
-		node: true,
+		node: false,
 		es6: true,
 		'cypress/globals': true,
 	},
