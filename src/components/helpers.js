@@ -121,7 +121,7 @@ const calendarOptions = [
 	'windowResizeDelay',
 ];
 
-export const getCalendarProps = (props) {
+export const getCalendarProps = (props) => {
 	const calendarProps = {};
 
 	for (const propName in props) {
@@ -131,7 +131,7 @@ export const getCalendarProps = (props) {
 	}
 
 	return calendarProps;
-}
+};
 
 export const filterNullProps = (obj) => {
 	let result = {};

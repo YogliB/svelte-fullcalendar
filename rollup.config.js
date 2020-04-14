@@ -12,7 +12,7 @@ const name = pkg.name
 	.replace(/-\w/g, (m) => m[1].toUpperCase());
 
 export default {
-	external: Object.keys(pkg.devDependencies || {}),
+	external: !production ? [] : Object.keys(pkg.devDependencies || {}),
 	input: !production ? 'src/main.js' : 'src/components/components.module.js',
 	output: !production
 		? {
