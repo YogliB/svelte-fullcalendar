@@ -121,7 +121,7 @@ const calendarOptions = [
 	'windowResizeDelay',
 ];
 
-export function getCalendarProps(props) {
+export const getCalendarProps = (props) {
 	const calendarProps = {};
 
 	for (const propName in props) {
