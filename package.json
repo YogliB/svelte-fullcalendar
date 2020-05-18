@@ -15,7 +15,7 @@
 		"eslint-plugin-cypress": "2.10.3",
 		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "4.2.5",
-		"lint-staged": "10.2.2",
+		"lint-staged": "10.2.4",
 		"moment": "2.25.3",
 		"prettier": "2.0.5",
 		"rollup": "2.10.2",
