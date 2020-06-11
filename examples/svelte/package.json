@@ -17,7 +17,7 @@
 		"@fullcalendar/daygrid": "4.4.2",
 		"@fullcalendar/interaction": "4.4.2",
 		"@fullcalendar/timegrid": "4.4.2",
-		"sirv-cli": "0.4.6",
+		"sirv-cli": "1.0.0",
 		"svelte-fullcalendar": "0.2.0"
 	},
 	"scripts": {
