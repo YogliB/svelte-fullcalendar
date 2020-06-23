@@ -11,7 +11,7 @@
 		"rollup-plugin-svelte": "5.2.3",
 		"rollup-plugin-terser": "5.2.0",
 		"svelte": "3.23.2",
-		"svelte-preprocess": "3.9.9"
+		"svelte-preprocess": "3.9.10"
 	},
 	"dependencies": {
 		"@fullcalendar/daygrid": "5.0.0",
