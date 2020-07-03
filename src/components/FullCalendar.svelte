@@ -2,12 +2,12 @@
 	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
 	import deepEqual from 'fast-deep-equal';
-	import { getCalendarProps } from './helpers';
 
 	// General Props
 	let classes = null;
 	export { classes as class };
 	export let style = null;
+	export let options = {};
 
 	const dispatch = createEventDispatcher();
 	let calendarEl;
@@ -18,11 +18,10 @@
 	let removals = [];
 
 	onMount(() => {
-		calendarProps = getCalendarProps($$props);
-		oldProps = { ...calendarProps };
+		oldProps = { ...options };
 
 		calendar = new Calendar(calendarEl, {
-			...calendarProps,
+			...options,
 			dateClick: (event) => dispatch('dateClick', event),
 			datesDestroy: (event) => dispatch('datesDestroy', event),
 			datesRender: (event) => dispatch('datesRender', event),
@@ -57,7 +56,9 @@
 	});
 
 	onDestroy(() => {
-		calendar.destroy();
+		if (calendar) {
+			calendar.destroy();
+		}
 	});
 
 	export function getAPI() {
@@ -66,7 +67,7 @@
 
 	$: {
 		if (calendar) {
-			calendarProps = getCalendarProps($$props);
+			calendarProps = { ...options };
 			updates = {};
 			removals = [];
 
@@ -89,4 +90,4 @@
 	}
 </script>
 
-<div bind:this={calendarEl} class={classes} {style} />
+<div bind:this="{calendarEl}" class="{classes}" {style}></div>
