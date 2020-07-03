@@ -59,3 +59,4 @@
 <div bind:this="{elementRef}" class="{clazz}" {style}>
 	<slot></slot>
 </div>
+	

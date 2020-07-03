@@ -3,63 +3,78 @@
 	import dayGridPlugin from '@fullcalendar/daygrid';
 	import timeGridPlugin from '@fullcalendar/timegrid';
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
-	
-	let plugins = [dayGridPlugin, timeGridPlugin, interactionPlugin];
+
+	let options = {
+		initialView: 'dayGridMonth',
+		droppable: true,
+		editable: true,
+		plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+		events: [
+			// initial event data
+			{ title: 'Event Now', start: new Date() },
+		],
+		headerToolbar: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
+		},
+		height: 'auto',
+		weekends: true,
+	};
 	let calendarComponentRef;
-	let calendarWeekends = true;
-	let calendarEvents = [
-		// initial event data
-		{ title: 'Event Now', start: new Date() },
-	];
 	let eventData = { title: 'my event', duration: '02:00' };
-	
+
 	function toggleWeekends() {
-		calendarWeekends = !calendarWeekends;
+		const { calendarWeekends } = options;
+		options = { ...options, calendarWeekends: !calendarWeekends };
 	}
-	
+
 	function gotoPast() {
 		let calendarApi = calendarComponentRef.getAPI();
 		calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
 	}
-	
+
 	function handleDateClick(arg) {
 		if (
 			confirm('Would you like to add an event to ' + arg.dateStr + ' ?')
 		) {
-			calendarEvents = [
-				...calendarEvents,
+			const { events } = options;
+			const calendarEvents = [
+				...events,
 				{
 					title: 'New Event',
 					start: arg.date,
 					allDay: arg.allDay,
 				},
 			];
+			options = {
+				...options,
+				events: calendarEvents,
+			};
 		}
 	}
 </script>
 
 <style>
-	@import url('https://unpkg.com/@fullcalendar/core/main.css');
-	@import url('https://unpkg.com/@fullcalendar/daygrid/main.css');
-	@import url('https://unpkg.com/@fullcalendar/timegrid/main.css');
-	
 	.demo-app {
+		width: 100vw;
+		height: 100vh;
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 		font-size: 14px;
 	}
-	
+
 	.demo-app-top {
 		margin: 0 0 3em;
 	}
-	
+
 	.demo-app-calendar {
 		margin: 0 auto;
 		max-width: 900px;
 	}
-	
+
 	:global(.draggable) {
 		color: white;
-		background: #3788D8;
+		background: #3788d8;
 		width: fit-content;
 		padding: 1rem;
 		margin: 1rem;
@@ -82,16 +97,7 @@
 	</div>
 
 	<div class="demo-app-calendar">
-		<FullCalendar bind:this={calendarComponentRef}
-		defaultView="dayGridMonth"
-		droppable={true} 
-		editable={true} 
-		events={calendarEvents}
-		header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
-		height={800} 
-		plugins={plugins}
-		weekends={calendarWeekends}
-		on:dateClick={(event) => handleDateClick(event.detail)}
-		/>
+		<FullCalendar bind:this={calendarComponentRef} {options}
+		on:dateClick={(event) => handleDateClick(event.detail)} />
 	</div>
 </div>

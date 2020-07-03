@@ -7,23 +7,43 @@
 	let classes = null;
 	export { classes as class };
 	export let style = null;
-	export let options = {};
+	export let options = null;
 
 	const dispatch = createEventDispatcher();
 	let calendarEl;
 	let calendar;
-	let calendarProps = {};
-	let oldProps = {};
-	let updates = {};
-	let removals = [];
 
 	onMount(() => {
-		oldProps = { ...options };
+		if (!options) return;
 
+		initCalendar();
+	});
+
+	onDestroy(() => {
+		if (calendar) calendar.destroy();
+	});
+
+	$: {
+		if (calendar) {
+			updateCalendarProps(options);
+		} else {
+			initCalendar();
+		}
+	}
+
+	export function getAPI() {
+		return calendar;
+	}
+
+	$: {
+		if (calendar) {
+		}
+	}
+
+	function initCalendar() {
 		calendar = new Calendar(calendarEl, {
 			...options,
 			dateClick: (event) => dispatch('dateClick', event),
-			datesDestroy: (event) => dispatch('datesDestroy', event),
 			datesRender: (event) => dispatch('datesRender', event),
 			dayRender: (event) => dispatch('dayRender', event),
 			drop: (event) => dispatch('drop', event),
@@ -53,40 +73,12 @@
 		});
 
 		calendar.render();
-	});
-
-	onDestroy(() => {
-		if (calendar) {
-			calendar.destroy();
-		}
-	});
-
-	export function getAPI() {
-		return calendar;
 	}
 
-	$: {
-		if (calendar) {
-			calendarProps = { ...options };
-			updates = {};
-			removals = [];
-
-			for (const propName in oldProps) {
-				if (!(propName in calendarProps)) {
-					removals.push(propName);
-				}
-			}
-
-			for (const propName in calendarProps) {
-				if (!deepEqual(calendarProps[propName], oldProps[propName])) {
-					updates[propName] = calendarProps[propName];
-				}
-			}
-
-			calendar.mutateOptions(updates, removals, false, deepEqual);
-
-			oldProps = { ...calendarProps };
-		}
+	function updateCalendarOptions(newOptions) {
+		calendar.pauseRendering();
+		calendar.resetOptions(newOptions);
+		this.calendar.resumeRendering();
 	}
 </script>
 

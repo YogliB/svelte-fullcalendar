@@ -4,6 +4,7 @@ import livereload from 'rollup-plugin-livereload';
 import pkg from './package.json';
 import resolve from 'rollup-plugin-node-resolve';
 import svelte from 'rollup-plugin-svelte';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 const name = pkg.name
@@ -58,6 +59,7 @@ export default {
 		commonjs({
 			include: ['node_modules/**'],
 		}),
+		postcss(),
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
