@@ -91,6 +91,24 @@ You can modify your calendar’s options after initialization by reassigning the
 <FullCalendar {options} />
 ```
 
+## FullCalendar Utilities
+
+All of FullCalendar’s utility functions that would normally be accessible via `@fullcalendar/core` will also be accessible via `svelte-fullcalendar`. The formatDate utility for example. This prevents you from needing to add another dependency to your project.
+
+```html
+<script>
+	import { formatDate } from 'svelte-fullcalendar';
+
+	let str = formatDate(new Date(), {
+		month: 'long',
+		year: 'numeric',
+		day: 'numeric',
+	});
+
+	console.log(str);
+</script>
+```
+
 ## Calendar API
 
 Hopefully you won’t need to do it often, but sometimes it’s useful to access the underlying `Calendar` object for raw data and methods.

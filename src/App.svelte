@@ -5,14 +5,15 @@
 	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
 	let options = {
-		initialView: 'dayGridMonth',
+		dateClick: handleDateClick,
 		droppable: true,
 		editable: true,
-		plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
 		events: [
 			// initial event data
 			{ title: 'Event Now', start: new Date() },
 		],
+		initialView: 'dayGridMonth',
+		plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
 		headerToolbar: {
 			left: 'prev,next today',
 			center: 'title',
@@ -20,7 +21,6 @@
 		},
 		height: 'auto',
 		weekends: true,
-		dateClick: handleDateClick,
 	};
 	let calendarComponentRef;
 	let eventData = { title: 'my event', duration: '02:00' };
