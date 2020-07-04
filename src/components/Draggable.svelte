@@ -46,7 +46,6 @@
 		const props = {
 			appendTo,
 			eventData,
-			itemSelector,
 			longPressDelay,
 			minDistance,
 		};
