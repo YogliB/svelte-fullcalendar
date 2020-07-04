@@ -9,7 +9,7 @@ context('Actions', () => {
 
 	it('Should render without crashing', () => {
 		cy.get('.fc-toolbar').should('exist');
-		cy.get('.fc-view-container').should('exist');
+		cy.get('.fc-view-harness').should('exist');
 	});
 
 	it('Should have updatable props', () => {
