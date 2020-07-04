@@ -16,17 +16,18 @@
 		headerToolbar: {
 			left: 'prev,next today',
 			center: 'title',
-			right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek',
+			right: 'dayGridMonth,timeGridWeek,timeGridDay',
 		},
 		height: 'auto',
 		weekends: true,
+		dateClick: handleDateClick,
 	};
 	let calendarComponentRef;
 	let eventData = { title: 'my event', duration: '02:00' };
 
 	function toggleWeekends() {
-		const { calendarWeekends } = options;
-		options = { ...options, calendarWeekends: !calendarWeekends };
+		const { weekends } = options;
+		options = { ...options, weekends: !weekends };
 	}
 
 	function gotoPast() {
@@ -34,17 +35,19 @@
 		calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
 	}
 
-	function handleDateClick(arg) {
+	function handleDateClick(event) {
 		if (
-			confirm('Would you like to add an event to ' + arg.dateStr + ' ?')
+			confirm(
+				'Would you like to add an event to ' + event.dateStr + ' ?'
+			)
 		) {
 			const { events } = options;
 			const calendarEvents = [
 				...events,
 				{
 					title: 'New Event',
-					start: arg.date,
-					allDay: arg.allDay,
+					start: event.date,
+					allDay: event.allDay,
 				},
 			];
 			options = {
@@ -97,7 +100,9 @@
 	</div>
 
 	<div class="demo-app-calendar">
-		<FullCalendar bind:this={calendarComponentRef} {options}
-		on:dateClick={(event) => handleDateClick(event.detail)} />
+		<FullCalendar
+			bind:this="{calendarComponentRef}"
+			{options}
+		></FullCalendar>
 	</div>
 </div>
