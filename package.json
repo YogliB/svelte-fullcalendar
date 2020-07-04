@@ -1,10 +1,10 @@
 {
 	"dependencies": {
-		"@fullcalendar/core": "5.0.0"
+		"@fullcalendar/core": "5.1.0"
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
-		"@fullcalendar/daygrid": "5.0.1",
+		"@fullcalendar/daygrid": "5.1.0",
 		"@fullcalendar/interaction": "5.1.0",
 		"@fullcalendar/timegrid": "5.1.0",
 		"@testing-library/cypress": "6.0.0",
