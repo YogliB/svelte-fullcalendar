@@ -32,10 +32,7 @@
 	}
 
 	function initCalendar() {
-		calendar = new Calendar(calendarEl, {
-			...options,
-		});
-
+		calendar = new Calendar(calendarEl, options);
 		calendar.render();
 	}
 

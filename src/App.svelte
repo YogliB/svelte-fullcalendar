@@ -101,6 +101,6 @@
 		<FullCalendar
 			bind:this="{calendarComponentRef}"
 			{options}
-		></FullCalendar>
+		/>
 	</div>
 </div>
