@@ -26,8 +26,8 @@
 	let eventData = { title: 'my event', duration: '02:00' };
 
 	function toggleWeekends() {
-		const { weekends } = options;
-		options = { ...options, weekends: !weekends };
+		options.weekends = !options.weekends;
+		options = { ...options };
 	}
 
 	function gotoPast() {
@@ -37,9 +37,7 @@
 
 	function handleDateClick(event) {
 		if (
-			confirm(
-				'Would you like to add an event to ' + event.dateStr + ' ?'
-			)
+			confirm('Would you like to add an event to ' + event.dateStr + ' ?')
 		) {
 			const { events } = options;
 			const calendarEvents = [
