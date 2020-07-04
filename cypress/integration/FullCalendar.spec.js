@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import moment from 'moment';
-
 context('Actions', () => {
 	beforeEach(() => {
 		cy.visit('http://localhost:5000');
@@ -16,14 +14,6 @@ context('Actions', () => {
 		cy.findByText('Sat').should('exist');
 		cy.findByText('toggle weekends').click();
 		cy.findByText('Sat').should('not.exist');
-	});
-
-	it('Should accept a callback', () => {
-		const date = new Date();
-		const formatedDate = moment(date).format('YYYY-MM-DD');
-
-		cy.get(`.fc-day[data-date=${formatedDate}]`).click();
-		cy.findByText('New Event').should('exist');
 	});
 
 	it('Should expose an API', () => {

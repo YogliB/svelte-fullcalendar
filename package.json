@@ -15,7 +15,6 @@
 		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "4.2.5",
 		"lint-staged": "10.2.11",
-		"moment": "2.27.0",
 		"prettier": "2.0.5",
 		"rollup": "2.18.0",
 		"rollup-plugin-commonjs": "10.1.0",

@@ -1,5 +1,5 @@
 <script>
-	import { onMount, onDestroy, createEventDispatcher } from 'svelte';
+	import { onMount, onDestroy } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
 
 	// General Props
@@ -12,7 +12,6 @@
 		return calendar;
 	}
 
-	const dispatch = createEventDispatcher();
 	let calendarEl;
 	let calendar;
 
