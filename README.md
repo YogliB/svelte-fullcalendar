@@ -1,4 +1,3 @@
-
 [![Node CI](https://github.com/YogliB/svelte-fullcalendar/workflows/Node%20CI/badge.svg)](https://github.com/YogliB/svelte-fullcalendar/actions?query=workflow%3A%22Node+CI%22)
 [![Known Vulnerabilities](https://snyk.io/test/github/YogliB/svelte-fullcalendar/badge.svg)](https://snyk.io/test/github/YogliB/svelte-fullcalendar)
 [![install size](https://badgen.net/packagephobia/install/svelte-fullcalendar)](https://packagephobia.now.sh/result?p=svelte-fullcalendar)
@@ -35,77 +34,86 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 	import FullCalendar from 'svelte-fullcalendar';
 	import dayGridPlugin from '@fullcalendar/daygrid';
 
-	import './fullcalendar.scss'; // rollup must be configured to do this
+	let options = { initialView: 'dayGridMonth', plugins: [dayGridPlugin] };
 </script>
 
-<FullCalendar defaultView="dayGridMonth" plugins="{[ dayGridPlugin ]}" />
+<FullCalendar {options} />
 ```
 
 You must initialized your calendar with at least one plugin that provides a view!
 
 ## CSS
 
-The above example includes a `.scss` file from _JavaScript_. To get this to work with Rollup, you need to install `rollup-plugin-postcss` and `node-sass`, and set the `postcss` plugin in your `rollup.config.js` file (See an example [here](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/rollup.config.js)).
+All of FullCalendar’s CSS will be automatically loaded as long as your build system is able to process .css file imports. See [Initializing with an ES6 Build System](https://fullcalendar.io/docs/initialize-es6) for more information on configuring your build system.
 
-You must then manually include the stylesheets for FullCalendar's core and plugins. In `fullcalendar.scss`:
+## Props and Emitted Events
 
-```scss
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
-```
-
-The prefixed `~` tells Sass to look in the `node_modules` directory.
-
-## Props
-
-The `<FullCalendar>` component is equipped with [all of FullCalendar's options](https://fullcalendar.io/docs#toc)! Just pass them in as props. Example:
-
-```html
-<FullCalendar defaultView="dayGridMonth" plugins={calendarPlugins}
-weekends={false} events={[ { title: 'event 1', date: '2019-04-01' }, { title:
-'event 2', date: '2019-04-02' }, ]} />
-```
-
-## Callbacks
-
-A callback function can be passed into a Svelte component and it will be called when something happens. For example, the [dateClick](https://fullcalendar.io/docs/dateClick) handler is called whenever the user clicks on a date:
+For the FullCalendar connector, there is no distinction between props and events. Everything is passed into the master `options` object as key-value pairs. Here is an example that demonstrates passing in an `events` array and a `dateClick` handler:
 
 ```html
 <script>
+	let options = {
+		dateClick: (event) => alert('date click! ' + event.dateStr),
+		events: [
+			{ title: 'event 1', date: '2019-04-01' },
+			{ title: 'event 2', date: '2019-04-02' },
+		],
+		initialView: dayGridMonth,
+		plugins: [dayGridPlugin],
+	};
+</script>
+
+<FullCalendar {options} />
+```
+
+## Modifying Options
+
+You can modify your calendar’s options after initialization by reassigning them within the options object and reassign the `options` object. This is an example of changing the `weekends` options:
+
+```html
+<script>
+	import FullCalendar from 'svelte-fullcalendar';
 	import dayGridPlugin from '@fullcalendar/daygrid';
-	import interactionPlugin from '@fullcalendar/interaction'; // needed for dayClick
 
-	function handleDateClick(arg) {
-		alert(arg.dateStr);
+	let options = {
+		initialView: dayGridMonth,
+		plugins: [dayGridPlugin],
+		weekends: false,
+	};
+
+	function toggleWeekends() {
+		options.weekends = !options.weekends;
+		options = { ...options };
 	}
 </script>
 
-<FullCalendar
-	on:dateClick="{handleDateClick}"
-	plugins="{[dayGridPlugin,"
-	interactionPlugin]}
-/>
+<button on:click="{toggleWeekends}">toggle weekends</button>
+<FullCalendar {options} />
 ```
 
-## Accessing FullCalendar's API
+## Calendar API
 
-Hopefully you won't need to do it often, but sometimes it's useful to access the underlying `Calendar` object for raw data and methods.
+Hopefully you won’t need to do it often, but sometimes it’s useful to access the underlying `Calendar` object for raw data and methods.
 
-This is especially useful for controlling the current date. The [defaultDate](defaultDate) prop will set the _initial_ date of the calendar, but to change it after that, you'll need to rely on the [date navigation methods](date-navigation).
+This is especially useful for controlling the current date. The [initialDate](https://fullcalendar.io/docs/initialDate) prop will set the initial date of the calendar, but to change it after that, you’ll need to rely on the [date navigation methods](https://fullcalendar.io/docs/date-navigation).
 
-To do something like this, you'll need to get ahold of the component's ref (short for "reference"). Once you do that, you call the `getApi` method of the "current" component instance:
+To do something like this, you’ll need to get ahold of the component’s ref (short for “reference”). In the template:
+
+```html
+<FullCalendar bind:this="{calendarRef}" {options} />
+```
+
+Once you have the ref, you can get the underlying Calendar object via the getApi method:
 
 ```html
 <script>
-	let componentRef = null;
+	let calendarRef;
 
-	function someMethod() {
-		const calendarAPI = calendarRef.getAPI();
-		calendarAPI.next();
+	function next() {
+		let calendarApi = calendarRef.getAPI();
+		calendarApi.next();
 	}
 </script>
-
-<FullCalendar bind:this="{calendarRef}" plugins="{[dayGridPlugin]}" />
 ```
 
 ## Scheduler
@@ -116,9 +124,14 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 <script>
 	import FullCalendar from 'svelte-fullcalendar';
 	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+
+	let options = {
+		plugins: [resourceTimelinePlugin],
+		schedulerLicenseKey: 'XXX',
+	};
 </script>
 
-<FullCalendar schedulerLicenseKey="XXX" plugins="{[resourceTimelinePlugin]}" />
+<FullCalendar {options} />
 ```
 
 Also, make sure all the correct stylesheets are being included.
