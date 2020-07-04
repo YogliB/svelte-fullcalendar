@@ -10,7 +10,6 @@
 
 	export let appendTo = null;
 	export let eventData = null;
-	export let itemSelector = null;
 	export let longPressDelay = null;
 	export let minDistance = null;
 
