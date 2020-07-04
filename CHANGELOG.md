@@ -12,6 +12,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Updated FullCalendar to version 5.0.0
 -   Changed the component API
 
+Please follow the [readme](https://github.com/YogliB/svelte-fullcalendar/blob/master/README.md) and the [V5 Release Notes and Upgrade Guide](https://fullcalendar.io/docs/upgrading-from-v4) **before** upgrading.
+
 ## [0.3.0] - 2020-06-13
 
 -   Bump @fullcalendar/core from 4.4.0 to 4.4.2
