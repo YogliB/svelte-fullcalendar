@@ -1,6 +1,6 @@
 {
 	"dependencies": {
-		"@fullcalendar/core": "5.0.0"
+		"@fullcalendar/core": "5.1.0"
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
