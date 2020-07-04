@@ -6,7 +6,7 @@
 	"devDependencies": {
 		"@fullcalendar/daygrid": "5.0.1",
 		"@fullcalendar/interaction": "5.0.0",
-		"@fullcalendar/timegrid": "5.0.1",
+		"@fullcalendar/timegrid": "5.1.0",
 		"@testing-library/cypress": "6.0.0",
 		"cypress": "4.9.0",
 		"eslint": "7.4.0",
