@@ -14,9 +14,9 @@
 		"svelte-preprocess": "3.9.10"
 	},
 	"dependencies": {
-		"@fullcalendar/daygrid": "5.0.1",
-		"@fullcalendar/interaction": "5.0.0",
-		"@fullcalendar/timegrid": "5.0.1",
+		"@fullcalendar/daygrid": "5.1.0",
+		"@fullcalendar/interaction": "5.1.0",
+		"@fullcalendar/timegrid": "5.1.0",
 		"sirv-cli": "1.0.1",
 		"svelte-fullcalendar": "0.3.0"
 	},
