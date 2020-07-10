@@ -9,7 +9,7 @@
 		"@fullcalendar/interaction": "4.4.2",
 		"@fullcalendar/timegrid": "4.4.2",
 		"@testing-library/cypress": "6.0.0",
-		"cypress": "4.7.0",
+		"cypress": "4.10.0",
 		"eslint": "7.4.0",
 		"eslint-config-prettier": "6.11.0",
 		"eslint-plugin-cypress": "2.11.1",
