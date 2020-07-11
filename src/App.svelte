@@ -58,8 +58,10 @@
 
 <style>
 	.demo-app {
-		width: 100vw;
+		width: 100%;
 		height: 100vh;
+		display: flex;
+		flex-direction: column;
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 		font-size: 14px;
 	}
@@ -69,8 +71,9 @@
 	}
 
 	.demo-app-calendar {
-		margin: 0 auto;
 		max-width: 900px;
+		margin: 0 auto;
+		flex-grow: 1;
 	}
 
 	:global(.draggable) {
@@ -85,9 +88,9 @@
 
 <div class="demo-app">
 	<div class="demo-app-top">
-		<button on:click="{toggleWeekends}">toggle weekends</button>
+		<button on:click={toggleWeekends}>toggle weekends</button>
 		&nbsp;
-		<button on:click="{gotoPast}">go to a date in the past</button>
+		<button on:click={gotoPast}>go to a date in the past</button>
 		&nbsp; (also, click a date/time to add an event)
 	</div>
 
@@ -98,9 +101,6 @@
 	</div>
 
 	<div class="demo-app-calendar">
-		<FullCalendar
-			bind:this="{calendarComponentRef}"
-			{options}
-		/>
+		<FullCalendar bind:this={calendarComponentRef} {options} />
 	</div>
 </div>
