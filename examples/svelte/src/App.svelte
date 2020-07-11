@@ -42,6 +42,10 @@
 
 <style>
 	.demo-app {
+		width: 100%;
+		height: 100vh;
+		display: flex;
+		flex-direction: column;
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 		font-size: 14px;
 	}
@@ -51,8 +55,9 @@
 	}
 
 	.demo-app-calendar {
-		margin: 0 auto;
 		max-width: 900px;
+		margin: 0 auto;
+		flex-grow: 1;
 	}
 
 	:global(.draggable) {
@@ -81,15 +86,15 @@
 
 	<div class="demo-app-calendar">
 		<FullCalendar
+			height="parent"
 			bind:this={calendarComponentRef}
 			defaultView="dayGridMonth"
 			droppable={true}
 			editable={true}
 			events={calendarEvents}
 			header={{ left: 'prev,next today', center: 'title', right: 'dayGridMonth,timeGridWeek,timeGridDay,listWeek' }}
-			height={800}
-			{plugins}
 			weekends={calendarWeekends}
+			{plugins}
 			on:dateClick={(event) => handleDateClick(event.detail)} />
 	</div>
 </div>
