@@ -17,7 +17,6 @@ This component is released under a MIT license, the same license the standard ve
 Useful links:
 
 -   [Example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/svelte) (the code in this guide loosely follows it)
--   [Runnable project](https://svelte.dev/repl/afa33232d6914c5f9fd25e332e167a7c?version=3.12.1) in a code playground
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
