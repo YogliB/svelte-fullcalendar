@@ -1,7 +1,7 @@
 {
 	"dependencies": {
 		"@fullcalendar/core": "4.4.2",
-		"fast-deep-equal": "3.1.1"
+		"fast-deep-equal": "3.1.3"
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
@@ -22,7 +22,7 @@
 		"rollup-plugin-commonjs": "10.1.0",
 		"rollup-plugin-livereload": "1.3.0",
 		"rollup-plugin-node-resolve": "5.2.0",
-		"rollup-plugin-svelte": "5.2.2",
+		"rollup-plugin-svelte": "5.2.3",
 		"rollup-plugin-terser": "6.1.0",
 		"sirv-cli": "1.0.3",
 		"start-server-and-test": "1.11.2",
