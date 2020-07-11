@@ -1,4 +1,3 @@
-
 [![Node CI](https://github.com/YogliB/svelte-fullcalendar/workflows/Node%20CI/badge.svg)](https://github.com/YogliB/svelte-fullcalendar/actions?query=workflow%3A%22Node+CI%22)
 [![Known Vulnerabilities](https://snyk.io/test/github/YogliB/svelte-fullcalendar/badge.svg)](https://snyk.io/test/github/YogliB/svelte-fullcalendar)
 [![install size](https://badgen.net/packagephobia/install/svelte-fullcalendar)](https://packagephobia.now.sh/result?p=svelte-fullcalendar)
@@ -25,7 +24,7 @@ This guide does not go into depth about initializing a Svelte project. Please co
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
-npm install --save svelte-fullcalendar @fullcalendar/daygrid
+npm install --save svelte-fullcalendar @fullcalendar/daygrid@4
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
@@ -50,8 +49,8 @@ The above example includes a `.scss` file from _JavaScript_. To get this to work
 You must then manually include the stylesheets for FullCalendar's core and plugins. In `fullcalendar.scss`:
 
 ```scss
-@import '~@fullcalendar/core/main.css';
-@import '~@fullcalendar/daygrid/main.css';
+@import '~@fullcalendar/core/main.min.css';
+@import '~@fullcalendar/daygrid/main.min.css';
 ```
 
 The prefixed `~` tells Sass to look in the `node_modules` directory.
@@ -128,7 +127,7 @@ Also, make sure all the correct stylesheets are being included.
 You'll need to install the `interactionPlugin`:
 
 ```bash
-npm install @fullcalendar/interaction
+npm install @fullcalendar/interaction@4
 ```
 
 See the [official docs](https://fullcalendar.io/docs/external-dragging) for all available props.
