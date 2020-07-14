@@ -2,7 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
 
-	// General Props
+	// Props
 	let classes = null;
 	export { classes as class };
 	export let style = null;
@@ -43,4 +43,4 @@
 	}
 </script>
 
-<div bind:this={calendarEl} class={classes} {style}></div>
+<div bind:this={calendarEl} class={classes} {style} />
