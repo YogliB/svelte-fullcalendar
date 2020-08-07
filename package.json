@@ -1,70 +1,25 @@
 {
-	"dependencies": {
-		"@fullcalendar/core": "5.1.0"
-	},
-	"description": "A Svelte component wrapper around FullCalendar",
-	"devDependencies": {
-		"@fullcalendar/daygrid": "5.1.0",
-		"@fullcalendar/interaction": "5.1.0",
-		"@fullcalendar/timegrid": "5.1.0",
-		"@testing-library/cypress": "6.0.0",
-		"cypress": "4.10.0",
-		"eslint": "7.4.0",
-		"eslint-config-prettier": "6.11.0",
-		"eslint-plugin-cypress": "2.11.1",
-		"eslint-plugin-svelte3": "2.7.3",
-		"husky": "4.2.5",
-		"lint-staged": "10.2.11",
-		"prettier": "2.0.5",
-		"rollup": "2.21.0",
-		"rollup-plugin-commonjs": "10.1.0",
-		"rollup-plugin-livereload": "1.3.0",
-		"rollup-plugin-node-resolve": "5.2.0",
-		"rollup-plugin-postcss": "3.1.2",
-		"rollup-plugin-svelte": "5.2.3",
-		"rollup-plugin-terser": "6.1.0",
-		"sirv-cli": "1.0.3",
-		"start-server-and-test": "1.11.2",
-		"svelte": "3.24.0"
-	},
-	"files": [
-		"src/components",
-		"dist/index.min.mjs",
-		"dist/index.min.js"
-	],
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
-	"keywords": [
-		"svelte",
-		"calendar",
-		"scheduler",
-		"fullcalendar"
-	],
-	"license": "MIT",
-	"lint-staged": {
-		"*.{html, css, scss, stylus, js, ts, json, yml, md}": [
-			"prettier --write"
-		]
-	},
-	"main": "dist/index.min.js",
-	"module": "dist/index.min.mjs",
-	"name": "svelte-fullcalendar",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/YogliB/svelte-fullcalendar.git"
-	},
-	"scripts": {
-		"build": "rollup -c",
-		"cy:open": "cypress open",
-		"cy:run": "cypress run",
-		"dev": "rollup -c -w",
-		"lint": "eslint --color --ignore-path .gitignore .",
-		"prepublishOnly": "npm audit fix && npm run build",
-		"start": "sirv public",
-		"test": "start-server-and-test dev http://localhost:5000 cy:run"
-	},
-	"version": "1.0.0"
+  "dependencies": {
+    "@fullcalendar/core": "5.2.1"
+  },
+  "description": "A Svelte component wrapper around FullCalendar",
+  "devDependencies": {
+    "@fullcalendar/daygrid": "^5.2.0",
+    "rollup": "^2.23.0",
+    "rollup-plugin-commonjs": "10.1.0",
+    "rollup-plugin-livereload": "1.3.0",
+    "rollup-plugin-node-resolve": "5.2.0",
+    "rollup-plugin-postcss": "^3.1.4",
+    "rollup-plugin-svelte": "5.2.3",
+    "rollup-plugin-terser": "6.1.0",
+    "sirv-cli": "1.0.5",
+    "svelte": "^3.24.1"
+  },
+  "name": "svelte-fullcalendar",
+  "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "start": "sirv public"
+  },
+  "version": "1.0.0"
 }
