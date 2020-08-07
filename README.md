@@ -95,7 +95,7 @@ To do something like this, you'll need to get ahold of the component's ref (shor
 
 ```html
 <script>
-	let componentRef = null;
+	let calendarRef = null;
 
 	function someMethod() {
 		const calendarAPI = calendarRef.getAPI();
