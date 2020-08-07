@@ -4,16 +4,16 @@
   },
   "description": "A Svelte component wrapper around FullCalendar",
   "devDependencies": {
-    "@fullcalendar/daygrid": "^5.2.0",
-    "rollup": "^2.23.0",
+    "@fullcalendar/daygrid": "5.2.0",
+    "rollup": "2.23.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-livereload": "1.3.0",
     "rollup-plugin-node-resolve": "5.2.0",
-    "rollup-plugin-postcss": "^3.1.4",
+    "rollup-plugin-postcss": "3.1.4",
     "rollup-plugin-svelte": "5.2.3",
     "rollup-plugin-terser": "6.1.0",
     "sirv-cli": "1.0.5",
-    "svelte": "^3.24.1"
+    "svelte": "3.24.1"
   },
   "name": "svelte-fullcalendar",
   "scripts": {
