@@ -36,7 +36,7 @@ export default {
     // https://github.com/rollup/rollup-plugin-commonjs
     resolve({
       browser: true,
-      dedupe: ["svelte"],
+      dedupe: ["svelte", "@fullcalendar/common"],
     }),
     commonjs(),
     postcss(),
