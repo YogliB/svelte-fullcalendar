@@ -1,11 +1,11 @@
 {
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
-		"eslint": "^7.8.1",
-		"husky": "^4.3.0",
-		"lerna": "^3.22.1",
-		"lint-staged": "^10.3.0",
-		"prettier": "^2.1.1"
+		"eslint": "7.8.1",
+		"husky": "4.3.0",
+		"lerna": "3.22.1",
+		"lint-staged": "10.3.0",
+		"prettier": "2.1.1"
 	},
 	"name": "svelte-fullcalendar",
 	"prettier": {
