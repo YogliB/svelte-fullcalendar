@@ -18,10 +18,5 @@
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
-	},
-	"scripts": {
-		"build": "rollup -c",
-		"dev": "rollup -c -w",
-		"start": "sirv public"
 	}
 }
