@@ -4,3 +4,4 @@
 cypress/screenshots/**
 cypress/videos/**
 dist
+*.log
