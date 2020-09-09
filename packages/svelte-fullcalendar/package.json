@@ -1,0 +1,27 @@
+{
+	"author": "",
+	"bugs": {
+		"url": "https://github.com/YogliB/svelte-fullcalendar/issues"
+	},
+	"dependencies": {
+		"@fullcalendar/core": "5.2.1"
+	},
+	"description": "A Svelte component wrapper around FullCalendar",
+	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
+	"keywords": [],
+	"license": "MIT",
+	"name": "svelte-fullcalendar",
+	"peerDependencies": {
+		"svelte": "^3.0.0"
+	},
+	"svelte": "index.js",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
+	},
+	"scripts": {
+		"build": "rollup -c",
+		"dev": "rollup -c -w",
+		"start": "sirv public"
+	}
+}
