@@ -8,15 +8,21 @@
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
-	"keywords": [],
+	"keywords": [
+		"svelte",
+		"fullcalendar",
+		"javascript",
+		"calendar",
+		"scheduler"
+	],
 	"license": "MIT",
 	"name": "svelte-fullcalendar",
 	"peerDependencies": {
 		"svelte": "^3.0.0"
 	},
-	"svelte": "index.js",
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
-	}
+	},
+	"svelte": "index.js"
 }
