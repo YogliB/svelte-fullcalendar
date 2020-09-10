@@ -10,13 +10,13 @@
 
 ## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
 
-FullCalendar seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [Sapper](https://sapper.svelte.dev) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [Sapper](https://sapper.svelte.dev) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This component is released under a MIT license, the same license the standard version of FullCalendar uses.
 
 Useful links:
 
--   [Example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/svelte) (the code in this guide loosely follows it)
+-   [Example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/svelte>) (the code in this guide loosely follows it)
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
