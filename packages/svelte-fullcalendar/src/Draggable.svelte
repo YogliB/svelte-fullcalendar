@@ -3,10 +3,16 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
-	export let appendTo = null;
-	export let eventData = null;
-	export let longPressDelay = null;
-	export let minDistance = null;
+	/** @type {string} */
+	export let appendTo;
+	/** @type {import('../typings/draggable-event.d').DraggableEvent} */
+	export let eventData;
+	/** @type {string} */
+	export let itemSelector;
+	/** @type {number} */
+	export let longPressDelay;
+	/** @type {number} */
+	export let minDistance;
 
 	let elementRef = null;
 	let draggable = null;
@@ -41,6 +47,7 @@
 		const props = {
 			appendTo,
 			eventData,
+			itemSelector,
 			longPressDelay,
 			minDistance,
 		};
