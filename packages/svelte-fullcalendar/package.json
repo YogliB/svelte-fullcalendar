@@ -17,6 +17,9 @@
 	],
 	"license": "MIT",
 	"name": "svelte-fullcalendar",
+	"optionalDependencies": {
+		"@fullcalendar/interaction": "5.3.1"
+	},
 	"peerDependencies": {
 		"svelte": "^3.0.0"
 	},
