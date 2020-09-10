@@ -3,6 +3,13 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
+	// general props
+	/** @type {string} */
+	let classes;
+	export { classes as class };
+	/** @type {string} */
+	export let style;
+
 	/** @type {string} */
 	export let appendTo;
 	/** @type {import('../typings/draggable-event.d').DraggableEvent} */
@@ -56,6 +63,6 @@
 	}
 </script>
 
-<div bind:this={elementRef}>
+<div bind:this={elementRef} class={classes} {style}>
 	<slot />
 </div>

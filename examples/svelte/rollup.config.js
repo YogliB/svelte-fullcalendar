@@ -3,6 +3,7 @@ import resolve from '@rollup/plugin-node-resolve';
 import commonjs from '@rollup/plugin-commonjs';
 import livereload from 'rollup-plugin-livereload';
 import { terser } from 'rollup-plugin-terser';
+import postcss from 'rollup-plugin-postcss';
 
 const production = !process.env.ROLLUP_WATCH;
 
@@ -50,6 +51,9 @@ export default {
 			},
 		}),
 
+		// for FullCalendar
+		postcss(),
+
 		// If you have external dependencies installed from
 		// npm, you'll most likely need these plugins. In
 		// some cases you'll need additional configuration -
@@ -57,7 +61,7 @@ export default {
 		// https://github.com/rollup/plugins/tree/master/packages/commonjs
 		resolve({
 			browser: true,
-			dedupe: ['svelte'],
+			dedupe: ['svelte', '@fullcalendar/common'],
 		}),
 		commonjs(),
 

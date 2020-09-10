@@ -1,14 +1,17 @@
 {
 	"dependencies": {
 		"@fullcalendar/daygrid": "^5.3.2",
+		"@fullcalendar/interaction": "^5.3.1",
+		"@fullcalendar/timegrid": "^5.3.1",
 		"sirv-cli": "1.0.0",
-		"svelte-fullcalendar": "^1.0.0"
+		"svelte-fullcalendar": "1.0.0"
 	},
 	"devDependencies": {
 		"@rollup/plugin-commonjs": "14.0.0",
 		"@rollup/plugin-node-resolve": "8.0.0",
 		"rollup": "2.3.4",
 		"rollup-plugin-livereload": "2.0.0",
+		"rollup-plugin-postcss": "^3.1.8",
 		"rollup-plugin-svelte": "6.0.0",
 		"rollup-plugin-terser": "7.0.0",
 		"svelte": "3.0.0"
