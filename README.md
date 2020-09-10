@@ -152,15 +152,17 @@ Here is a simple usage example:
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
 	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 	import interactionPlugin from '@fullcalendar/interaction';
+
+	let options = {
+		schedulerLicenseKey: "XXX",
+		plugins: [resourceTimelinePlugin, interactionPlugin],
+		droppable: true},
+		};
 </script>
 
 <Draggable eventData={{ title: 'my event', duration: '02:00' }}>
 	Drag me!
 </Draggable>
 
-<FullCalendar
-	schedulerLicenseKey="XXX"
-	plugins="{[resourceTimelinePlugin, interactionPlugin]}"
-	droppable="{true}"
-/>
+<FullCalendar {options}/>
 ```
