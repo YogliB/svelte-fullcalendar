@@ -24,5 +24,6 @@
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
 	},
-	"svelte": "index.js"
+	"svelte": "index.js",
+	"version": "1.0.0"
 }
