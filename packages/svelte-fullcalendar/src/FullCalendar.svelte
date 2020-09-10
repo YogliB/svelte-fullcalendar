@@ -3,10 +3,14 @@
 	import { Calendar } from '@fullcalendar/core';
 
 	// General Props
-	let classes = null;
+	/** @type {string} */
+	let classes;
 	export { classes as class };
-	export let style = null;
-	export let options = null;
+	/** @type {string} */
+	export let style;
+
+	/** @type {import('@fullcalendar/common').CalendarOptions}  */
+	export let options;
 
 	export function getAPI() {
 		return calendar;
