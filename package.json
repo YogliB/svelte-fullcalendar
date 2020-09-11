@@ -4,7 +4,7 @@
 		"@testing-library/cypress": "7.0.0",
 		"cypress": "5.1.0",
 		"eslint": "7.8.1",
-		"eslint-config-prettier": "^6.11.0",
+		"eslint-config-prettier": "6.11.0",
 		"eslint-plugin-cypress": "2.11.1",
 		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "4.3.0",
@@ -12,7 +12,8 @@
 		"lint-staged": "10.3.0",
 		"prettier": "2.1.1",
 		"prettier-plugin-svelte": "1.2.1",
-		"start-server-and-test": "1.11.3"
+		"start-server-and-test": "1.11.3",
+		"svelte": "3.25.0"
 	},
 	"husky": {
 		"hooks": {
