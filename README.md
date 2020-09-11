@@ -14,16 +14,17 @@ FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev
 
 This component is released under a MIT license, the same license the standard version of FullCalendar uses.
 
-Useful links:
+Examples: (the code in this guide loosely follows them)
 
--   [Example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/svelte>) (the code in this guide loosely follows it)
+-   [Svelte example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/svelte>) 
+-   [Sapper example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/sapper>) 
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
-npm install --save svelte-fullcalendar @fullcalendar/daygrid
+npm install svelte-fullcalendar @fullcalendar/daygrid
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
@@ -44,6 +45,33 @@ You must initialized your calendar with at least one plugin that provides a view
 ## CSS
 
 All of FullCalendar’s CSS will be automatically loaded as long as your build system is able to process .css file imports. See [Initializing with an ES6 Build System](https://fullcalendar.io/docs/initialize-es6) for more information on configuring your build system.
+
+Note that non-Sapper users will also need to install `postcss` and configure `Rollup` to use it:
+
+Run:
+```bash
+npm install --save-dev rollup-plugin-postcss
+```
+
+Edit `rollup.config.js`
+```javascript
++ import postcss from 'rollup-plugin-postcss';
+
+...
+svelte({
+	// enable run-time checks when not in production
+	dev: !production,
+	// we'll extract any component CSS out into
+	// a separate file - better for performance
+	css: (css) => {
+		css.write('bundle.css');
+	},
+	}),
+
++ // for FullCalendar
++ postcss(),
+...
+```
 
 ## Props and Emitted Events
 
