@@ -1,11 +1,32 @@
 {
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
+		"@testing-library/cypress": "7.0.0",
+		"cypress": "5.1.0",
 		"eslint": "7.8.1",
+		"eslint-plugin-cypress": "2.11.1",
+		"eslint-plugin-svelte3": "2.7.3",
 		"husky": "4.3.0",
 		"lerna": "3.22.1",
 		"lint-staged": "10.3.0",
-		"prettier": "2.1.1"
+		"prettier": "2.1.1",
+		"prettier-plugin-svelte": "1.2.1",
+		"start-server-and-test": "1.11.3"
+	},
+	"husky": {
+		"hooks": {
+			"pre-commit": "lint-staged"
+		}
+	},
+	"lint-staged": {
+		"*.{js, svelte}": [
+			"eslint --fix",
+			"git add"
+		],
+		"*.{svelte, html, css, scss, stylus, js, ts, json, yml, md}": [
+			"prettier --write",
+			"git add"
+		]
 	},
 	"name": "svelte-fullcalendar",
 	"prettier": {
