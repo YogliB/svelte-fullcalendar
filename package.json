@@ -47,7 +47,13 @@
 	"private": true,
 	"scripts": {
 		"bootstrap": "lerna bootstrap",
-		"lint": "eslint --color --ignore-path .gitignore ."
+		"cy:open": "cypress open",
+		"cy:run": "cypress run",
+		"lint": "eslint --color --ignore-path .gitignore .",
+		"dev:svelte": "lerna run dev --scope=@examples/svelte --stream",
+		"dev:sapper": "lerna run dev --scope=@examples/sapper --stream",
+		"test:svelte": "start-server-and-test dev:svelte http://localhost:5000 cy:run",
+		"test:sapper": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
 	},
 	"workspaces": [
 		"packages/*",
