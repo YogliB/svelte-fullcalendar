@@ -5,21 +5,21 @@
 
 	// general props
 	/** @type {string} */
-	let classes;
+	let classes = null;
 	export { classes as class };
 	/** @type {string} */
-	export let style;
+	export let style = null;
 
 	/** @type {string} */
-	export let appendTo;
+	export let appendTo = null;
 	/** @type {import('../typings/draggable-event.d').DraggableEvent} */
 	export let eventData;
 	/** @type {string} */
-	export let itemSelector;
+	export let itemSelector = null;
 	/** @type {number} */
-	export let longPressDelay;
+	export let longPressDelay = null;
 	/** @type {number} */
-	export let minDistance;
+	export let minDistance = null;
 
 	let elementRef = null;
 	let draggable = null;

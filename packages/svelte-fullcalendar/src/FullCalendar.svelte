@@ -4,10 +4,10 @@
 
 	// General Props
 	/** @type {string} */
-	let classes;
+	let classes = null;
 	export { classes as class };
 	/** @type {string} */
-	export let style;
+	export let style = null;
 
 	/** @type {import('@fullcalendar/common').CalendarOptions}  */
 	export let options;
