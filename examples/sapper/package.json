@@ -23,10 +23,12 @@
 		"svelte-fullcalendar": "^1.0.0"
 	},
 	"name": "@examples/sapper",
+	"private": true,
 	"scripts": {
 		"build": "sapper build --legacy",
 		"dev": "sapper dev",
 		"export": "sapper export --legacy",
 		"start": "node __sapper__/build"
-	}
+	},
+	"version": "0.0.1"
 }

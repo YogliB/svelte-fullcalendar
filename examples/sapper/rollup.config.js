@@ -13,7 +13,8 @@ const legacy = !!process.env.SAPPER_LEGACY_BUILD;
 
 const onwarn = (warning, onwarn) =>
 	(warning.code === 'MISSING_EXPORT' && /'preload'/.test(warning.message)) ||
-	(warning.code === 'CIRCULAR_DEPENDENCY' && /[/\\]@sapper[/\\]/.test(warning.message)) ||
+	(warning.code === 'CIRCULAR_DEPENDENCY' &&
+		/[/\\]@sapper[/\\]/.test(warning.message)) ||
 	onwarn(warning);
 
 export default {
@@ -23,39 +24,47 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			svelte({
 				dev,
 				hydratable: true,
-				emitCss: true
+				emitCss: true,
 			}),
 			resolve({
 				browser: true,
-				dedupe: ['svelte']
+				dedupe: ['svelte', '@fullcalendar/common'],
 			}),
 			commonjs(),
 
-			legacy && babel({
-				extensions: ['.js', '.mjs', '.html', '.svelte'],
-				babelHelpers: 'runtime',
-				exclude: ['node_modules/@babel/**'],
-				presets: [
-					['@babel/preset-env', {
-						targets: '> 0.25%, not dead'
-					}]
-				],
-				plugins: [
-					'@babel/plugin-syntax-dynamic-import',
-					['@babel/plugin-transform-runtime', {
-						useESModules: true
-					}]
-				]
-			}),
+			legacy &&
+				babel({
+					extensions: ['.js', '.mjs', '.html', '.svelte'],
+					babelHelpers: 'runtime',
+					exclude: ['node_modules/@babel/**'],
+					presets: [
+						[
+							'@babel/preset-env',
+							{
+								targets: '> 0.25%, not dead',
+							},
+						],
+					],
+					plugins: [
+						'@babel/plugin-syntax-dynamic-import',
+						[
+							'@babel/plugin-transform-runtime',
+							{
+								useESModules: true,
+							},
+						],
+					],
+				}),
 
-			!dev && terser({
-				module: true
-			})
+			!dev &&
+				terser({
+					module: true,
+				}),
 		],
 
 		preserveEntrySignatures: false,
@@ -68,19 +77,21 @@ export default {
 		plugins: [
 			replace({
 				'process.browser': false,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			svelte({
 				generate: 'ssr',
 				hydratable: true,
-				dev
+				dev,
 			}),
 			resolve({
-				dedupe: ['svelte']
+				dedupe: ['svelte'],
 			}),
-			commonjs()
+			commonjs(),
 		],
-		external: Object.keys(pkg.dependencies).concat(require('module').builtinModules),
+		external: Object.keys(pkg.dependencies).concat(
+			require('module').builtinModules
+		),
 
 		preserveEntrySignatures: 'strict',
 		onwarn,
@@ -93,13 +104,13 @@ export default {
 			resolve(),
 			replace({
 				'process.browser': true,
-				'process.env.NODE_ENV': JSON.stringify(mode)
+				'process.env.NODE_ENV': JSON.stringify(mode),
 			}),
 			commonjs(),
-			!dev && terser()
+			!dev && terser(),
 		],
 
 		preserveEntrySignatures: false,
 		onwarn,
-	}
+	},
 };

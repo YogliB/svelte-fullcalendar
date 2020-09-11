@@ -1,46 +1,105 @@
-<style>
-	h1, figure, p {
-		text-align: center;
-		margin: 0 auto;
+<script>
+	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
+	import dayGridPlugin from '@fullcalendar/daygrid';
+	import timeGridPlugin from '@fullcalendar/timegrid';
+	import interactionPlugin from '@fullcalendar/interaction'; // needed for dateClick
+
+	let options = {
+		dateClick: handleDateClick,
+		droppable: true,
+		editable: true,
+		events: [
+			// initial event data
+			{ title: 'Event Now', start: new Date() },
+		],
+		initialView: 'dayGridMonth',
+		plugins: [dayGridPlugin, timeGridPlugin, interactionPlugin],
+		headerToolbar: {
+			left: 'prev,next today',
+			center: 'title',
+			right: 'dayGridMonth,timeGridWeek,timeGridDay',
+		},
+		height: 'auto',
+		weekends: true,
+	};
+	let calendarComponentRef;
+	let eventData = { title: 'my event', duration: '02:00' };
+
+	function toggleWeekends() {
+		options.weekends = !options.weekends;
+		options = { ...options };
 	}
 
-	h1 {
-		font-size: 2.8em;
-		text-transform: uppercase;
-		font-weight: 700;
-		margin: 0 0 0.5em 0;
+	function gotoPast() {
+		let calendarApi = calendarComponentRef.getAPI();
+		calendarApi.gotoDate('2000-01-01'); // call a method on the Calendar object
 	}
 
-	figure {
-		margin: 0 0 1em 0;
-	}
-
-	img {
-		width: 100%;
-		max-width: 400px;
-		margin: 0 0 1em 0;
-	}
-
-	p {
-		margin: 1em auto;
-	}
-
-	@media (min-width: 480px) {
-		h1 {
-			font-size: 4em;
+	function handleDateClick(event) {
+		if (
+			confirm('Would you like to add an event to ' + event.dateStr + ' ?')
+		) {
+			const { events } = options;
+			const calendarEvents = [
+				...events,
+				{
+					title: 'New Event',
+					start: event.date,
+					allDay: event.allDay,
+				},
+			];
+			options = {
+				...options,
+				events: calendarEvents,
+			};
 		}
+	}
+</script>
+
+<style>
+	.demo-app {
+		width: 100%;
+		height: 100%;
+		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	.demo-app-top {
+		margin: 0 0 3em;
+	}
+
+	.demo-app-calendar {
+		margin: 0 auto;
+		max-width: 900px;
+	}
+
+	:global(.draggable) {
+		color: white;
+		background: #3788d8;
+		width: fit-content;
+		padding: 1rem;
+		margin: 1rem;
+		cursor: pointer;
 	}
 </style>
 
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
+<div class="demo-app">
+	<div class="demo-app-top">
+		<button on:click={toggleWeekends}>toggle weekends</button> &nbsp; <button
+			on:click={gotoPast}>go to a date in the past</button> &nbsp; (also, click
+		a date/time to add an event)
+	</div>
 
-<h1>Great success!</h1>
+	<div>
+		<Draggable {eventData} class="draggable">
+			Drag me in Week or Day view!
+		</Draggable>
+	</div>
 
-<figure>
-	<img alt='Success Kid' src='successkid.jpg'>
-	<figcaption>Have fun with Sapper!</figcaption>
-</figure>
-
-<p><strong>Try editing this file (src/routes/index.svelte) to test live reloading.</strong></p>
+	<div class="demo-app-calendar">
+		<FullCalendar bind:this={calendarComponentRef} {options} />
+	</div>
+</div>
