@@ -19,7 +19,7 @@
 	let calendarEl;
 	let calendar;
 
-	onMount(() => {
+	onMount(async () => {
 		if (!options || !calendarEl) return;
 
 		initCalendar();
