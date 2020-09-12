@@ -21,7 +21,6 @@
 		"@fullcalendar/interaction": "^5.0.0"
 	},
 	"peerDependencies": {
-		"@fullcalendar/core": "^5.0.0",
 		"rollup-plugin-postcss": "^3.0.0",
 		"svelte": "^3.0.0"
 	},
