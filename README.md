@@ -21,10 +21,16 @@ Examples: (the code in this guide loosely follows them)
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package, and any additional plugins you plan to use:
+The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package:
 
 ```bash
 npm install --save-dev svelte-fullcalendar @fullcalendar/core rollup-plugin-postcss
+```
+
+Then install any additional plugins you plan to use:
+
+```bash
+npm install --save-dev  @fullcalendar/daygrid
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
