@@ -6,6 +6,7 @@ import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
+import postcss from 'rollup-plugin-postcss';
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -31,6 +32,8 @@ export default {
 				hydratable: true,
 				emitCss: true,
 			}),
+			// For FullCalendar
+			postcss(),
 			resolve({
 				browser: true,
 				dedupe: ['svelte', '@fullcalendar/common'],
