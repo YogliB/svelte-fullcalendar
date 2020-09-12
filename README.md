@@ -16,15 +16,15 @@ This component is released under a MIT license, the same license the standard ve
 
 Examples: (the code in this guide loosely follows them)
 
--   [Svelte example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/svelte>) 
--   [Sapper example project](<https://github.com/YogliB/svelte-fullcalendar/tree/(wip)v1/examples/sapper>) 
+-   [Svelte example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/svelte)
+-   [Sapper example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/sapper)
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package, and any additional plugins you plan to use:
 
 ```bash
-npm install svelte-fullcalendar @fullcalendar/daygrid
+npm install --save-dev svelte-fullcalendar @fullcalendar/core rollup-plugin-postcss
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
@@ -49,11 +49,13 @@ All of FullCalendar’s CSS will be automatically loaded as long as your build s
 Note that non-Sapper users will also need to install `postcss` and configure `Rollup` to use it:
 
 Run:
+
 ```bash
 npm install --save-dev rollup-plugin-postcss
 ```
 
 Edit `rollup.config.js`
+
 ```javascript
 + import postcss from 'rollup-plugin-postcss';
 
