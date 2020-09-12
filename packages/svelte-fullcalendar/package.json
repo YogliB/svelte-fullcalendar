@@ -18,10 +18,11 @@
 	"license": "MIT",
 	"name": "svelte-fullcalendar",
 	"optionalDependencies": {
-		"@fullcalendar/interaction": "5.3.1",
+		"@fullcalendar/interaction": "^5.0.0",
 		"rollup-plugin-postcss": "^3.0.0"
 	},
 	"peerDependencies": {
+		"@fullcalendar/core": "^5.0.0",
 		"svelte": "^3.0.0"
 	},
 	"repository": {
