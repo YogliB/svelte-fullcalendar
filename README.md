@@ -21,10 +21,10 @@ Examples: (the code in this guide loosely follows them)
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter, the core package:
+The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and Rollup's PostCSS plugin for handling the styles:
 
 ```bash
-npm install --save-dev svelte-fullcalendar @fullcalendar/core rollup-plugin-postcss
+npm install --save-dev svelte-fullcalendar rollup-plugin-postcss
 ```
 
 Then install any additional plugins you plan to use:
