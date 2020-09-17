@@ -1,5 +1,4 @@
 <script>
-	import { Draggable } from '@fullcalendar/interaction';
 	import { onMount, onDestroy } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
@@ -24,11 +23,13 @@
 	let elementRef = null;
 	let draggable = null;
 
-	onMount(() => {
+	onMount(async () => {
 		if (!draggable && elementRef) {
 			const filledProps = getFilledProps();
 
-			draggable = new Draggable(elementRef, {
+			draggable = new (
+				await import('@fullcalendar/interaction')
+			).Draggable(elementRef, {
 				...filledProps,
 			});
 		}
