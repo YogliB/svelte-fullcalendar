@@ -56,7 +56,7 @@
 		"lint": "eslint --color .",
 		"publish": "lerna publish",
 		"test:sapper": "start-server-and-test dev:sapper http://localhost:3000 cy:run",
-		"test:svelte": "start-server-and-test dev:svelte http://localhost:5000 cy:run"
+		"test:svelte": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
 	},
 	"workspaces": [
 		"packages/*",

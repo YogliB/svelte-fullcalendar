@@ -4,7 +4,7 @@ import moment from 'moment';
 
 context('Actions', () => {
 	beforeEach(() => {
-		cy.visit('http://localhost:5000');
+		cy.visit('http://localhost:3000');
 	});
 
 	it('Should render without crashing', () => {
