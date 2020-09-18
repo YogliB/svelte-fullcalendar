@@ -20,7 +20,13 @@
 	let calendar;
 
 	onMount(async () => {
-		if (!options || !calendarEl) return;
+		if (
+			!options ||
+			!options.plugins ||
+			!options.plugins.length ||
+			!calendarEl
+		)
+			return;
 
 		initCalendar();
 	});
@@ -30,9 +36,17 @@
 	});
 
 	$: {
-		if (options && calendarEl && !calendar) initCalendar();
+		if (
+			options &&
+			options.plugins &&
+			options.plugins.length &&
+			calendarEl &&
+			!calendar
+		)
+			initCalendar();
 
-		if (options && calendar) updateCalendarOptions();
+		if (options && options.plugins && options.plugins.length && calendar)
+			updateCalendarOptions();
 	}
 
 	function initCalendar() {
