@@ -8547,6 +8547,15 @@ supports-color@^7.0.0, supports-color@^7.1.0:
   dependencies:
     has-flag "^4.0.0"
 
+svelte-fullcalendar@latest:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/svelte-fullcalendar/-/svelte-fullcalendar-1.0.3.tgz#0f2c694ca2f8b83c54584cdcab29cfbf9ec07c30"
+  integrity sha512-mkSB+W4c2fiZ7DrI0HtIf+7CXgycYIQFTofAdhS0ZThaZrM4mIZYbiDLcVsgvJKKeiclVhCggy0BZlkfCHMsow==
+  dependencies:
+    "@fullcalendar/core" "5.2.1"
+  optionalDependencies:
+    "@fullcalendar/interaction" "^5.0.0"
+
 svelte@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/svelte/-/svelte-3.0.0.tgz#70e1e9d9980a5cd6c5516b62518e49dab5859bb4"
