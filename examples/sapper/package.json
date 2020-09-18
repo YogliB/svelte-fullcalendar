@@ -24,7 +24,7 @@
 		"rollup-plugin-terser": "^7.0.0",
 		"sapper": "^0.28.0",
 		"svelte": "^3.17.3",
-		"svelte-fullcalendar": "1.0.4"
+		"svelte-fullcalendar": "^1.0.5"
 	},
 	"name": "@examples/sapper",
 	"private": true,
@@ -34,5 +34,5 @@
 		"export": "sapper export --legacy",
 		"start": "node __sapper__/build"
 	},
-	"version": "1.0.4"
+	"version": "1.0.5"
 }
