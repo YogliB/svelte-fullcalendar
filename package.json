@@ -49,11 +49,12 @@
 		"bootstrap": "lerna bootstrap",
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
-		"lint": "eslint --color --ignore-path .gitignore .",
-		"dev:svelte": "lerna run dev --scope=@examples/svelte --stream",
 		"dev:sapper": "lerna run dev --scope=@examples/sapper --stream",
-		"test:svelte": "start-server-and-test dev:svelte http://localhost:5000 cy:run",
-		"test:sapper": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
+		"dev:svelte": "lerna run dev --scope=@examples/svelte --stream",
+		"lint": "eslint --color --ignore-path .gitignore .",
+		"publish": "lerna publish",
+		"test:sapper": "start-server-and-test dev:svelte http://localhost:3000 cy:run",
+		"test:svelte": "start-server-and-test dev:svelte http://localhost:5000 cy:run"
 	},
 	"workspaces": [
 		"packages/*",
