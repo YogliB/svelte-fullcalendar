@@ -4,7 +4,7 @@
 		"url": "https://github.com/YogliB/svelte-fullcalendar/issues"
 	},
 	"dependencies": {
-		"@fullcalendar/core": "5.2.1"
+		"@fullcalendar/core": "5.3.1"
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
