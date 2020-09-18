@@ -9,7 +9,7 @@
 		editable: true,
 		events: [
 			// initial event data
-			{ title: 'Event Now', start: new Date() },
+			{ title: 'New Event', start: new Date() },
 		],
 		initialView: 'dayGridMonth',
 		plugins: [],
