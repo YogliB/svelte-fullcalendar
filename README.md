@@ -169,7 +169,27 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 <FullCalendar {options} />
 ```
 
-Also, make sure all the correct stylesheets are being included.
+## SSR
+
+When using server side rendering, it is necessary to load all plugins asynchronously.
+
+```html
+<script>
+	import { onMount } from 'svelte';
+	import FullCalendar from 'svelte-fullcalendar';
+
+	let options = { initialView: 'dayGridMonth', plugins: [] };
+
+	onMount(async () => {
+		options.plugins = [
+			(await import('@fullcalendar/daygrid')).default,
+			(await import('@fullcalendar/resource-timeline')).default,
+		];
+	});
+</script>
+
+<FullCalendar {options} />
+```
 
 ## Draggable external events
 
