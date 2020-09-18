@@ -1,9 +1,11 @@
 {
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
+		"@babel/core": "7.11.6",
+		"@babel/eslint-parser": "7.11.5",
 		"@testing-library/cypress": "7.0.0",
 		"cypress": "5.1.0",
-		"eslint": "7.8.1",
+		"eslint": "7.9.0",
 		"eslint-config-prettier": "6.11.0",
 		"eslint-plugin-cypress": "2.11.1",
 		"eslint-plugin-svelte3": "2.7.3",
@@ -51,7 +53,7 @@
 		"cy:run": "cypress run",
 		"dev:sapper": "lerna run dev --scope=@examples/sapper --stream",
 		"dev:svelte": "lerna run dev --scope=@examples/svelte --stream",
-		"lint": "eslint --color --ignore-path .gitignore .",
+		"lint": "eslint --color .",
 		"publish": "lerna publish",
 		"test:sapper": "start-server-and-test dev:svelte http://localhost:3000 cy:run",
 		"test:svelte": "start-server-and-test dev:svelte http://localhost:5000 cy:run"
