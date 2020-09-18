@@ -39,17 +39,19 @@
 		if (draggable) draggable.destroy();
 	});
 
-	$: {
+	$: async () => {
 		if (draggable) draggable.destroy();
 
 		if (elementRef) {
 			const filledProps = getFilledProps();
 
-			draggable = new Draggable(elementRef, {
+			draggable = new (
+				await import('@fullcalendar/interaction')
+			).Draggable(elementRef, {
 				...filledProps,
 			});
 		}
-	}
+	};
 
 	function getFilledProps() {
 		const props = {
