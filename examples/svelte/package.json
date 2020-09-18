@@ -23,5 +23,5 @@
 		"dev": "rollup -c -w",
 		"start": "sirv public"
 	},
-	"version": "0.0.0"
+	"version": "1.0.3"
 }
