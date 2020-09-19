@@ -27,6 +27,7 @@ context('Actions', () => {
 	});
 
 	it('Should expose an API', () => {
+		cy.get('.fc-view').should('exist');
 		cy.findByText('go to a date in the past').click();
 		cy.findByText('January 2000').should('exist');
 	});
