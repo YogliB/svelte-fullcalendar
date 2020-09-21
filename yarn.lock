@@ -996,7 +996,7 @@
   dependencies:
     tslib "^2.0.0"
 
-"@fullcalendar/core@5.3.1":
+"@fullcalendar/core@^5.0.0":
   version "5.3.1"
   resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.3.1.tgz#183140648e4c07a452e10a13259768406065329f"
   integrity sha512-CqcpMimyuTf4DI+s1Se9bjVQMa2PDGtTBj8CYaCf8nSu+Wc6/RoimhIiA5bDTyg4KQFqXFT8ojt1avC05ZBvgg==
@@ -7912,13 +7912,13 @@ safe-regex@^1.1.0:
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
 sapper@^0.28.0:
-  version "0.28.6"
-  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.6.tgz#bf5438bdef430d6ff96aa98ef652b6c810382ba2"
-  integrity sha512-PLCZXBcXcL2ISBh+CqoUxcT0MwMnA8N71UDNhQig0Em5Z8vqg+g2jpKfYSnnyxqB5Plwc9LipN5ZJr42Vs4hXg==
+  version "0.28.8"
+  resolved "https://registry.yarnpkg.com/sapper/-/sapper-0.28.8.tgz#90674bda8bbae3f6915688421ebbeb558c51af04"
+  integrity sha512-CLXI2mlTBWC5ztk8l/2bqJRvzWpkZzzCDJLPOHrvU3z5pfc2M4UlENMXACDLd8kf8vq3xmWnOfmO5MmhNyJB8w==
   dependencies:
     html-minifier "^4.0.0"
     http-link-header "^1.0.2"
-    shimport "^1.0.1"
+    shimport "^2.0.3"
     source-map "^0.6.1"
     sourcemap-codec "^1.4.6"
     string-hash "^1.1.3"
@@ -8021,10 +8021,10 @@ shell-quote@^1.6.1:
   resolved "https://registry.yarnpkg.com/shell-quote/-/shell-quote-1.7.2.tgz#67a7d02c76c9da24f99d20808fcaded0e0e04be2"
   integrity sha512-mRz/m/JVscCrkMyPqHc/bczi3OQHkLTqXHEFu0zDhK/qfv3UcOA4SVmRCLmos4bhjr9ekVQubj/R7waKapmiQg==
 
-shimport@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/shimport/-/shimport-1.0.1.tgz#32ea5637e7707fdfa9037516f8c2a97786fc9031"
-  integrity sha512-Imf4gH+8WQmT1GvxS/x79qpmfnE6m50hyN1ucatX+7oMCgmaF8obZWCPIzSUe6+P+YmXM46lkP2pxiV2/lt9Og==
+shimport@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/shimport/-/shimport-2.0.3.tgz#ba0d127c8a385d53707729ea389f9dc08c2f10c5"
+  integrity sha512-cI6ZhAblQUqZz2xnQxQpcA6lQUbB5YBSodcxGp+FeN8kgBLtXeiC7ZpM+5eGrH5OMNWDRiGTD0rRUnmuA+T6uw==
 
 signal-exit@^3.0.0, signal-exit@^3.0.2:
   version "3.0.3"
