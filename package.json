@@ -13,7 +13,7 @@
 		"lerna": "3.22.1",
 		"lint-staged": "10.3.0",
 		"prettier": "2.1.1",
-		"prettier-plugin-svelte": "1.2.1",
+		"prettier-plugin-svelte": "1.4.0",
 		"start-server-and-test": "1.11.4",
 		"svelte": "3.28.0"
 	},
