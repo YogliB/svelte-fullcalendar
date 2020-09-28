@@ -6,7 +6,7 @@
 		"sirv-cli": "1.0.0"
 	},
 	"devDependencies": {
-		"@rollup/plugin-commonjs": "15.0.0",
+		"@rollup/plugin-commonjs": "15.1.0",
 		"@rollup/plugin-node-resolve": "8.0.0",
 		"rollup": "2.3.4",
 		"rollup-plugin-livereload": "2.0.0",
