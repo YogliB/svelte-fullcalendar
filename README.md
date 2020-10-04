@@ -171,7 +171,7 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 
 ## SSR
 
-When using server side rendering, it is necessary to load all plugins asynchronously.
+When using server side rendering, it is necessary to load all plugins asynchronously `onMount`.
 
 ```html
 <script>
