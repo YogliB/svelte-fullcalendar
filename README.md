@@ -60,7 +60,7 @@ Run:
 npm install --save-dev rollup-plugin-postcss
 ```
 
-Edit `rollup.config.js`
+Edit `rollup.config.js`:
 
 ```javascript
 + import postcss from 'rollup-plugin-postcss';
