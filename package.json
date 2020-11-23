@@ -1,7 +1,7 @@
 {
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
-		"@babel/core": "7.12.3",
+		"@babel/core": "7.12.7",
 		"@babel/eslint-parser": "7.12.1",
 		"@testing-library/cypress": "7.0.1",
 		"cypress": "5.6.0",
