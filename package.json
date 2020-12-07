@@ -15,7 +15,7 @@
 		"prettier": "2.2.1",
 		"prettier-plugin-svelte": "1.4.2",
 		"start-server-and-test": "1.11.6",
-		"svelte": "3.30.0"
+		"svelte": "3.31.0"
 	},
 	"husky": {
 		"hooks": {
