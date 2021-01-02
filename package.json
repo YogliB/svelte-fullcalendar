@@ -5,7 +5,7 @@
 		"@babel/eslint-parser": "7.12.1",
 		"@testing-library/cypress": "7.0.3",
 		"cypress": "6.2.0",
-		"eslint": "7.16.0",
+		"eslint": "7.17.0",
 		"eslint-config-prettier": "7.1.0",
 		"eslint-plugin-cypress": "2.11.2",
 		"eslint-plugin-svelte3": "3.0.0",
@@ -15,7 +15,7 @@
 		"prettier": "2.2.1",
 		"prettier-plugin-svelte": "1.4.2",
 		"start-server-and-test": "1.11.7",
-		"svelte": "3.31.0"
+		"svelte": "3.31.1"
 	},
 	"husky": {
 		"hooks": {
