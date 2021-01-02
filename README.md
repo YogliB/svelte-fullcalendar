@@ -24,7 +24,7 @@ This guide does not go into depth about initializing a Svelte project. Please co
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and Rollup's PostCSS plugin for handling the styles **(Not necessary in a Sapper project)**:
 
 ```bash
-npm install --save-dev svelte-fullcalendar rollup-plugin-postcss
+npm install --save-dev svelte-fullcalendar postcss rollup-plugin-postcss
 ```
 
 Then install any additional plugins you plan to use:
@@ -57,7 +57,7 @@ Note that non-Sapper users will also need to install `postcss` and configure `Ro
 Run:
 
 ```bash
-npm install --save-dev rollup-plugin-postcss
+npm install --save-dev postcss rollup-plugin-postcss
 ```
 
 Edit `rollup.config.js`:
@@ -67,17 +67,17 @@ Edit `rollup.config.js`:
 
 ...
 svelte({
-	// enable run-time checks when not in production
-	dev: !production,
-	// we'll extract any component CSS out into
-	// a separate file - better for performance
-	css: (css) => {
-		css.write('bundle.css');
+	compilerOptions: {
+		// enable run-time checks when not in production
+		dev: !production,
 	},
-	}),
+}),
+// we'll extract any component CSS out into
+// a separate file - better for performance
+css({ output: 'bundle.css' }),
 
-+ // for FullCalendar
-+ postcss(),
+// for FullCalendar
+postcss(),
 ...
 ```
 
