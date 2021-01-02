@@ -57,7 +57,7 @@ Note that non-Sapper users will also need to install `postcss` and configure `Ro
 Run:
 
 ```bash
-npm install --save-dev rollup-plugin-postcss
+npm install --save-dev postcss rollup-plugin-postcss
 ```
 
 Edit `rollup.config.js`:
