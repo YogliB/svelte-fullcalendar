@@ -4,7 +4,7 @@
 		"@babel/core": "7.12.10",
 		"@babel/eslint-parser": "7.12.13",
 		"@testing-library/cypress": "7.0.3",
-		"cypress": "6.3.0",
+		"cypress": "6.4.0",
 		"eslint": "7.19.0",
 		"eslint-config-prettier": "7.2.0",
 		"eslint-plugin-cypress": "2.11.2",
