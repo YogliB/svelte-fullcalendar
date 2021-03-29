@@ -1873,10 +1873,10 @@
   dependencies:
     "@octokit/openapi-types" "^5.3.1"
 
-"@polka/url@^1.0.0-next.11", "@polka/url@^1.0.0-next.9":
-  version "1.0.0-next.11"
-  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.11.tgz#aeb16f50649a91af79dbe36574b66d0f9e4d9f71"
-  integrity sha512-3NsZsJIA/22P3QUyrEDNA2D133H4j224twJrdipXN38dpnIOzAbUDtOwkcJ5pXmn75w7LSQDjA4tO9dm1XlqlA==
+"@polka/url@^1.0.0-next.12", "@polka/url@^1.0.0-next.9":
+  version "1.0.0-next.12"
+  resolved "https://registry.yarnpkg.com/@polka/url/-/url-1.0.0-next.12.tgz#431ec342a7195622f86688bbda82e3166ce8cb28"
+  integrity sha512-6RglhutqrGFMO1MNUXp95RBuYIuc8wTnMAV5MUhLmjTOy78ncwOw7RgeQ/HeymkKXRhZd0s2DNrM1rL7unk3MQ==
 
 "@rollup/plugin-babel@^5.0.0":
   version "5.3.0"
@@ -6357,11 +6357,11 @@ please-upgrade-node@^3.2.0:
     semver-compare "^1.0.0"
 
 polka@next:
-  version "1.0.0-next.11"
-  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.11.tgz#b1543043c6e5e3c19f6b8f6835b41dfcc13be583"
-  integrity sha512-M/HBkS6ILksrDq7uvktCTev81OzuLwNtpxMyYdUhxLKQlMWdsu789XMotQU+p8JY8CM8vx8ML0HudyWjRus/lg==
+  version "1.0.0-next.13"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.13.tgz#56f952b29bf2d4f0ab38b5d32a775e35235437db"
+  integrity sha512-ISFBSJ3hHeSDOhbEUwBn0Jp8Rd9iOdXJa5LUaYyECw6lQOSkr0wJ7Shl5pRRS/u0t+uQpw9jJPypHRyX8mPpPQ==
   dependencies:
-    "@polka/url" "^1.0.0-next.11"
+    "@polka/url" "^1.0.0-next.12"
     trouter "^3.1.0"
 
 postcss-calc@^7.0.1:
