@@ -6396,9 +6396,9 @@ please-upgrade-node@^3.2.0:
     semver-compare "^1.0.0"
 
 polka@next:
-  version "1.0.0-next.13"
-  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.13.tgz#56f952b29bf2d4f0ab38b5d32a775e35235437db"
-  integrity sha512-ISFBSJ3hHeSDOhbEUwBn0Jp8Rd9iOdXJa5LUaYyECw6lQOSkr0wJ7Shl5pRRS/u0t+uQpw9jJPypHRyX8mPpPQ==
+  version "1.0.0-next.14"
+  resolved "https://registry.yarnpkg.com/polka/-/polka-1.0.0-next.14.tgz#58afc40fb3380d86bf6a6385b187e25c44bb3eba"
+  integrity sha512-nRxh6lifEred8F973wMJ3YA7z8EBAf+lWFLbhIh4MnYJXmZododD8FDGj+R81xnuNNG8b4PDqNXvrB5ShKcStA==
   dependencies:
     "@polka/url" "^1.0.0-next.12"
     trouter "^3.1.0"
