@@ -983,6 +983,13 @@
     ical.js "^1.4.0"
     tslib "^2.0.3"
 
+"@fullcalendar/common@~5.6.0":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.6.0.tgz#27206084df07fbab33a67478b0d9b05542b09b79"
+  integrity sha512-4i4kZDVpRvfdKoJHRljDHsoYu466Odor9FhekP+67dIUoNnXSDTnQRmGfURwiF4RwaTsdWKe2+B7gors9G7zZA==
+  dependencies:
+    tslib "^2.0.3"
+
 "@fullcalendar/core@^5.0.0":
   version "5.5.1"
   resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.5.1.tgz#310adf23d5323b435a00f7df6f68eaf2f6087f39"
@@ -992,7 +999,15 @@
     preact "^10.0.5"
     tslib "^2.0.3"
 
-"@fullcalendar/daygrid@^5.3.2", "@fullcalendar/daygrid@~5.5.0":
+"@fullcalendar/daygrid@^5.3.2":
+  version "5.6.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.6.0.tgz#705508a7e7c5d560d01877485283f370c3c70780"
+  integrity sha512-UaNn6/vKQ3zI4/sDhrMACkIHOSZb/MA0JGlvvw3OTYFULqE5TISuYYnDbo9S1Wdz3AbTBvCzYy5Qk1vZQFsGwg==
+  dependencies:
+    "@fullcalendar/common" "~5.6.0"
+    tslib "^2.0.3"
+
+"@fullcalendar/daygrid@~5.5.0":
   version "5.5.0"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.5.0.tgz#48f943d070a07f88cd6f8170fb757d3038239bd6"
   integrity sha512-O/59C3ihElLsPnkjlD1xUgAf3v7WEARXVO+wZfASKtK14Ccux2MA9mWUA1+80m9q8on7SYL36ORhrea7GKy/qQ==
