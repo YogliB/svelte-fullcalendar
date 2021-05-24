@@ -1021,13 +1021,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fullcalendar/common@~5.6.0":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.6.0.tgz#27206084df07fbab33a67478b0d9b05542b09b79"
-  integrity sha512-4i4kZDVpRvfdKoJHRljDHsoYu466Odor9FhekP+67dIUoNnXSDTnQRmGfURwiF4RwaTsdWKe2+B7gors9G7zZA==
-  dependencies:
-    tslib "^2.0.3"
-
 "@fullcalendar/common@~5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.7.0.tgz#fe83f6dbf631c4170654386e9b522ee85c2c064b"
@@ -1053,11 +1046,11 @@
     tslib "^2.0.3"
 
 "@fullcalendar/interaction@^5.0.0", "@fullcalendar/interaction@^5.3.1":
-  version "5.6.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-5.6.0.tgz#4af3d976aea258a6e3354b3f7609f008b2c046fa"
-  integrity sha512-2Jlr3e9hKanctmwXKio84Wv070bJn1Im+ZVWjdzUcF/wtUrsD1Kd5dcPBfl9jfTwl2jX/eCWBU3o6ZCLdgoaDg==
+  version "5.7.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/interaction/-/interaction-5.7.0.tgz#856073b32f230f501f14d03bc30d971f82066c38"
+  integrity sha512-GSIMP+b+fN6DZQ6VFkoZvLX94r3o5MmCMRvHfUVWx4XcOF1T1rytcKtPpLv/7HQJpXwX7LAQXEJnywBcXUTbXQ==
   dependencies:
-    "@fullcalendar/common" "~5.6.0"
+    "@fullcalendar/common" "~5.7.0"
     tslib "^2.0.3"
 
 "@fullcalendar/timegrid@^5.3.1":
