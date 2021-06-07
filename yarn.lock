@@ -1044,19 +1044,19 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fullcalendar/common@~5.7.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.7.0.tgz#fe83f6dbf631c4170654386e9b522ee85c2c064b"
-  integrity sha512-8zKa4q9cQ5xjuAyN0d8AlpCrEC9Kmar5Oq3iMcPbPIO2AtNXTvifzCG44VIgm3/skjDBZ/wYvjJyyB+4WdmT6g==
+"@fullcalendar/common@~5.7.0", "@fullcalendar/common@~5.7.2":
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/common/-/common-5.7.2.tgz#a9fae0159a26dd83b0b85df04df3fd66133fa433"
+  integrity sha512-0EDKmZBvTUFLvnJ7n6Vo6xMaPVm0jpYq739aSjwFPPXKgbjKFTPbWvLkaDpjJf7YhVebVSOLHbUC1Ky5wXsKvQ==
   dependencies:
     tslib "^2.0.3"
 
 "@fullcalendar/core@^5.0.0":
-  version "5.7.0"
-  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.7.0.tgz#ebeb93258e6ff41c758c954f82a25147fd9b7189"
-  integrity sha512-V9kNy/fgZLMPNarS1Eav3WUZIhdyzanYJPWTTxycCT/AiTxyw+RyinowhR9qnv3ZnUTMrZzCAplMT0HKdRFfnA==
+  version "5.7.2"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/core/-/core-5.7.2.tgz#77bc6e0e8044e2e9350d5d6647128e24a0da9894"
+  integrity sha512-4yKLUnAEDDIePw9WJuT2sSvLWGrDGBhp20cjBmyxnJ/6eNN1RCex/OjSu7qDNHvzey+ncjlVWsY41bvZwhpfvg==
   dependencies:
-    "@fullcalendar/common" "~5.7.0"
+    "@fullcalendar/common" "~5.7.2"
     preact "^10.0.5"
     tslib "^2.0.3"
 
