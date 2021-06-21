@@ -1110,7 +1110,15 @@
     preact "^10.0.5"
     tslib "^2.1.0"
 
-"@fullcalendar/daygrid@^5.3.2", "@fullcalendar/daygrid@~5.7.0":
+"@fullcalendar/daygrid@^5.3.2":
+  version "5.8.0"
+  resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.8.0.tgz#6a5991886ed3323366f72e7614ac8907cbd8d998"
+  integrity sha512-VrqwI97cewoUjFrKT67sS+f+JANI8xMx0g5bpM0XgV/KEEwvXpH5OmwkFSbXOnx1m4RXsvolQc6EBZpnJCf69Q==
+  dependencies:
+    "@fullcalendar/common" "~5.8.0"
+    tslib "^2.1.0"
+
+"@fullcalendar/daygrid@~5.7.0":
   version "5.7.0"
   resolved "https://registry.yarnpkg.com/@fullcalendar/daygrid/-/daygrid-5.7.0.tgz#a98ad53aec22e18e0896967223d01490ea031938"
   integrity sha512-K/0A1XIcf527Q18Hg4eMXCdZwd9AkkfrOqm/rtzULnM5cRkd2oaHOksdrQ5V0kGHAQeV96sp9OCg8PPBrdlBoQ==
