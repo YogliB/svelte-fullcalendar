@@ -1,4 +1,4 @@
-import { EventApi, Duration } from '@fullcalendar/common';
+import { EventApi, Duration } from '@fullcalendar/core';
 
 export interface DraggableEvent extends EventApi {
 	startTime: Duration;
