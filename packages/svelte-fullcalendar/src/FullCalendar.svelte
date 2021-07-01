@@ -9,7 +9,7 @@
 	/** @type {string} */
 	export let style = null;
 
-	/** @type {import('@fullcalendar/common').CalendarOptions}  */
+	/** @type {import('@fullcalendar/core').CalendarOptions}  */
 	export let options;
 
 	export function getAPI() {
