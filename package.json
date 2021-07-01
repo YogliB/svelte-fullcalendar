@@ -48,13 +48,11 @@
 	},
 	"private": true,
 	"scripts": {
-		"bootstrap": "lerna bootstrap",
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
-		"dev:sapper": "lerna run dev --scope=@examples/sapper --stream",
-		"dev:svelte": "lerna run dev --scope=@examples/svelte --stream",
+		"dev:sapper": "pnpm run dev --filter=@examples/sapper",
+		"dev:svelte": "pnpm run dev --filter=@examples/svelte",
 		"lint": "eslint --color .",
-		"publish": "lerna publish",
 		"test:sapper": "start-server-and-test dev:sapper http://localhost:3000 cy:run",
 		"test:svelte": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
 	},
