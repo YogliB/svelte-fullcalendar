@@ -19,7 +19,7 @@
 	let calendarEl;
 	let calendar;
 
-	onMount(async () => {
+	onMount(() => {
 		if (
 			!options ||
 			!options.plugins ||
