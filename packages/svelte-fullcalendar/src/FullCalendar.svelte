@@ -20,13 +20,7 @@
 	let calendar;
 
 	onMount(() => {
-		if (
-			!options ||
-			!options.plugins ||
-			!options.plugins.length ||
-			!calendarEl
-		)
-			return;
+		if (!canBeInitiated) return;
 
 		initCalendar();
 	});
@@ -35,15 +29,15 @@
 		if (calendar) calendar.destroy();
 	});
 
+	$: canBeInitiated =
+		options &&
+		options.plugins &&
+		options.plugins.length &&
+		calendarEl &&
+		!calendar;
+
 	$: {
-		if (
-			options &&
-			options.plugins &&
-			options.plugins.length &&
-			calendarEl &&
-			!calendar
-		)
-			initCalendar();
+		if (canBeInitiated) initCalendar();
 
 		if (options && options.plugins && options.plugins.length && calendar)
 			updateCalendarOptions();
