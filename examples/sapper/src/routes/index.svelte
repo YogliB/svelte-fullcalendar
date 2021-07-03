@@ -18,7 +18,7 @@
 			center: 'title',
 			right: 'dayGridMonth,timeGridWeek,timeGridDay',
 		},
-		height: 'auto',
+		height: '100%',
 		weekends: true,
 	};
 	let calendarComponentRef;
@@ -64,41 +64,15 @@
 	}
 </script>
 
-<style>
-	.demo-app {
-		width: 100%;
-		height: 100%;
-		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
-		font-size: 14px;
-	}
-
-	.demo-app-top {
-		margin: 0 0 3em;
-	}
-
-	.demo-app-calendar {
-		margin: 0 auto;
-		max-width: 900px;
-	}
-
-	:global(.draggable) {
-		color: white;
-		background: #3788d8;
-		width: fit-content;
-		padding: 1rem;
-		margin: 1rem;
-		cursor: pointer;
-	}
-</style>
-
 <svelte:head>
 	<title>Sapper project template</title>
 </svelte:head>
+
 <div class="demo-app">
 	<div class="demo-app-top">
-		<button on:click={toggleWeekends}>toggle weekends</button> &nbsp; <button
-			on:click={gotoPast}>go to a date in the past</button> &nbsp; (also, click
-		a date/time to add an event)
+		<button on:click={toggleWeekends}>toggle weekends</button> &nbsp;
+		<button on:click={gotoPast}>go to a date in the past</button> &nbsp; (also,
+		click a date/time to add an event)
 	</div>
 
 	<div>
@@ -111,3 +85,37 @@
 		<FullCalendar bind:this={calendarComponentRef} {options} />
 	</div>
 </div>
+
+<style>
+	:global(* > *) {
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+
+	.demo-app {
+		width: 100vw;
+		height: 100vh;
+		padding: 0.5rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+		font-size: 14px;
+	}
+
+	.demo-app-calendar {
+		width: 100%;
+		flex-grow: 1;
+		margin: 0 auto;
+		max-width: 900px;
+	}
+	:global(.draggable) {
+		color: white;
+		background: #3788d8;
+		width: fit-content;
+		padding: 1rem;
+		margin: 1rem;
+		cursor: pointer;
+	}
+</style>

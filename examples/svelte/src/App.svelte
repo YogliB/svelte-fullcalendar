@@ -82,12 +82,12 @@
 	}
 
 	.demo-app {
+		width: 100vw;
+		height: 100vh;
 		padding: 0.5rem;
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		width: 100vw;
-		height: 100vh;
 		font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
 		font-size: 14px;
 	}
