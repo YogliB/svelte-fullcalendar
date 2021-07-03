@@ -23,8 +23,8 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-            - run: yarn
-            - run: yarn bootstrap
-            - run: yarn lint
-            - run: yarn test:svelte
-            - run: yarn test:sapper
+            - run: npm i -g pnpm
+            - run: pnpm i
+            - run: pnpm lint
+            - run: pnpm test:svelte
+            - run: pnpm test:sapper
