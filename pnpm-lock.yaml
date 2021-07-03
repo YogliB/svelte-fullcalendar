@@ -122,9 +122,11 @@ importers:
 
   packages/svelte-fullcalendar:
     specifiers:
+      '@fullcalendar/common': ^5.0.0
       '@fullcalendar/core': ^5.0.0
       '@fullcalendar/interaction': ^5.0.0
     dependencies:
+      '@fullcalendar/common': 5.8.0
       '@fullcalendar/core': 5.8.0
     optionalDependencies:
       '@fullcalendar/interaction': 5.8.0
