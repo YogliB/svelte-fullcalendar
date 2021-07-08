@@ -32,13 +32,6 @@
 	},
 	"name": "svelte-fullcalendar",
 	"prettier": {
-		"arrowParens": "always",
-		"bracketSpacing": true,
-		"endOfLine": "lf",
-		"htmlWhitespaceSensitivity": "css",
-		"printWidth": 80,
-		"quoteProps": "as-needed",
-		"semi": true,
 		"singleQuote": true,
 		"tabWidth": 4,
 		"trailingComma": "es5",
