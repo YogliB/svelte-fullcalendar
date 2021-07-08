@@ -38,16 +38,16 @@ importers:
 
   examples/kit:
     specifiers:
-      '@fullcalendar/daygrid': ^5.3.2
-      '@fullcalendar/interaction': ^5.3.1
-      '@fullcalendar/timegrid': ^5.3.1
+      '@fullcalendar/daygrid': ^5.8.0
+      '@fullcalendar/interaction': ^5.8.0
+      '@fullcalendar/timegrid': ^5.8.0
       '@sveltejs/kit': next
-      svelte: ^3.34.0
-      svelte-check: ^2.0.0
-      svelte-fullcalendar: latest
-      svelte-preprocess: ^4.0.0
-      tslib: ^2.0.0
-      typescript: ^4.0.0
+      svelte: ^3.38.3
+      svelte-check: ^2.2.0
+      svelte-fullcalendar: workspace:latest
+      svelte-preprocess: ^4.7.3
+      tslib: ^2.3.0
+      typescript: ^4.3.5
     dependencies:
       '@fullcalendar/daygrid': 5.8.0
       '@fullcalendar/interaction': 5.8.0
@@ -55,9 +55,9 @@ importers:
     devDependencies:
       '@sveltejs/kit': 1.0.0-next.122_svelte@3.38.3
       svelte: 3.38.3
-      svelte-check: 2.2.0_@babel+core@7.14.6+svelte@3.38.3
+      svelte-check: 2.2.0_svelte@3.38.3
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
-      svelte-preprocess: 4.7.3_b2aecbc0205fcefc2febd44dddd1e284
+      svelte-preprocess: 4.7.3_svelte@3.38.3+typescript@4.3.5
       tslib: 2.3.0
       typescript: 4.3.5
 
@@ -2522,10 +2522,6 @@ packages:
     resolution: {integrity: sha512-se3yX7UHv5Bscf8f1ERKvQOD6sTyycH3hdaoozvaLxgUiY5lIGEeH37AD0G0Qi9kPqihPn0HOfd2yaIEN9VwEg==}
     dev: true
 
-  /@types/node/16.0.0:
-    resolution: {integrity: sha512-TmCW5HoZ2o2/z2EYi109jLqIaPIi9y/lc2LmDCWzuCi35bcaQ+OtUh6nwBiFK7SOu25FAU5+YKdqFZUwtqGSdg==}
-    dev: true
-
   /@types/node/16.0.1:
     resolution: {integrity: sha512-hBOx4SUlEPKwRi6PrXuTGw1z6lz0fjsibcWCM378YxsSu/6+C30L6CR49zIBKHiwNWCYIcOLjg4OHKZaFeLAug==}
     dev: true
@@ -2555,7 +2551,7 @@ packages:
   /@types/sass/1.16.1:
     resolution: {integrity: sha512-iZUcRrGuz/Tbg3loODpW7vrQJkUtpY2fFSf4ELqqkApcS2TkZ1msk7ie8iZPB86lDOP8QOTTmuvWjc5S0R9OjQ==}
     dependencies:
-      '@types/node': 16.0.0
+      '@types/node': 16.0.1
     dev: true
 
   /@types/sinonjs__fake-timers/6.0.3:
@@ -7368,6 +7364,14 @@ packages:
       fsevents: 2.3.2
     dev: true
 
+  /rollup/2.52.8:
+    resolution: {integrity: sha512-IjAB0C6KK5/lvqzJWAzsvOik+jV5Bt907QdkQ/gDP4j+R9KYNI1tjqdxiPitGPVrWC21Mf/ucXgowUjN/VemaQ==}
+    engines: {node: '>=10.0.0'}
+    hasBin: true
+    optionalDependencies:
+      fsevents: 2.3.2
+    dev: true
+
   /run-async/2.4.1:
     resolution: {integrity: sha512-tvVnVv01b8c1RrA6Ep7JkStj85Guv/YrMcwqYQnwjsAS2cTmmPGBBjAjpCW7RrSodNSoE2/qg9O4bceNvUuDgQ==}
     engines: {node: '>=0.12.0'}
@@ -7886,7 +7890,7 @@ packages:
       has-flag: 4.0.0
     dev: true
 
-  /svelte-check/2.2.0_@babel+core@7.14.6+svelte@3.38.3:
+  /svelte-check/2.2.0_svelte@3.38.3:
     resolution: {integrity: sha512-6Lo5h/I2LlygtKn9sl2n5hAPBZgeY99wlsz0+6f5K3qCpMwYC8rkcbrZkNpNEMwbMABQkcWOKb5cfEew6Q/Kpg==}
     hasBin: true
     peerDependencies:
@@ -7900,7 +7904,7 @@ packages:
       sade: 1.7.4
       source-map: 0.7.3
       svelte: 3.38.3
-      svelte-preprocess: 4.7.3_b2aecbc0205fcefc2febd44dddd1e284
+      svelte-preprocess: 4.7.3_svelte@3.38.3+typescript@4.3.5
       typescript: 4.3.5
     transitivePeerDependencies:
       - '@babel/core'
@@ -7923,7 +7927,7 @@ packages:
       svelte: 3.38.3
     dev: true
 
-  /svelte-preprocess/4.7.3_b2aecbc0205fcefc2febd44dddd1e284:
+  /svelte-preprocess/4.7.3_svelte@3.38.3+typescript@4.3.5:
     resolution: {integrity: sha512-Zx1/xLeGOIBlZMGPRCaXtlMe4ZA0faato5Dc3CosEqwu75MIEPuOstdkH6cy+RYTUYynoxzNaDxkPX4DbrPwRA==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -7964,7 +7968,6 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@babel/core': 7.14.6
       '@types/pug': 2.0.5
       '@types/sass': 1.16.1
       detect-indent: 6.1.0
@@ -8412,7 +8415,7 @@ packages:
       esbuild: 0.12.15
       postcss: 8.3.5
       resolve: 1.20.0
-      rollup: 2.52.6
+      rollup: 2.52.8
     optionalDependencies:
       fsevents: 2.3.2
     dev: true
