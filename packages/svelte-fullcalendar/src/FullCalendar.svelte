@@ -37,10 +37,12 @@
 		!calendar;
 
 	$: {
-		if (canBeInitiated) initCalendar();
-
-		if (options && options.plugins && options.plugins.length && calendar)
+		if (calendar && options && options.plugins && options.plugins.length)
 			updateCalendarOptions();
+
+		if (canBeInitiated) {
+			initCalendar();
+		}
 	}
 
 	function initCalendar() {
