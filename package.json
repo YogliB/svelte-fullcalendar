@@ -24,12 +24,10 @@
 	},
 	"lint-staged": {
 		"*.{js, svelte}": [
-			"eslint --fix",
-			"git add"
+			"eslint --fix"
 		],
 		"*.{svelte, html, css, scss, stylus, js, ts, json, yml, md}": [
-			"prettier --write",
-			"git add"
+			"prettier --write"
 		]
 	},
 	"name": "svelte-fullcalendar",
