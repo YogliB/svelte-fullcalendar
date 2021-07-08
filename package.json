@@ -50,6 +50,7 @@
 	"scripts": {
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
+		"dev:kit": "pnpm run dev --filter=@examples/kit",
 		"dev:sapper": "pnpm run dev --filter=@examples/sapper",
 		"dev:svelte": "pnpm run dev --filter=@examples/svelte",
 		"lint": "eslint --color .",

@@ -36,6 +36,31 @@ importers:
       start-server-and-test: 1.12.5
       svelte: 3.38.3
 
+  examples/kit:
+    specifiers:
+      '@fullcalendar/daygrid': ^5.3.2
+      '@fullcalendar/interaction': ^5.3.1
+      '@fullcalendar/timegrid': ^5.3.1
+      '@sveltejs/kit': next
+      svelte: ^3.34.0
+      svelte-check: ^2.0.0
+      svelte-fullcalendar: latest
+      svelte-preprocess: ^4.0.0
+      tslib: ^2.0.0
+      typescript: ^4.0.0
+    dependencies:
+      '@fullcalendar/daygrid': 5.8.0
+      '@fullcalendar/interaction': 5.8.0
+      '@fullcalendar/timegrid': 5.8.0
+    devDependencies:
+      '@sveltejs/kit': 1.0.0-next.122_svelte@3.38.3
+      svelte: 3.38.3
+      svelte-check: 2.2.0_@babel+core@7.14.6+svelte@3.38.3
+      svelte-fullcalendar: link:../../packages/svelte-fullcalendar
+      svelte-preprocess: 4.7.3_b2aecbc0205fcefc2febd44dddd1e284
+      tslib: 2.3.0
+      typescript: 4.3.5
+
   examples/sapper:
     specifiers:
       '@babel/core': ^7.0.0
@@ -59,7 +84,7 @@ importers:
       sapper: ^0.29.0
       sirv: ^1.0.0
       svelte: ^3.17.3
-      svelte-fullcalendar: ^1.1.0
+      svelte-fullcalendar: latest
     dependencies:
       '@fullcalendar/daygrid': 5.8.0
       '@fullcalendar/interaction': 5.8.0
@@ -101,7 +126,7 @@ importers:
       rollup-plugin-terser: ^7.0.0
       sirv-cli: ^1.0.10
       svelte: ^3.31.0
-      svelte-fullcalendar: ^1.1.0
+      svelte-fullcalendar: latest
     dependencies:
       '@fullcalendar/daygrid': 5.8.0
       '@fullcalendar/interaction': 5.8.0
@@ -2352,6 +2377,16 @@ packages:
       rollup: 2.52.6
     dev: true
 
+  /@rollup/pluginutils/4.1.0:
+    resolution: {integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==}
+    engines: {node: '>= 8.0.0'}
+    peerDependencies:
+      rollup: ^1.20.0||^2.0.0
+    dependencies:
+      estree-walker: 2.0.2
+      picomatch: 2.3.0
+    dev: true
+
   /@rollup/pluginutils/4.1.0_rollup@2.52.6:
     resolution: {integrity: sha512-TrBhfJkFxA+ER+ew2U2/fHbebhLT/l/2pRk0hfj9KusXUuRXd2v0R58AfaZK9VXDQ4TogOSEmICVrQAA3zFnHQ==}
     engines: {node: '>= 8.0.0'}
@@ -2375,6 +2410,42 @@ packages:
 
   /@sideway/pinpoint/2.0.0:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
+    dev: true
+
+  /@sveltejs/kit/1.0.0-next.122_svelte@3.38.3:
+    resolution: {integrity: sha512-HwyYcbLMN2q7HuO561CD01RZ8ZPEdZgwdTKmyvMYrTZehH9WPJI2VF+7bI84mNxWiQiLnc2gg+Y0klVHXJO+Yw==}
+    engines: {node: ^12.20 || >=14.13}
+    hasBin: true
+    peerDependencies:
+      svelte: ^3.34.0
+    dependencies:
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.11_svelte@3.38.3+vite@2.4.1
+      cheap-watch: 1.0.3
+      sade: 1.7.4
+      svelte: 3.38.3
+      vite: 2.4.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
+    dev: true
+
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.11_svelte@3.38.3+vite@2.4.1:
+    resolution: {integrity: sha512-EYR1I145k5rflVqhPwk3442m3bkYimTKSHM9uO5KdomXzt+GS9ZSBJQE3/wy1Di9V8OnGa3oKpckI3OZsHkTIA==}
+    engines: {node: ^12.20 || ^14.13.1 || >= 16}
+    peerDependencies:
+      svelte: ^3.38.2
+      vite: ^2.3.7
+    dependencies:
+      '@rollup/pluginutils': 4.1.0
+      chalk: 4.1.1
+      debug: 4.3.2
+      require-relative: 0.8.7
+      svelte: 3.38.3
+      svelte-hmr: 0.14.4_svelte@3.38.3
+      vite: 2.4.1
+    transitivePeerDependencies:
+      - rollup
+      - supports-color
     dev: true
 
   /@testing-library/cypress/7.0.6_cypress@7.6.0:
@@ -2463,6 +2534,10 @@ packages:
     resolution: {integrity: sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==}
     dev: true
 
+  /@types/pug/2.0.5:
+    resolution: {integrity: sha512-LOnASQoeNZMkzexRuyqcBBDZ6rS+rQxUMkmj5A0PkhhiSZivLIuz6Hxyr1mkGoEZEkk66faROmpMi4fFkrKsBA==}
+    dev: true
+
   /@types/q/1.5.4:
     resolution: {integrity: sha512-1HcDas8SEj4z1Wc696tH56G8OlRaH/sqZOynNNB+HF0WOeXPaxTtbYzJY2oEfiUxjSKjhCKr+MvR7dCHcEelug==}
     dev: true
@@ -2471,6 +2546,12 @@ packages:
     resolution: {integrity: sha512-yy7HuzQhj0dhGpD8RLXSZWEkLsV9ibvxvi6EiJ3bkqLAO1RGo0WbkWQiwpRlSFymTJRz0d3k5LM3kkx8ArDbLw==}
     dependencies:
       '@types/node': 15.12.5
+    dev: true
+
+  /@types/sass/1.16.1:
+    resolution: {integrity: sha512-iZUcRrGuz/Tbg3loODpW7vrQJkUtpY2fFSf4ELqqkApcS2TkZ1msk7ie8iZPB86lDOP8QOTTmuvWjc5S0R9OjQ==}
+    dependencies:
+      '@types/node': 16.0.0
     dev: true
 
   /@types/sinonjs__fake-timers/6.0.2:
@@ -2987,6 +3068,11 @@ packages:
 
   /chardet/0.7.0:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
+    dev: true
+
+  /cheap-watch/1.0.3:
+    resolution: {integrity: sha512-xC5CruMhLzjPwJ5ecUxGu1uGmwJQykUhqd2QrCrYbwvsFYdRyviu6jG9+pccwDXJR/OpmOTOJ9yLFunVgQu9wg==}
+    engines: {node: '>=8'}
     dev: true
 
   /check-more-types/2.24.0:
@@ -3614,6 +3700,18 @@ packages:
       ms: 2.1.2
     dev: true
 
+  /debug/4.3.2:
+    resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
+    engines: {node: '>=6.0'}
+    peerDependencies:
+      supports-color: '*'
+    peerDependenciesMeta:
+      supports-color:
+        optional: true
+    dependencies:
+      ms: 2.1.2
+    dev: true
+
   /debug/4.3.2_supports-color@8.1.1:
     resolution: {integrity: sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==}
     engines: {node: '>=6.0'}
@@ -3862,6 +3960,12 @@ packages:
       is-callable: 1.2.3
       is-date-object: 1.0.4
       is-symbol: 1.0.4
+    dev: true
+
+  /esbuild/0.12.15:
+    resolution: {integrity: sha512-72V4JNd2+48eOVCXx49xoSWHgC3/cCy96e7mbXKY+WOWghN00cCmlGnwVLRhRHorvv0dgCyuMYBZlM2xDM5OQw==}
+    hasBin: true
+    requiresBuild: true
     dev: true
 
   /escalade/3.1.1:
@@ -5726,7 +5830,6 @@ packages:
   /mri/1.1.6:
     resolution: {integrity: sha512-oi1b3MfbyGa7FJMP9GmLTttni5JoICpYBRlq+x5V16fZbLsnL9N3wFqqIm/nIG43FjUFkFh9Epzp/kzUGUnJxQ==}
     engines: {node: '>=4'}
-    dev: false
 
   /ms/2.0.0:
     resolution: {integrity: sha1-VgiurfwAvmwpAd9fmGF4jeDVl8g=}
@@ -7280,7 +7383,6 @@ packages:
     engines: {node: '>= 6'}
     dependencies:
       mri: 1.1.6
-    dev: false
 
   /safe-buffer/5.1.2:
     resolution: {integrity: sha512-Gd2UZBJDkXlY7GbJxfsE8/nvKkUEU1G38c1siN6QP6a9PT9MmHB8GnpscSmMJSoF8LOIrt8ud/wPtojys4G6+g==}
@@ -7776,6 +7878,93 @@ packages:
       has-flag: 4.0.0
     dev: true
 
+  /svelte-check/2.2.0_@babel+core@7.14.6+svelte@3.38.3:
+    resolution: {integrity: sha512-6Lo5h/I2LlygtKn9sl2n5hAPBZgeY99wlsz0+6f5K3qCpMwYC8rkcbrZkNpNEMwbMABQkcWOKb5cfEew6Q/Kpg==}
+    hasBin: true
+    peerDependencies:
+      svelte: ^3.24.0
+    dependencies:
+      chalk: 4.1.1
+      chokidar: 3.5.2
+      glob: 7.1.7
+      import-fresh: 3.3.0
+      minimist: 1.2.5
+      sade: 1.7.4
+      source-map: 0.7.3
+      svelte: 3.38.3
+      svelte-preprocess: 4.7.3_b2aecbc0205fcefc2febd44dddd1e284
+      typescript: 4.3.5
+    transitivePeerDependencies:
+      - '@babel/core'
+      - coffeescript
+      - less
+      - node-sass
+      - postcss
+      - postcss-load-config
+      - pug
+      - sass
+      - stylus
+      - sugarss
+    dev: true
+
+  /svelte-hmr/0.14.4_svelte@3.38.3:
+    resolution: {integrity: sha512-kItFF7vqzStckSigoFmMnxJpTOdB9TWnQAW6Js+yAB4277tLbJIIE5KBlGHNmJNpA7MguqidsPB27Uw5UzQPCA==}
+    peerDependencies:
+      svelte: '>=3.19.0'
+    dependencies:
+      svelte: 3.38.3
+    dev: true
+
+  /svelte-preprocess/4.7.3_b2aecbc0205fcefc2febd44dddd1e284:
+    resolution: {integrity: sha512-Zx1/xLeGOIBlZMGPRCaXtlMe4ZA0faato5Dc3CosEqwu75MIEPuOstdkH6cy+RYTUYynoxzNaDxkPX4DbrPwRA==}
+    engines: {node: '>= 9.11.2'}
+    requiresBuild: true
+    peerDependencies:
+      '@babel/core': ^7.10.2
+      coffeescript: ^2.5.1
+      less: ^3.11.3
+      node-sass: '*'
+      postcss: ^7 || ^8
+      postcss-load-config: ^2.1.0 || ^3.0.0
+      pug: ^3.0.0
+      sass: ^1.26.8
+      stylus: ^0.54.7
+      sugarss: ^2.0.0
+      svelte: ^3.23.0
+      typescript: ^3.9.5 || ^4.0.0
+    peerDependenciesMeta:
+      '@babel/core':
+        optional: true
+      coffeescript:
+        optional: true
+      less:
+        optional: true
+      node-sass:
+        optional: true
+      postcss:
+        optional: true
+      postcss-load-config:
+        optional: true
+      pug:
+        optional: true
+      sass:
+        optional: true
+      stylus:
+        optional: true
+      sugarss:
+        optional: true
+      typescript:
+        optional: true
+    dependencies:
+      '@babel/core': 7.14.6
+      '@types/pug': 2.0.5
+      '@types/sass': 1.16.1
+      detect-indent: 6.1.0
+      strip-indent: 3.0.0
+      svelte: 3.38.3
+      typescript: 4.3.5
+    dev: true
+
   /svelte/3.38.3:
     resolution: {integrity: sha512-N7bBZJH0iF24wsalFZF+fVYMUOigaAUQMIcEKHO3jstK/iL8VmP9xE+P0/a76+FkNcWt+TDv2Gx1taUoUscrvw==}
     engines: {node: '>= 8'}
@@ -7972,7 +8161,6 @@ packages:
 
   /tslib/2.3.0:
     resolution: {integrity: sha512-N82ooyxVNm6h1riLCoyS9e3fuJ3AMG2zIZs2Gd1ATcSFjSA23Q0fzjjZeh0jbJvWVDZ0cJT8yaNNaaXHzueNjg==}
-    dev: false
 
   /tunnel-agent/0.6.0:
     resolution: {integrity: sha1-J6XeoGs2sEoKmWZ3SykIaPD8QP0=}
@@ -8034,6 +8222,12 @@ packages:
 
   /typedarray/0.0.6:
     resolution: {integrity: sha1-hnrHTjhkGHsdPUfZlqeOxciDB3c=}
+    dev: true
+
+  /typescript/4.3.5:
+    resolution: {integrity: sha512-DqQgihaQ9cUrskJo9kIyW/+g0Vxsk8cDtZ52a3NGh0YNTfpUSArXSohyUGnvbPazEPLu398C0UxmKSOrPumUzA==}
+    engines: {node: '>=4.2.0'}
+    hasBin: true
     dev: true
 
   /uglify-js/3.13.10:
@@ -8200,6 +8394,19 @@ packages:
       assert-plus: 1.0.0
       core-util-is: 1.0.2
       extsprintf: 1.3.0
+    dev: true
+
+  /vite/2.4.1:
+    resolution: {integrity: sha512-4BpKRis9uxIqPfIEcJ18LTBsamqnDFxTx45CXwagHjNltHa6PFEvf8Pe6OpgIHb0OyWT30OXOSSQvdOaX4OBiQ==}
+    engines: {node: '>=12.0.0'}
+    hasBin: true
+    dependencies:
+      esbuild: 0.12.15
+      postcss: 8.3.5
+      resolve: 1.20.0
+      rollup: 2.52.6
+    optionalDependencies:
+      fsevents: 2.3.2
     dev: true
 
   /wait-on/5.3.0_debug@4.3.1:
