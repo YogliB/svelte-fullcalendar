@@ -1,7 +1,7 @@
 import { EventApi, Duration } from '@fullcalendar/core';
 
-export interface DraggableEvent extends EventApi {
-	startTime: Duration;
-	duration: Duration;
-	create: boolean;
-}
+export type DraggableEvent = Partial<EventApi> & {
+	create?: boolean;
+	duration?: string | Duration;
+	startTime?: string | Duration;
+};
