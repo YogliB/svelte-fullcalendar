@@ -17,6 +17,7 @@
 	}
 
 	let calendarEl;
+	/** @type {import('@fullcalendar/core').Calendar}  */
 	let calendar;
 
 	onMount(() => {
