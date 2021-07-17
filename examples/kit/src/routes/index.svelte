@@ -2,6 +2,7 @@
 	import { onMount } from 'svelte';
 
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
+	import { browser } from '$app/env';
 
 	let options = {
 		dateClick: handleDateClick,
@@ -24,14 +25,16 @@
 	let calendarComponentRef;
 	let eventData = { title: 'my event', duration: '02:00' };
 
-	onMount(async () => {
-		options.plugins = [
-			(await import('@fullcalendar/daygrid')).default,
-			(await import('@fullcalendar/timegrid')).default,
-			(await import('@fullcalendar/interaction')).default,
-		];
-		options = { ...options };
-	});
+	if (browser) {
+		onMount(async () => {
+			options.plugins = [
+				(await import('@fullcalendar/daygrid')).default,
+				(await import('@fullcalendar/timegrid')).default,
+				(await import('@fullcalendar/interaction')).default,
+			];
+			options = { ...options };
+		});
+	}
 
 	function toggleWeekends() {
 		options.weekends = !options.weekends;
