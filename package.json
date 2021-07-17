@@ -11,7 +11,7 @@
 		"eslint-plugin-svelte3": "^3.2.0",
 		"husky": "^7.0.1",
 		"lerna": "^4.0.0",
-		"lint-staged": "^11.0.0",
+		"lint-staged": "^11.0.1",
 		"prettier": "^2.3.2",
 		"prettier-plugin-svelte": "^2.3.1",
 		"start-server-and-test": "^1.12.6",
