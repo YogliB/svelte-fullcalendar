@@ -27,6 +27,7 @@
 
 	if (browser) {
 		onMount(async () => {
+			await import("@fullcalendar/core/vdom.js");
 			options.plugins = [
 				(await import('@fullcalendar/daygrid')).default,
 				(await import('@fullcalendar/timegrid')).default,

@@ -5,8 +5,9 @@
 		"@fullcalendar/timegrid": "^5.8.0"
 	},
 	"devDependencies": {
+		"@fullcalendar/core": "^5.8.0",
 		"@sveltejs/kit": "next",
-		"svelte": "^3.38.3",
+		"svelte": "^3.40.0",
 		"svelte-check": "^2.2.0",
 		"svelte-fullcalendar": "workspace:latest",
 		"svelte-preprocess": "^4.7.3",
