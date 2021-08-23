@@ -1,6 +1,6 @@
 /// <reference types="Cypress" />
 
-import moment from 'moment';
+import { format } from 'date-fns';
 
 context('Actions', () => {
 	beforeEach(() => {
@@ -20,7 +20,7 @@ context('Actions', () => {
 
 	it('Should accept a callback', () => {
 		const date = new Date();
-		const formatedDate = moment(date).format('YYYY-MM-DD');
+		const formatedDate = format(date, 'yyyy-MM-dd');
 
 		cy.get(`.fc-day[data-date=${formatedDate}]`).click();
 		cy.findByText('New Event').should('exist');
