@@ -28,3 +28,4 @@ jobs:
             - run: pnpm lint
             - run: pnpm test:svelte
             - run: pnpm test:sapper
+            - run: pnpm test:kit
