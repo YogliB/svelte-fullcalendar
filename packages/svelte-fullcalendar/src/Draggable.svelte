@@ -21,9 +21,12 @@
 	export let minDistance = null;
 
 	let elementRef = null;
+	/** @type {import('@fullcalendar/interaction').Draggable} */
 	let draggable = null;
 
 	onMount(async () => {
+		await import('@fullcalendar/core/vdom.js');
+
 		if (!draggable && elementRef) {
 			const filledProps = getFilledProps();
 

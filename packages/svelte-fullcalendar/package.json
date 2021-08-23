@@ -8,6 +8,9 @@
 		"@fullcalendar/core": "^5.0.0"
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
+	"devDependencies": {
+		"svelte": "^3.42.2"
+	},
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
 	"keywords": [
 		"svelte",

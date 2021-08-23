@@ -20,7 +20,9 @@
 	/** @type {import('@fullcalendar/core').Calendar}  */
 	let calendar;
 
-	onMount(() => {
+	onMount(async () => {
+		await import('@fullcalendar/core/vdom.js');
+
 		if (!canBeInitiated) return;
 
 		initCalendar();
