@@ -46,6 +46,7 @@
 		"dev:sapper": "pnpm run dev --filter=@examples/sapper",
 		"dev:svelte": "pnpm run dev --filter=@examples/svelte",
 		"lint": "eslint --color .",
+		"test:kit": "start-server-and-test dev:kit http://localhost:3000 cy:run",
 		"test:sapper": "start-server-and-test dev:sapper http://localhost:3000 cy:run",
 		"test:svelte": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
 	},
