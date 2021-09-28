@@ -40,7 +40,6 @@ importers:
 
   examples/kit:
     specifiers:
-      '@fullcalendar/core': ^5.0.0
       '@fullcalendar/daygrid': ^5.8.0
       '@fullcalendar/interaction': ^5.8.0
       '@fullcalendar/timegrid': ^5.8.0
@@ -56,8 +55,7 @@ importers:
       '@fullcalendar/interaction': 5.8.0
       '@fullcalendar/timegrid': 5.8.0
     devDependencies:
-      '@fullcalendar/core': 5.8.0
-      '@sveltejs/kit': 1.0.0-next.158_svelte@3.38.3
+      '@sveltejs/kit': 1.0.0-next.176_svelte@3.38.3
       svelte: 3.38.3
       svelte-check: 2.2.0_@babel+core@7.15.0+svelte@3.38.3
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -1556,6 +1554,7 @@ packages:
     resolution: {integrity: sha512-cKmXNgo/9auw86MOwXxA+5FRrgvbE93C9YDwic+Alfm3bUruDTzJDnuvRndrFVurpSBLm6/ZitaR+yoWKLIsgA==}
     dependencies:
       tslib: 2.3.0
+    dev: false
 
   /@fullcalendar/core/5.8.0:
     resolution: {integrity: sha512-55Zwy4fwcxBqHjfjhV5eae4qOh9fMlpjGcyy4Zt39zA1NlgUW0JxCGOyIu2K2jm2JZn+27/P8b06JXy57DmtKg==}
@@ -1563,6 +1562,7 @@ packages:
       '@fullcalendar/common': 5.8.0
       preact: 10.5.13
       tslib: 2.3.0
+    dev: false
 
   /@fullcalendar/daygrid/5.8.0:
     resolution: {integrity: sha512-VrqwI97cewoUjFrKT67sS+f+JANI8xMx0g5bpM0XgV/KEEwvXpH5OmwkFSbXOnx1m4RXsvolQc6EBZpnJCf69Q==}
@@ -2619,30 +2619,30 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.158_svelte@3.38.3:
-    resolution: {integrity: sha512-jVpVeAFOVNOGDRDVvbWjHxco5s78OYsrCJhnEAKoOe690gkWA5Qc8FqPXo8HHiaIHKHmTP1vbrEhQ5jkX7fBAw==}
+  /@sveltejs/kit/1.0.0-next.176_svelte@3.38.3:
+    resolution: {integrity: sha512-aFwZ1PjOcxOSAX93Py3jfJBgZgWmANO5Vt2fb8abvNGLTA/d6VVArdPXSccaSxLYCGmgzvx+CAr8P+P8FcJ+Ng==}
     engines: {node: ^12.20 || >=14.13}
     hasBin: true
     peerDependencies:
-      svelte: ^3.39.0
+      svelte: ^3.43.0
     dependencies:
-      '@sveltejs/vite-plugin-svelte': 1.0.0-next.19_svelte@3.38.3+vite@2.5.0
-      cheap-watch: 1.0.3
+      '@sveltejs/vite-plugin-svelte': 1.0.0-next.24_svelte@3.38.3+vite@2.5.10
+      cheap-watch: 1.0.4
       sade: 1.7.4
       svelte: 3.38.3
-      vite: 2.5.0
+      vite: 2.5.10
     transitivePeerDependencies:
       - diff-match-patch
       - supports-color
     dev: true
 
-  /@sveltejs/vite-plugin-svelte/1.0.0-next.19_svelte@3.38.3+vite@2.5.0:
-    resolution: {integrity: sha512-q9hHkMzodScwDq64pNaWhekpj97vWg3wO9T0rqd8bC2EsrBQs2uD1qMJvDqlNd63AbO2uSJMGo+TQ0Xt2xgyYg==}
+  /@sveltejs/vite-plugin-svelte/1.0.0-next.24_svelte@3.38.3+vite@2.5.10:
+    resolution: {integrity: sha512-b+n3jcLpk2j/25APQbk5ejCyd0faYTB2bOxR3gY0LX3MFGgdiL8zdf3/aawcPSxLdbL73YVlxNBIATGuvq03uQ==}
     engines: {node: ^12.20 || ^14.13.1 || >= 16}
     peerDependencies:
       diff-match-patch: ^1.0.5
       svelte: ^3.34.0
-      vite: ^2.3.7
+      vite: ^2.5.3
     peerDependenciesMeta:
       diff-match-patch:
         optional: true
@@ -2654,7 +2654,7 @@ packages:
       require-relative: 0.8.7
       svelte: 3.38.3
       svelte-hmr: 0.14.7_svelte@3.38.3
-      vite: 2.5.0
+      vite: 2.5.10
     transitivePeerDependencies:
       - supports-color
     dev: true
@@ -3319,8 +3319,8 @@ packages:
     resolution: {integrity: sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==}
     dev: true
 
-  /cheap-watch/1.0.3:
-    resolution: {integrity: sha512-xC5CruMhLzjPwJ5ecUxGu1uGmwJQykUhqd2QrCrYbwvsFYdRyviu6jG9+pccwDXJR/OpmOTOJ9yLFunVgQu9wg==}
+  /cheap-watch/1.0.4:
+    resolution: {integrity: sha512-QR/9FrtRL5fjfUJBhAKCdi0lSRQ3rVRRum3GF9wDKp2TJbEIMGhUEr2yU8lORzm9Isdjx7/k9S0DFDx+z5VGtw==}
     engines: {node: '>=8'}
     dev: true
 
@@ -7173,6 +7173,7 @@ packages:
 
   /preact/10.5.13:
     resolution: {integrity: sha512-q/vlKIGNwzTLu+jCcvywgGrt+H/1P/oIRSD6mV4ln3hmlC+Aa34C7yfPI4+5bzW8pONyVXYS7SvXosy2dKKtWQ==}
+    dev: false
 
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}
@@ -8820,8 +8821,8 @@ packages:
       extsprintf: 1.3.0
     dev: true
 
-  /vite/2.5.0:
-    resolution: {integrity: sha512-Dn4B+g54PJsMG5WCc4QeFy1ygMXRdTtFrUPegqfk4+vzVQcbF/DqqmI/1bxezArzbujBJg/67QeT5wz8edfJVQ==}
+  /vite/2.5.10:
+    resolution: {integrity: sha512-0ObiHTi5AHyXdJcvZ67HMsDgVpjT5RehvVKv6+Q0jFZ7zDI28PF5zK9mYz2avxdA+4iJMdwCz6wnGNnn4WX5Gg==}
     engines: {node: '>=12.2.0'}
     hasBin: true
     dependencies:

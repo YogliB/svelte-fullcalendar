@@ -1,5 +1,5 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
 	// general props
@@ -36,10 +36,10 @@
 				...filledProps,
 			});
 		}
-	});
 
-	onDestroy(() => {
-		if (draggable) draggable.destroy();
+		return () => {
+			draggable && draggable.destroy();
+		};
 	});
 
 	$: async () => {

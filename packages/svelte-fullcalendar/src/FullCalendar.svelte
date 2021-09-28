@@ -1,5 +1,5 @@
 <script>
-	import { onMount, onDestroy } from 'svelte';
+	import { onMount } from 'svelte';
 	import { Calendar } from '@fullcalendar/core';
 
 	// General Props
@@ -26,10 +26,10 @@
 		if (!canBeInitiated) return;
 
 		initCalendar();
-	});
 
-	onDestroy(() => {
-		if (calendar) calendar.destroy();
+		return () => {
+			calendar && calendar.destroy();
+		};
 	});
 
 	$: canBeInitiated =
