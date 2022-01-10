@@ -1,0 +1,5 @@
+{
+	"extends": ["config:base"],
+	"ignoreDeps": ["@fullcalendar/common", "@fullcalendar/core"],
+	"automerge": true
+}
