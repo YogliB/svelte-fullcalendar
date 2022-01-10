@@ -28,6 +28,8 @@
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
 	},
+	"type": "module",
+	"main": "index.js",
 	"svelte": "index.js",
 	"version": "1.1.1"
 }
