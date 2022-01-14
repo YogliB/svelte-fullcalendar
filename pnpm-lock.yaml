@@ -17,7 +17,7 @@ importers:
       lerna: 4.0.0
       lint-staged: 12.1.7
       prettier: 2.5.1
-      prettier-plugin-svelte: 2.5.1
+      prettier-plugin-svelte: 2.6.0
       start-server-and-test: 1.14.0
       svelte: 3.45.0
     devDependencies:
@@ -34,7 +34,7 @@ importers:
       lerna: 4.0.0
       lint-staged: 12.1.7
       prettier: 2.5.1
-      prettier-plugin-svelte: 2.5.1_prettier@2.5.1+svelte@3.45.0
+      prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.45.0
       start-server-and-test: 1.14.0
       svelte: 3.45.0
 
@@ -55,7 +55,7 @@ importers:
       '@fullcalendar/interaction': 5.8.0
       '@fullcalendar/timegrid': 5.8.0
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.223_svelte@3.38.3
+      '@sveltejs/kit': 1.0.0-next.228_svelte@3.38.3
       svelte: 3.38.3
       svelte-check: 2.2.0_@babel+core@7.16.7+svelte@3.38.3
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -2694,8 +2694,8 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.223_svelte@3.38.3:
-    resolution: {integrity: sha512-4By1NldrpMznrL3sqYCZYxRQHz+ZI2Rlhrrzp0qhaKqdbU9KLEtM7ZVxVW3r+pWk2y6uLulRpjp3NfKPOy1Xiw==}
+  /@sveltejs/kit/1.0.0-next.228_svelte@3.38.3:
+    resolution: {integrity: sha512-77e8G7CcmqHhMyAbtjrAWjRDDgFiZArFhujKGql5YM68TWx0cCoipqGdhK0m3EJ/t/NL+T2YuK/9nvtrSNEK6A==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -7489,8 +7489,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.5.1_prettier@2.5.1+svelte@3.45.0:
-    resolution: {integrity: sha512-IhZUcqr7Bg4LY15d87t9lDr7EyC0IPehkzH5ya5igG8zYwf3UYaYDFnVW2mckREaZyLREcH9YOouesmt4f5Ozg==}
+  /prettier-plugin-svelte/2.6.0_prettier@2.5.1+svelte@3.45.0:
+    resolution: {integrity: sha512-NPSRf6Y5rufRlBleok/pqg4+1FyGsL0zYhkYP6hnueeL1J/uCm3OfOZPsLX4zqD9VAdcXfyEL2PYqGv8ZoOSfA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
