@@ -7,7 +7,7 @@ importers:
       '@babel/core': 7.16.7
       '@babel/eslint-parser': 7.16.5
       '@testing-library/cypress': 8.0.2
-      cypress: 8.7.0
+      cypress: 9.2.1
       date-fns: 2.28.0
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0
@@ -23,8 +23,8 @@ importers:
     devDependencies:
       '@babel/core': 7.16.7
       '@babel/eslint-parser': 7.16.5_@babel+core@7.16.7+eslint@7.32.0
-      '@testing-library/cypress': 8.0.2_cypress@8.7.0
-      cypress: 8.7.0
+      '@testing-library/cypress': 8.0.2_cypress@9.2.1
+      cypress: 9.2.1
       date-fns: 2.28.0
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0_eslint@7.32.0
@@ -55,7 +55,7 @@ importers:
       '@fullcalendar/interaction': 5.8.0
       '@fullcalendar/timegrid': 5.8.0
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.228_svelte@3.38.3
+      '@sveltejs/kit': 1.0.0-next.229_svelte@3.38.3
       svelte: 3.38.3
       svelte-check: 2.2.0_@babel+core@7.16.7+svelte@3.38.3
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -1576,8 +1576,8 @@ packages:
       to-fast-properties: 2.0.0
     dev: true
 
-  /@cypress/request/2.88.6:
-    resolution: {integrity: sha512-z0UxBE/+qaESAHY9p9sM2h8Y4XqtsbDCt0/DPOrqA/RZgKi4PkxdpXyK4wCCnSk1xHqWHZZAE+gV6aDAR6+caQ==}
+  /@cypress/request/2.88.10:
+    resolution: {integrity: sha512-Zp7F+R93N0yZyG34GutyTNr+okam7s/Fzc1+i3kcqOP8vk6OuajuE9qZJ6Rs+10/1JFtXFYMdyarnU1rZuJesg==}
     engines: {node: '>= 6'}
     dependencies:
       aws-sign2: 0.7.0
@@ -1587,8 +1587,7 @@ packages:
       extend: 3.0.2
       forever-agent: 0.6.1
       form-data: 2.3.3
-      har-validator: 5.1.5
-      http-signature: 1.2.0
+      http-signature: 1.3.6
       is-typedarray: 1.0.0
       isstream: 0.1.2
       json-stringify-safe: 5.0.1
@@ -2694,8 +2693,8 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.228_svelte@3.38.3:
-    resolution: {integrity: sha512-77e8G7CcmqHhMyAbtjrAWjRDDgFiZArFhujKGql5YM68TWx0cCoipqGdhK0m3EJ/t/NL+T2YuK/9nvtrSNEK6A==}
+  /@sveltejs/kit/1.0.0-next.229_svelte@3.38.3:
+    resolution: {integrity: sha512-i609g5T58Qdgh/qgO1atak70R7woNuJwWp7GtF/YUOZ9csMR9JPUr1tfX9lSh2I4Ez7j+Dc10RLlQ3szVywfXA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -2736,7 +2735,7 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.2_cypress@8.7.0:
+  /@testing-library/cypress/8.0.2_cypress@9.2.1:
     resolution: {integrity: sha512-KVdm7n37sg/A4e3wKMD4zUl0NpzzVhx06V9Tf0hZHZ7nrZ4yFva6Zwg2EFF1VzHkEfN/ahUzRtT1qiW+vuWnJw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -2744,7 +2743,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.15.3
       '@testing-library/dom': 8.2.0
-      cypress: 8.7.0
+      cypress: 9.2.1
     dev: true
 
   /@testing-library/dom/8.2.0:
@@ -3463,11 +3462,10 @@ packages:
       restore-cursor: 3.1.0
     dev: true
 
-  /cli-table3/0.6.0:
-    resolution: {integrity: sha512-gnB85c3MGC7Nm9I/FkiasNBOKjOiO1RNuXXarQms37q4QMpWdlbBgD/VnOStA2faG1dpXMv31RFApjX1/QdgWQ==}
+  /cli-table3/0.6.1:
+    resolution: {integrity: sha512-w0q/enDHhPLq44ovMGdQeeDLvwxwavsJX7oQGYt/LrBlYsyaxyDnp6z3QzFut/6kLLKnlcUVJLrpB7KBfgG/RA==}
     engines: {node: 10.* || >= 12.*}
     dependencies:
-      object-assign: 4.1.1
       string-width: 4.2.2
     optionalDependencies:
       colors: 1.4.0
@@ -3574,10 +3572,6 @@ packages:
 
   /colorette/1.2.2:
     resolution: {integrity: sha512-MKGMzyfeuutC/ZJ1cba9NqcNpfeqMUcYmyF1ZFY6/Cn7CNSAKx6a+s48sqLqyAiZuaP2TcqMhoo+dlwFnVxT9w==}
-    dev: true
-
-  /colorette/1.4.0:
-    resolution: {integrity: sha512-Y2oEozpomLn7Q3HFP7dpww7AtMJplbM9lGZP6RDfHqmbeRjiwRg4n6VM6j4KLmRke85uWEI7JqF17f3pqdRA0g==}
     dev: true
 
   /colorette/2.0.16:
@@ -3956,13 +3950,13 @@ packages:
       css-tree: 1.1.3
     dev: true
 
-  /cypress/8.7.0:
-    resolution: {integrity: sha512-b1bMC3VQydC6sXzBMFnSqcvwc9dTZMgcaOzT0vpSD+Gq1yFc+72JDWi55sfUK5eIeNLAtWOGy1NNb6UlhMvB+Q==}
+  /cypress/9.2.1:
+    resolution: {integrity: sha512-LVEe4yWCo4xO0Vd8iYjFHRyd5ulRvM56XqMgAdn05Qb9kJ6iJdO/MmjKD8gNd768698cp1FDuSmFQZHVZGk+Og==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
     dependencies:
-      '@cypress/request': 2.88.6
+      '@cypress/request': 2.88.10
       '@cypress/xvfb': 1.2.4
       '@types/node': 14.17.12
       '@types/sinonjs__fake-timers': 6.0.3
@@ -3974,7 +3968,7 @@ packages:
       chalk: 4.1.2
       check-more-types: 2.24.0
       cli-cursor: 3.1.0
-      cli-table3: 0.6.0
+      cli-table3: 0.6.1
       commander: 5.1.0
       common-tags: 1.8.0
       dayjs: 1.10.6
@@ -3990,14 +3984,13 @@ packages:
       is-ci: 3.0.0
       is-installed-globally: 0.4.0
       lazy-ass: 1.6.0
-      listr2: 3.11.0_enquirer@2.3.6
+      listr2: 3.14.0_enquirer@2.3.6
       lodash: 4.17.21
       log-symbols: 4.1.0
       minimist: 1.2.5
       ospath: 1.2.2
       pretty-bytes: 5.6.0
       proxy-from-env: 1.0.0
-      ramda: 0.27.1
       request-progress: 3.0.0
       supports-color: 8.1.1
       tmp: 0.2.1
@@ -5284,6 +5277,15 @@ packages:
       sshpk: 1.16.1
     dev: true
 
+  /http-signature/1.3.6:
+    resolution: {integrity: sha512-3adrsD6zqo4GsTqtO7FyrejHNv+NgiIfAfv68+jVlFmSr9OGy7zrxONceFRLKvnnZA5jbxQBX1u9PpB6Wi32Gw==}
+    engines: {node: '>=0.10'}
+    dependencies:
+      assert-plus: 1.0.0
+      jsprim: 2.0.2
+      sshpk: 1.16.1
+    dev: true
+
   /https-proxy-agent/5.0.0:
     resolution: {integrity: sha512-EkYm5BcKUGiduxzSt3Eppko+PiNWNEpa4ySk9vTC6wDsQJW9rHSa+UhGNJoRYp7bz6Ht1eaRIa6QaJqO5rCFbA==}
     engines: {node: '>= 6'}
@@ -5819,6 +5821,10 @@ packages:
     resolution: {integrity: sha1-tIDIkuWaLwWVTOcnvT8qTogvnhM=}
     dev: true
 
+  /json-schema/0.4.0:
+    resolution: {integrity: sha512-es94M3nTIfsEPisRafak+HDLfHXnKBhV3vU5eqPcS3flIWqcxJWgXHXiey3YrpaNsanY5ei1VoYEbOzijuq9BA==}
+    dev: true
+
   /json-stable-stringify-without-jsonify/1.0.1:
     resolution: {integrity: sha1-nbe1lJatPzz+8wp1FC0tkwrXJlE=}
     dev: true
@@ -5862,6 +5868,16 @@ packages:
       assert-plus: 1.0.0
       extsprintf: 1.3.0
       json-schema: 0.2.3
+      verror: 1.10.0
+    dev: true
+
+  /jsprim/2.0.2:
+    resolution: {integrity: sha512-gqXddjPqQ6G40VdnI6T6yObEC+pDNvyP95wdQhkWkg7crHH3km5qP1FsOXEkzEQwnz6gz5qGTn1c2Y52wP3OyQ==}
+    engines: {'0': node >=0.6.0}
+    dependencies:
+      assert-plus: 1.0.0
+      extsprintf: 1.3.0
+      json-schema: 0.4.0
       verror: 1.10.0
     dev: true
 
@@ -5981,22 +5997,6 @@ packages:
       - enquirer
     dev: true
 
-  /listr2/3.11.0_enquirer@2.3.6:
-    resolution: {integrity: sha512-XLJVe2JgXCyQTa3FbSv11lkKExYmEyA4jltVo8z4FX10Vt1Yj8IMekBfwim0BSOM9uj1QMTJvDQQpHyuPbB/dQ==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      enquirer: '>= 2.3.0 < 3'
-    dependencies:
-      cli-truncate: 2.1.0
-      colorette: 1.4.0
-      enquirer: 2.3.6
-      log-update: 4.0.0
-      p-map: 4.0.0
-      rxjs: 6.6.7
-      through: 2.3.8
-      wrap-ansi: 7.0.0
-    dev: true
-
   /listr2/3.14.0:
     resolution: {integrity: sha512-TyWI8G99GX9GjE54cJ+RrNMcIFBfwMPxc3XTFiAYGN4s10hWROGtOg7+O6u6LE3mNkyld7RSLE6nrKBvTfcs3g==}
     engines: {node: '>=10.0.0'}
@@ -6008,6 +6008,26 @@ packages:
     dependencies:
       cli-truncate: 2.1.0
       colorette: 2.0.16
+      log-update: 4.0.0
+      p-map: 4.0.0
+      rfdc: 1.3.0
+      rxjs: 7.5.1
+      through: 2.3.8
+      wrap-ansi: 7.0.0
+    dev: true
+
+  /listr2/3.14.0_enquirer@2.3.6:
+    resolution: {integrity: sha512-TyWI8G99GX9GjE54cJ+RrNMcIFBfwMPxc3XTFiAYGN4s10hWROGtOg7+O6u6LE3mNkyld7RSLE6nrKBvTfcs3g==}
+    engines: {node: '>=10.0.0'}
+    peerDependencies:
+      enquirer: '>= 2.3.0 < 3'
+    peerDependenciesMeta:
+      enquirer:
+        optional: true
+    dependencies:
+      cli-truncate: 2.1.0
+      colorette: 2.0.16
+      enquirer: 2.3.6
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
@@ -7632,10 +7652,6 @@ packages:
   /quick-lru/4.0.1:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
-    dev: true
-
-  /ramda/0.27.1:
-    resolution: {integrity: sha512-PgIdVpn5y5Yns8vqb8FzBUEYn98V3xcPgawAkkgj0YJ0qDsnHCiNmZYfOGMgOvoB0eWFLpYbhxUR3mxfDIMvpw==}
     dev: true
 
   /randombytes/2.1.0:
