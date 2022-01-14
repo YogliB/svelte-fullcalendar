@@ -12,7 +12,7 @@ importers:
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0
       eslint-plugin-cypress: 2.12.1
-      eslint-plugin-svelte3: 3.3.0
+      eslint-plugin-svelte3: 3.4.0
       husky: 7.0.4
       lerna: 4.0.0
       lint-staged: 12.1.7
@@ -29,7 +29,7 @@ importers:
       eslint: 7.32.0
       eslint-config-prettier: 8.3.0_eslint@7.32.0
       eslint-plugin-cypress: 2.12.1_eslint@7.32.0
-      eslint-plugin-svelte3: 3.3.0_eslint@7.32.0+svelte@3.45.0
+      eslint-plugin-svelte3: 3.4.0_eslint@7.32.0+svelte@3.45.0
       husky: 7.0.4
       lerna: 4.0.0
       lint-staged: 12.1.7
@@ -55,7 +55,7 @@ importers:
       '@fullcalendar/interaction': 5.8.0
       '@fullcalendar/timegrid': 5.8.0
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.228_svelte@3.38.3
+      '@sveltejs/kit': 1.0.0-next.229_svelte@3.38.3
       svelte: 3.38.3
       svelte-check: 2.2.0_@babel+core@7.16.7+svelte@3.38.3
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -2694,8 +2694,8 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.228_svelte@3.38.3:
-    resolution: {integrity: sha512-77e8G7CcmqHhMyAbtjrAWjRDDgFiZArFhujKGql5YM68TWx0cCoipqGdhK0m3EJ/t/NL+T2YuK/9nvtrSNEK6A==}
+  /@sveltejs/kit/1.0.0-next.229_svelte@3.38.3:
+    resolution: {integrity: sha512-i609g5T58Qdgh/qgO1atak70R7woNuJwWp7GtF/YUOZ9csMR9JPUr1tfX9lSh2I4Ez7j+Dc10RLlQ3szVywfXA==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -4571,8 +4571,8 @@ packages:
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3/3.3.0_eslint@7.32.0+svelte@3.45.0:
-    resolution: {integrity: sha512-MpeaDA+/hVsKoCmiVIhI54SrtFt1MQwss+bkeRGx6vx8j2ln3C3SDympR45R8ZOpWjp6qOqROnqo55tA+tnOgQ==}
+  /eslint-plugin-svelte3/3.4.0_eslint@7.32.0+svelte@3.45.0:
+    resolution: {integrity: sha512-MIQUTuRv3o7LyQ+360qOc9mLT35j1I5YzHr04g/UDcvJTpg0X/kHWELY99ve869Rp/9wjqD7I26Aq5H8OH5RIg==}
     engines: {node: '>=10'}
     peerDependencies:
       eslint: '>=6.0.0'
