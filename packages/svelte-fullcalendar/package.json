@@ -31,5 +31,5 @@
 	"type": "module",
 	"main": "index.js",
 	"svelte": "index.js",
-	"version": "1.1.1"
+	"version": "1.1.2"
 }
