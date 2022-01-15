@@ -1,5 +1,7 @@
 {
 	"dependencies": {
+		"@fullcalendar/common": "^5.10.1",
+		"@fullcalendar/core": "^5.10.1",
 		"@fullcalendar/daygrid": "^5.10.1",
 		"@fullcalendar/interaction": "^5.10.1",
 		"@fullcalendar/timegrid": "^5.10.1",
@@ -28,8 +30,8 @@
 	"name": "@examples/sapper",
 	"private": true,
 	"scripts": {
-		"dev": "sapper dev",
 		"build": "sapper build --legacy",
+		"dev": "sapper dev",
 		"export": "sapper export --legacy",
 		"start": "node __sapper__/build"
 	},

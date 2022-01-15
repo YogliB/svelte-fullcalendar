@@ -1,5 +1,7 @@
 {
 	"dependencies": {
+		"@fullcalendar/common": "^5.10.1",
+		"@fullcalendar/core": "^5.10.1",
 		"@fullcalendar/daygrid": "^5.10.1",
 		"@fullcalendar/interaction": "^5.10.1",
 		"@fullcalendar/timegrid": "^5.10.1"
@@ -8,7 +10,7 @@
 		"@sveltejs/kit": "next",
 		"svelte": "^3.46.1",
 		"svelte-check": "^2.3.0",
-		"svelte-fullcalendar": "workspace:^1.1.2",
+		"svelte-fullcalendar": "workspace:latest",
 		"svelte-preprocess": "^4.10.1",
 		"tslib": "^2.3.1",
 		"typescript": "^4.5.4"

@@ -3,13 +3,11 @@
 	"bugs": {
 		"url": "https://github.com/YogliB/svelte-fullcalendar/issues"
 	},
-	"dependencies": {
-		"@fullcalendar/common": "^5.0.0",
-		"@fullcalendar/core": "^5.0.0"
-	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
-		"svelte": "3.46.2"
+		"@fullcalendar/common": "^5.0.0",
+		"@fullcalendar/core": "^5.0.0",
+		"svelte": "^3.0.0"
 	},
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
 	"keywords": [
@@ -20,16 +18,21 @@
 		"scheduler"
 	],
 	"license": "MIT",
+	"main": "index.js",
 	"name": "svelte-fullcalendar",
 	"optionalDependencies": {
 		"@fullcalendar/interaction": "^5.0.0"
+	},
+	"peerDependencies": {
+		"@fullcalendar/common": "^5.0.0",
+		"@fullcalendar/core": "^5.0.0",
+		"svelte": "^3.0.0"
 	},
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
 	},
-	"type": "module",
-	"main": "index.js",
 	"svelte": "index.js",
-	"version": "1.1.2"
+	"type": "module",
+	"version": "2.0.0-experimental.1"
 }
