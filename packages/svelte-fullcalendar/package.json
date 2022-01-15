@@ -9,7 +9,7 @@
 	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
-		"svelte": "3.45.0"
+		"svelte": "3.46.2"
 	},
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
 	"keywords": [
