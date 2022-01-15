@@ -27,33 +27,16 @@
 	onMount(async () => {
 		await import('@fullcalendar/core/vdom.js');
 
-		if (!draggable && elementRef) {
-			const filledProps = getFilledProps();
-
-			draggable = new (
-				await import('@fullcalendar/interaction')
-			).Draggable(elementRef, {
-				...filledProps,
-			});
-		}
+		if (!draggable && elementRef) initDraggable();
 
 		return () => {
 			draggable && draggable.destroy();
 		};
 	});
 
-	$: async () => {
-		if (draggable) draggable.destroy();
-
-		if (elementRef) {
-			const filledProps = getFilledProps();
-
-			draggable = new (
-				await import('@fullcalendar/interaction')
-			).Draggable(elementRef, {
-				...filledProps,
-			});
-		}
+	$: () => {
+		draggable && draggable.destroy();
+		elementRef && initDraggable();
 	};
 
 	function getFilledProps() {
@@ -66,6 +49,15 @@
 		};
 
 		return filterNullProps(props);
+	}
+
+	async function initDraggable() {
+		draggable = new (await import('@fullcalendar/interaction')).Draggable(
+			elementRef,
+			{
+				...getFilledProps(),
+			}
+		);
 	}
 </script>
 
