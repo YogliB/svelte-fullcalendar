@@ -19,6 +19,7 @@
 		"scheduler"
 	],
 	"license": "MIT",
+	"main": "index.js",
 	"name": "svelte-fullcalendar",
 	"optionalDependencies": {
 		"@fullcalendar/interaction": "^5.0.0"
