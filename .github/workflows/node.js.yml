@@ -10,7 +10,7 @@ on:
         branches: [main]
 
 jobs:
-    build:
+    base:
         runs-on: ubuntu-latest
 
         strategy:
@@ -28,4 +28,21 @@ jobs:
             - run: pnpm lint
             - run: pnpm test:svelte
             - run: pnpm test:sapper
+            - run: pnpm test:kit
+
+    kit:
+        runs-on: ubuntu-latest
+
+        strategy:
+            matrix:
+                node-version: [14.x, 16.x]
+
+        steps:
+            - uses: actions/checkout@v2
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v2
+              with:
+                  node-version: ${{ matrix.node-version }}
+            - run: npm i -g pnpm
+            - run: pnpm i
             - run: pnpm test:kit
