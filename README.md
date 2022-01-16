@@ -1,4 +1,4 @@
-[![Node CI](https://github.com/YogliB/svelte-fullcalendar/workflows/Node%20CI/badge.svg)](https://github.com/YogliB/svelte-fullcalendar/actions?query=workflow%3A%22Node+CI%22)
+[![Node CI](https://github.com/YogliB/svelte-fullcalendar/workflows/Node%20CI/badge.svg)](https://github.com/YogliB/svelte-fullcalendar/actions?query=workflow%3A%22Node.js+CI%22)
 [![Known Vulnerabilities](https://snyk.io/test/github/YogliB/svelte-fullcalendar/badge.svg)](https://snyk.io/test/github/YogliB/svelte-fullcalendar)
 [![install size](https://badgen.net/packagephobia/install/svelte-fullcalendar)](https://packagephobia.now.sh/result?p=svelte-fullcalendar)
 [![npm package version](https://badgen.net/npm/v/svelte-fullcalendar)](https://npm.im/svelte-fullcalendar)
