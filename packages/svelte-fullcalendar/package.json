@@ -11,6 +11,12 @@
 	"devDependencies": {
 		"svelte": "3.46.2"
 	},
+	"exports": {
+		".": "./index.js",
+		"./package.json": "./package.json",
+		"./src/Draggable.svelte": "./src/Draggable.svelte",
+		"./src/FullCalendar.svelte": "./src/FullCalendar.svelte"
+	},
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
 	"keywords": [
 		"svelte",
@@ -28,8 +34,7 @@
 		"type": "git",
 		"url": "git+https://github.com/YogliB/svelte-fullcalendar.git"
 	},
-	"type": "module",
-	"main": "index.js",
 	"svelte": "index.js",
+	"type": "module",
 	"version": "1.1.2"
 }
