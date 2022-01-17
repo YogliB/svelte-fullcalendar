@@ -9,6 +9,7 @@
 		"@fullcalendar/core": "^5.0.0",
 		"svelte": "^3.0.0"
 	},
+	"exports": "./index.js",
 	"homepage": "https://github.com/YogliB/svelte-fullcalendar#readme",
 	"keywords": [
 		"svelte",
@@ -18,7 +19,6 @@
 		"scheduler"
 	],
 	"license": "MIT",
-	"main": "index.js",
 	"name": "svelte-fullcalendar",
 	"optionalDependencies": {
 		"@fullcalendar/interaction": "^5.0.0"
