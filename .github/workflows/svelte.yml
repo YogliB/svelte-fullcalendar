@@ -46,9 +46,9 @@ jobs:
                   check-latest: true
             - run: pnpm test:svelte
 
-            - name: Test SvelteKit with Node.js ${{ matrix.node-version }}
+            - name: Test Svelte with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
                   check-latest: true
-            - run: pnpm test:kit
+            - run: pnpm test:svelte
