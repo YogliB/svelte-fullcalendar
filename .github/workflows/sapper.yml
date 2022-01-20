@@ -1,4 +1,4 @@
-name: Cypress
+name: Sapper
 
 on:
     push:
