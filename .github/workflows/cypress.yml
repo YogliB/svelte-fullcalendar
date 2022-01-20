@@ -48,5 +48,5 @@ jobs:
             - name: Test SvelteKit with Node.js ${{ matrix.kit-node-version }}
               uses: actions/setup-node@v2
               with:
-                  node-version: ${{ matrix.kit-node-version }}
+                  node-version: 'lts/*'
             - run: pnpm test:kit
