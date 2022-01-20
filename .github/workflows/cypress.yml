@@ -36,19 +36,19 @@ jobs:
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-				  check-latest: true
+                  check-latest: true
             - run: pnpm test:svelte
 
             - name: Test Sapper with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-				  check-latest: true
+                  check-latest: true
             - run: pnpm test:svelte
 
             - name: Test SvelteKit with Node.js ${{ matrix.node-version }}
               uses: actions/setup-node@v2
               with:
                   node-version: ${{ matrix.node-version }}
-				  check-latest: true
+                  check-latest: true
             - run: pnpm test:kit
