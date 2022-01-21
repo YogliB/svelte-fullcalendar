@@ -18,11 +18,6 @@
 		"start-server-and-test": "1.14.0",
 		"svelte": "3.46.2"
 	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "lint-staged"
-		}
-	},
 	"lint-staged": {
 		"*.{js, svelte}": [
 			"eslint --fix"
@@ -46,6 +41,7 @@
 		"dev:sapper": "pnpm run dev --filter=@examples/sapper",
 		"dev:svelte": "pnpm run dev --filter=@examples/svelte",
 		"lint": "eslint --color .",
+		"prepare": "husky install",
 		"test:kit": "start-server-and-test dev:kit http://localhost:3000 cy:run",
 		"test:sapper": "start-server-and-test dev:sapper http://localhost:3000 cy:run",
 		"test:svelte": "start-server-and-test dev:svelte http://localhost:3000 cy:run"
