@@ -40,6 +40,8 @@ importers:
 
   examples/kit:
     specifiers:
+      '@fullcalendar/common': ^5.0.0
+      '@fullcalendar/core': ^5.0.0
       '@fullcalendar/daygrid': ^5.10.1
       '@fullcalendar/interaction': ^5.10.1
       '@fullcalendar/timegrid': ^5.10.1
@@ -51,6 +53,8 @@ importers:
       tslib: ^2.3.1
       typescript: ^4.5.4
     dependencies:
+      '@fullcalendar/common': 5.10.1
+      '@fullcalendar/core': 5.10.1
       '@fullcalendar/daygrid': 5.10.1
       '@fullcalendar/interaction': 5.10.1
       '@fullcalendar/timegrid': 5.10.1
@@ -70,6 +74,8 @@ importers:
       '@babel/plugin-transform-runtime': ^7.16.8
       '@babel/preset-env': ^7.16.8
       '@babel/runtime': ^7.16.7
+      '@fullcalendar/common': ^5.0.0
+      '@fullcalendar/core': ^5.0.0
       '@fullcalendar/daygrid': ^5.10.1
       '@fullcalendar/interaction': ^5.10.1
       '@fullcalendar/timegrid': ^5.10.1
@@ -88,6 +94,8 @@ importers:
       svelte: ^3.46.1
       svelte-fullcalendar: workspace:latest
     dependencies:
+      '@fullcalendar/common': 5.10.1
+      '@fullcalendar/core': 5.10.1
       '@fullcalendar/daygrid': 5.10.1
       '@fullcalendar/interaction': 5.10.1
       '@fullcalendar/timegrid': 5.10.1
@@ -114,6 +122,8 @@ importers:
 
   examples/svelte:
     specifiers:
+      '@fullcalendar/common': ^5.0.0
+      '@fullcalendar/core': ^5.0.0
       '@fullcalendar/daygrid': ^5.10.1
       '@fullcalendar/interaction': ^5.10.1
       '@fullcalendar/timegrid': ^5.10.1
@@ -130,6 +140,8 @@ importers:
       svelte: ^3.46.1
       svelte-fullcalendar: workspace:latest
     dependencies:
+      '@fullcalendar/common': 5.10.1
+      '@fullcalendar/core': 5.10.1
       '@fullcalendar/daygrid': 5.10.1
       '@fullcalendar/interaction': 5.10.1
       '@fullcalendar/timegrid': 5.10.1
@@ -153,12 +165,11 @@ importers:
       '@fullcalendar/core': ^5.0.0
       '@fullcalendar/interaction': ^5.0.0
       svelte: 3.46.2
-    dependencies:
-      '@fullcalendar/common': 5.10.1
-      '@fullcalendar/core': 5.10.1
     optionalDependencies:
       '@fullcalendar/interaction': 5.10.1
     devDependencies:
+      '@fullcalendar/common': 5.10.1
+      '@fullcalendar/core': 5.10.1
       svelte: 3.46.2
 
 packages:
@@ -1431,7 +1442,6 @@ packages:
     resolution: {integrity: sha512-EumKIJcQTvQdTs75/9dmeREFgjcRVWzqHJS1Xvlz5mNsmB+w9EINCHETRjChtAQg1WD/lTQyVj4sHsKO7vCMSw==}
     dependencies:
       tslib: 2.3.1
-    dev: false
 
   /@fullcalendar/core/5.10.1:
     resolution: {integrity: sha512-8sVuC6ywXV+cxqsqTZaR1hgUqeyjVed20NyZ7lGW9AY0kma1GIEwLgqPS5Q6uVhHyin68lmgecKfJCwhxENE8w==}
@@ -1439,7 +1449,6 @@ packages:
       '@fullcalendar/common': 5.10.1
       preact: 10.6.4
       tslib: 2.3.1
-    dev: false
 
   /@fullcalendar/daygrid/5.10.1:
     resolution: {integrity: sha512-sfUMP+rew0krsBffgNcWWKhBCiyytGfRKZJoc64E8ohX7VWjPcPZuB1xgO5U4wPLmNkT0rZiHoGeQGTXw1+ZKg==}
@@ -6987,7 +6996,6 @@ packages:
 
   /preact/10.6.4:
     resolution: {integrity: sha512-WyosM7pxGcndU8hY0OQlLd54tOU+qmG45QXj2dAYrL11HoyU/EzOSTlpJsirbBr1QW7lICxSsVJJmcmUglovHQ==}
-    dev: false
 
   /prelude-ls/1.2.1:
     resolution: {integrity: sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==}

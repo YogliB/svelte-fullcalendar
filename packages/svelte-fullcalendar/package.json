@@ -3,12 +3,10 @@
 	"bugs": {
 		"url": "https://github.com/YogliB/svelte-fullcalendar/issues"
 	},
-	"dependencies": {
-		"@fullcalendar/common": "^5.0.0",
-		"@fullcalendar/core": "^5.0.0"
-	},
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
+		"@fullcalendar/common": "^5.0.0",
+		"@fullcalendar/core": "^5.0.0",
 		"svelte": "3.46.2"
 	},
 	"exports": {
@@ -29,6 +27,10 @@
 	"name": "svelte-fullcalendar",
 	"optionalDependencies": {
 		"@fullcalendar/interaction": "^5.0.0"
+	},
+	"peerDependencies": {
+		"@fullcalendar/common": "^5.0.0",
+		"@fullcalendar/core": "^5.0.0"
 	},
 	"repository": {
 		"type": "git",
