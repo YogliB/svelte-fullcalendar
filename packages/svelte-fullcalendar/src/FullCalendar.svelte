@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
-	import { Calendar } from '@fullcalendar/core';
+
+	let Calendar;
 
 	// General Props
 	/** @type {string} */
@@ -21,7 +22,8 @@
 	let calendar;
 
 	onMount(async () => {
-		await import('@fullcalendar/core/vdom.js');
+		await import('@fullcalendar/core/vdom');
+		Calendar = (await import('@fullcalendar/core')).Calendar;
 
 		if (!canBeInitiated) return;
 
