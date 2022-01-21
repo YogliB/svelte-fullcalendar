@@ -51,6 +51,8 @@
 	}
 
 	function initCalendar() {
+		if (!Calendar) return;
+
 		calendar = new Calendar(calendarEl, options);
 		calendar.render();
 	}
