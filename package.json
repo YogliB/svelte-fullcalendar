@@ -23,7 +23,7 @@
 			"eslint --fix"
 		],
 		"*.{svelte, html, css, scss, stylus, js, ts, json, yml, md}": [
-			"prettier --write"
+			"prettier --write --plugin-search-dir=. ."
 		]
 	},
 	"name": "svelte-fullcalendar",
