@@ -2,6 +2,8 @@
 	import { onMount } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
+	let Draggable;
+
 	// general props
 	/** @type {string} */
 	let classes = null;
@@ -25,9 +27,10 @@
 	let draggable = null;
 
 	onMount(async () => {
-		await import('@fullcalendar/core/vdom.js');
+		await import('@fullcalendar/core/vdom');
+		Draggable = (await import('@fullcalendar/interaction')).Draggable;
 
-		if (!draggable && elementRef) initDraggable();
+		if (Draggable && !draggable && elementRef) initDraggable();
 
 		return () => {
 			draggable && draggable.destroy();
@@ -36,7 +39,7 @@
 
 	$: () => {
 		draggable && draggable.destroy();
-		elementRef && initDraggable();
+		Draggable && elementRef && initDraggable();
 	};
 
 	function getFilledProps() {
@@ -52,12 +55,9 @@
 	}
 
 	async function initDraggable() {
-		draggable = new (await import('@fullcalendar/interaction')).Draggable(
-			elementRef,
-			{
-				...getFilledProps(),
-			}
-		);
+		draggable = new Draggable(elementRef, {
+			...getFilledProps(),
+		});
 	}
 </script>
 
