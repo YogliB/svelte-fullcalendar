@@ -4,7 +4,7 @@ importers:
 
   .:
     specifiers:
-      '@babel/core': 7.16.10
+      '@babel/core': 7.16.12
       '@babel/eslint-parser': 7.16.5
       '@testing-library/cypress': 8.0.2
       cypress: 9.4.1
@@ -21,8 +21,8 @@ importers:
       start-server-and-test: 1.14.0
       svelte: 3.46.2
     devDependencies:
-      '@babel/core': 7.16.10
-      '@babel/eslint-parser': 7.16.5_@babel+core@7.16.10+eslint@8.7.0
+      '@babel/core': 7.16.12
+      '@babel/eslint-parser': 7.16.5_@babel+core@7.16.12+eslint@8.7.0
       '@testing-library/cypress': 8.0.2_cypress@9.4.1
       cypress: 9.4.1
       date-fns: 2.28.0
@@ -57,9 +57,9 @@ importers:
     devDependencies:
       '@sveltejs/kit': 1.0.0-next.254_svelte@3.46.1
       svelte: 3.46.1
-      svelte-check: 2.3.0_80463ad5eedb8975568052835074da7c
+      svelte-check: 2.3.0_cd48e85a6a4350ea5906a4c33962dd29
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
-      svelte-preprocess: 4.10.1_9861d09c6cfcfe387159f82111b38ecd
+      svelte-preprocess: 4.10.1_f9e38729ec20c59ebfc78a42f6395ab0
       tslib: 2.3.1
       typescript: 4.5.4
 
@@ -175,16 +175,16 @@ packages:
     engines: {node: '>=6.9.0'}
     dev: true
 
-  /@babel/core/7.16.10:
-    resolution: {integrity: sha512-pbiIdZbCiMx/MM6toR+OfXarYix3uz0oVsnNtfdAGTcCTu3w/JGF8JhirevXLBJUu0WguSZI12qpKnx7EeMyLA==}
+  /@babel/core/7.16.12:
+    resolution: {integrity: sha512-dK5PtG1uiN2ikk++5OzSYsitZKny4wOCD0nrO4TqnW4BVBTQ2NGS3NgilvT/TEyxTST7LNyWV/T4tXDoD3fOgg==}
     engines: {node: '>=6.9.0'}
     dependencies:
       '@babel/code-frame': 7.16.7
       '@babel/generator': 7.16.8
-      '@babel/helper-compilation-targets': 7.16.7_@babel+core@7.16.10
+      '@babel/helper-compilation-targets': 7.16.7_@babel+core@7.16.12
       '@babel/helper-module-transforms': 7.16.7
       '@babel/helpers': 7.16.7
-      '@babel/parser': 7.16.10
+      '@babel/parser': 7.16.12
       '@babel/template': 7.16.7
       '@babel/traverse': 7.16.10
       '@babel/types': 7.16.8
@@ -221,14 +221,14 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.16.5_@babel+core@7.16.10+eslint@8.7.0:
+  /@babel/eslint-parser/7.16.5_@babel+core@7.16.12+eslint@8.7.0:
     resolution: {integrity: sha512-mUqYa46lgWqHKQ33Q6LNCGp/wPR3eqOYTUixHFsfrSQqRxH0+WOzca75iEjFr5RDGH1dDz622LaHhLOzOuQRUA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
       '@babel/core': '>=7.11.0'
       eslint: ^7.5.0 || ^8.0.0
     dependencies:
-      '@babel/core': 7.16.10
+      '@babel/core': 7.16.12
       eslint: 8.7.0
       eslint-scope: 5.1.1
       eslint-visitor-keys: 2.1.0
@@ -259,14 +259,14 @@ packages:
       '@babel/types': 7.16.8
     dev: true
 
-  /@babel/helper-compilation-targets/7.16.7_@babel+core@7.16.10:
+  /@babel/helper-compilation-targets/7.16.7_@babel+core@7.16.12:
     resolution: {integrity: sha512-mGojBwIWcwGD6rfqgRXVlVYmPAv7eOpIemUG3dGnDdCY4Pae70ROij3XmfrH6Fa1h1aiDylpglbZyktfzyo/hA==}
     engines: {node: '>=6.9.0'}
     peerDependencies:
       '@babel/core': ^7.0.0
     dependencies:
       '@babel/compat-data': 7.16.8
-      '@babel/core': 7.16.10
+      '@babel/core': 7.16.12
       '@babel/helper-validator-option': 7.16.7
       browserslist: 4.19.1
       semver: 6.3.0
@@ -498,8 +498,8 @@ packages:
       js-tokens: 4.0.0
     dev: true
 
-  /@babel/parser/7.16.10:
-    resolution: {integrity: sha512-Sm/S9Or6nN8uiFsQU1yodyDW3MWXQhFeqzMPM+t8MJjM+pLsnFVxFZzkpXKvUXh+Gz9cbMoYYs484+Jw/NTEFQ==}
+  /@babel/parser/7.16.12:
+    resolution: {integrity: sha512-VfaV15po8RiZssrkPweyvbGVSe4x2y+aciFCgn0n0/SJMR22cwofRV1mtnJQYcSB1wUTaA/X1LnA3es66MCO5A==}
     engines: {node: '>=6.0.0'}
     hasBin: true
     dev: true
@@ -1345,7 +1345,7 @@ packages:
       '@babel/helper-function-name': 7.16.7
       '@babel/helper-hoist-variables': 7.16.7
       '@babel/helper-split-export-declaration': 7.16.7
-      '@babel/parser': 7.16.10
+      '@babel/parser': 7.16.12
       '@babel/types': 7.16.8
       debug: 4.3.3
       globals: 11.12.0
@@ -8075,7 +8075,7 @@ packages:
     engines: {node: '>= 0.4'}
     dev: true
 
-  /svelte-check/2.3.0_80463ad5eedb8975568052835074da7c:
+  /svelte-check/2.3.0_cd48e85a6a4350ea5906a4c33962dd29:
     resolution: {integrity: sha512-SBKdJyUmxzPmJf/ZPqDSQOoa9JzOcgEpV7u3UaYcgVn7fA0veZ3FA5JgLU8KYtf84Gp6guBVcrC7XKLjJa5SXQ==}
     hasBin: true
     peerDependencies:
@@ -8089,7 +8089,7 @@ packages:
       sade: 1.8.1
       source-map: 0.7.3
       svelte: 3.46.1
-      svelte-preprocess: 4.10.1_9861d09c6cfcfe387159f82111b38ecd
+      svelte-preprocess: 4.10.1_f9e38729ec20c59ebfc78a42f6395ab0
       typescript: 4.5.4
     transitivePeerDependencies:
       - '@babel/core'
@@ -8112,7 +8112,7 @@ packages:
       svelte: 3.46.1
     dev: true
 
-  /svelte-preprocess/4.10.1_9861d09c6cfcfe387159f82111b38ecd:
+  /svelte-preprocess/4.10.1_f9e38729ec20c59ebfc78a42f6395ab0:
     resolution: {integrity: sha512-NSNloaylf+o9UeyUR2KvpdxrAyMdHl3U7rMnoP06/sG0iwJvlUM4TpMno13RaNqovh4AAoGsx1jeYcIyuGUXMw==}
     engines: {node: '>= 9.11.2'}
     requiresBuild: true
@@ -8153,7 +8153,7 @@ packages:
       typescript:
         optional: true
     dependencies:
-      '@babel/core': 7.16.10
+      '@babel/core': 7.16.12
       '@types/pug': 2.0.6
       '@types/sass': 1.43.1
       detect-indent: 6.1.0
