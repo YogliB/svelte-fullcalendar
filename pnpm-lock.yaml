@@ -15,7 +15,7 @@ importers:
       eslint-plugin-svelte3: 3.4.0
       husky: 7.0.4
       lerna: 4.0.0
-      lint-staged: 12.2.2
+      lint-staged: 12.3.3
       prettier: 2.5.1
       prettier-plugin-svelte: 2.6.0
       start-server-and-test: 1.14.0
@@ -32,7 +32,7 @@ importers:
       eslint-plugin-svelte3: 3.4.0_eslint@8.7.0+svelte@3.46.2
       husky: 7.0.4
       lerna: 4.0.0
-      lint-staged: 12.2.2
+      lint-staged: 12.3.3
       prettier: 2.5.1
       prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.2
       start-server-and-test: 1.14.0
@@ -55,7 +55,7 @@ importers:
       '@fullcalendar/interaction': 5.10.1
       '@fullcalendar/timegrid': 5.10.1
     devDependencies:
-      '@sveltejs/kit': 1.0.0-next.236_svelte@3.46.1
+      '@sveltejs/kit': 1.0.0-next.253_svelte@3.46.1
       svelte: 3.46.1
       svelte-check: 2.3.0_80463ad5eedb8975568052835074da7c
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -2471,8 +2471,8 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.236_svelte@3.46.1:
-    resolution: {integrity: sha512-V/K6KZwZlfM2jDiL7luisRkPujf/pAT2SUpgOEONk44WwUwYwd928qN2u0Z6SAfQFCDAxUI8pMHP2OC1bm352Q==}
+  /@sveltejs/kit/1.0.0-next.253_svelte@3.46.1:
+    resolution: {integrity: sha512-rOO4aObxtFXkTv8vfuPx1UEu1kx2zPB6HSWcKbU0iYP8i2RHXSO2sLXlKbrrZUXsPhmi9bTSgEDUaqn7ShgwGw==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -5520,8 +5520,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/12.2.2:
-    resolution: {integrity: sha512-bcHEoM1M/f+K1BYdHcEuIn8K+zMOSJR3mkny6PAuQiTgcSUcRbUWaUD6porAYypxF4k1vYZZ2HutZt1p94Z1jQ==}
+  /lint-staged/12.3.3:
+    resolution: {integrity: sha512-OqcLsqcPOqzvsfkxjeBpZylgJ3SRG1RYqc9LxC6tkt6tNsq1bNVkAixBwX09f6CobcHswzqVOCBpFR1Fck0+ag==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
@@ -5531,7 +5531,7 @@ packages:
       debug: 4.3.3_supports-color@9.2.1
       execa: 5.1.1
       lilconfig: 2.0.4
-      listr2: 3.14.0
+      listr2: 4.0.2
       micromatch: 4.0.4
       normalize-path: 3.0.0
       object-inspect: 1.12.0
@@ -5540,25 +5540,6 @@ packages:
       yaml: 1.10.2
     transitivePeerDependencies:
       - enquirer
-    dev: true
-
-  /listr2/3.14.0:
-    resolution: {integrity: sha512-TyWI8G99GX9GjE54cJ+RrNMcIFBfwMPxc3XTFiAYGN4s10hWROGtOg7+O6u6LE3mNkyld7RSLE6nrKBvTfcs3g==}
-    engines: {node: '>=10.0.0'}
-    peerDependencies:
-      enquirer: '>= 2.3.0 < 3'
-    peerDependenciesMeta:
-      enquirer:
-        optional: true
-    dependencies:
-      cli-truncate: 2.1.0
-      colorette: 2.0.16
-      log-update: 4.0.0
-      p-map: 4.0.0
-      rfdc: 1.3.0
-      rxjs: 7.5.2
-      through: 2.3.8
-      wrap-ansi: 7.0.0
     dev: true
 
   /listr2/3.14.0_enquirer@2.3.6:
@@ -5573,6 +5554,25 @@ packages:
       cli-truncate: 2.1.0
       colorette: 2.0.16
       enquirer: 2.3.6
+      log-update: 4.0.0
+      p-map: 4.0.0
+      rfdc: 1.3.0
+      rxjs: 7.5.2
+      through: 2.3.8
+      wrap-ansi: 7.0.0
+    dev: true
+
+  /listr2/4.0.2:
+    resolution: {integrity: sha512-YcgwfCWpvPbj9FLUGqvdFvd3hrFWKpOeuXznRgfWEJ7RNr8b/IKKIKZABHx3aU+4CWN/iSAFFSReziQG6vTeIA==}
+    engines: {node: '>=12'}
+    peerDependencies:
+      enquirer: '>= 2.3.0 < 3'
+    peerDependenciesMeta:
+      enquirer:
+        optional: true
+    dependencies:
+      cli-truncate: 2.1.0
+      colorette: 2.0.16
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
