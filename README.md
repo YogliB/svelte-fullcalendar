@@ -1,4 +1,3 @@
-[![Node CI](https://github.com/YogliB/svelte-fullcalendar/workflows/Node%20CI/badge.svg)](https://github.com/YogliB/svelte-fullcalendar/actions?query=workflow%3A%22Node.js+CI%22)
 [![Known Vulnerabilities](https://snyk.io/test/github/YogliB/svelte-fullcalendar/badge.svg)](https://snyk.io/test/github/YogliB/svelte-fullcalendar)
 [![install size](https://badgen.net/packagephobia/install/svelte-fullcalendar)](https://packagephobia.now.sh/result?p=svelte-fullcalendar)
 [![npm package version](https://badgen.net/npm/v/svelte-fullcalendar)](https://npm.im/svelte-fullcalendar)
@@ -10,7 +9,7 @@
 
 ## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
 
-### Please @mention me for any issue (I'm unwatching for dependabot reasons)
+### Please @mention me for any issue (I'm unwatching for renovate reasons)
 
 FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [Sapper](https://sapper.svelte.dev) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
@@ -20,13 +19,24 @@ Examples: (the code in this guide loosely follows them)
 
 -   [Svelte example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/svelte)
 -   [Sapper example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/sapper)
+-   [SvelteKit example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit)
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and Rollup's PostCSS plugin for handling the styles **(Not necessary in a Sapper project)**:
+The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles **(Not necessary in a Sapper project)**:
 
 ```bash
-npm install --save-dev svelte-fullcalendar postcss rollup-plugin-postcss
+npm install --save-dev svelte-fullcalendar
+```
+
+For Svelte:
+```bash
+npm install --save-dev postcss rollup-plugin-postcss
+```
+
+For SvelteKit:
+```bash
+npm install --save-dev svelte-preprocess
 ```
 
 Then install any additional plugins you plan to use:
@@ -54,7 +64,7 @@ You must initialized your calendar with at least one plugin that provides a view
 
 All of FullCalendar’s CSS will be automatically loaded as long as your build system is able to process .css file imports. See [Initializing with an ES6 Build System](https://fullcalendar.io/docs/initialize-es6) for more information on configuring your build system.
 
-Note that non-Sapper users will also need to install `postcss` and configure `Rollup` to use it:
+Note that "vanilla" Svelte users will also need to install `postcss` and configure `Rollup` to use it:
 
 Run:
 
@@ -82,6 +92,14 @@ css({ output: 'bundle.css' }),
 postcss(),
 ...
 ```
+
+SvelteKit users will need to use `svelte-preprocess`:
+
+```bash
+npm install --save-dev svelte-preprocess
+```
+
+A usage example can be found [here](/examples/kit/svelte.config.js#L6)
 
 ## Props and Emitted Events
 
@@ -215,7 +233,7 @@ Here is a simple usage example:
 		schedulerLicenseKey: "XXX",
 		plugins: [resourceTimelinePlugin, interactionPlugin],
 		droppable: true},
-		};
+	};
 </script>
 
 <Draggable eventData={{ title: 'my event', duration: '02:00' }}>
