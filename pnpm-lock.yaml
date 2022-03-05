@@ -15,7 +15,7 @@ importers:
       eslint-plugin-svelte3: 3.4.1
       husky: 7.0.4
       lerna: 4.0.0
-      lint-staged: 12.3.4
+      lint-staged: 12.3.5
       prettier: 2.5.1
       prettier-plugin-svelte: 2.6.0
       start-server-and-test: 1.14.0
@@ -32,7 +32,7 @@ importers:
       eslint-plugin-svelte3: 3.4.1_eslint@8.10.0+svelte@3.46.4
       husky: 7.0.4
       lerna: 4.0.0
-      lint-staged: 12.3.4
+      lint-staged: 12.3.5
       prettier: 2.5.1
       prettier-plugin-svelte: 2.6.0_prettier@2.5.1+svelte@3.46.4
       start-server-and-test: 1.14.0
@@ -57,7 +57,7 @@ importers:
       '@fullcalendar/timegrid': 5.10.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.30
-      '@sveltejs/kit': 1.0.0-next.290_svelte@3.46.1
+      '@sveltejs/kit': 1.0.0-next.292_svelte@3.46.1
       svelte: 3.46.1
       svelte-check: 2.3.0_@babel+core@7.17.5+svelte@3.46.1
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -2556,8 +2556,8 @@ packages:
       esbuild: 0.14.22
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.290_svelte@3.46.1:
-    resolution: {integrity: sha512-3Q0uX/auFYsoj3o7+vQtZ+ZsuRLAmVsra5hvkvml18EjfX1wGRNdLlPcl6VE95eAvViWe/65vGaNNC+02h1crA==}
+  /@sveltejs/kit/1.0.0-next.292_svelte@3.46.1:
+    resolution: {integrity: sha512-sWLuN7/rOsV3xX0VtT562PXhGqkuU9np03Gv3k0v+MKh+NW59TUGgQTWIe0LP6ImHiZaMt0Uaw4oYfIn0wsTmQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -5651,8 +5651,8 @@ packages:
     resolution: {integrity: sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==}
     dev: true
 
-  /lint-staged/12.3.4:
-    resolution: {integrity: sha512-yv/iK4WwZ7/v0GtVkNb3R82pdL9M+ScpIbJLJNyCXkJ1FGaXvRCOg/SeL59SZtPpqZhE7BD6kPKFLIDUhDx2/w==}
+  /lint-staged/12.3.5:
+    resolution: {integrity: sha512-oOH36RUs1It7b9U/C7Nl/a0sLfoIBcMB8ramiB3nuJ6brBqzsWiUAFSR5DQ3yyP/OR7XKMpijtgKl2DV1lQ3lA==}
     engines: {node: ^12.20.0 || ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
