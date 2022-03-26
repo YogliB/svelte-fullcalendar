@@ -1,27 +1,29 @@
 {
-    "dependencies": {
-        "@fullcalendar/daygrid": "^5.10.1",
-        "@fullcalendar/interaction": "^5.10.1",
-        "@fullcalendar/timegrid": "^5.10.1"
-    },
-    "devDependencies": {
-        "@sveltejs/adapter-auto": "next",
-        "@sveltejs/kit": "next",
-        "svelte": "^3.46.1",
-        "svelte-check": "^2.3.0",
-        "svelte-fullcalendar": "workspace:latest",
-        "svelte-preprocess": "^4.10.1",
-        "tslib": "^2.3.1",
-        "typescript": "^4.5.4"
-    },
-    "name": "@examples/kit",
-    "private": true,
-    "scripts": {
-        "build": "svelte-kit build",
-        "check": "svelte-check --tsconfig ./tsconfig.json",
-        "check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
-        "dev": "svelte-kit dev",
-        "preview": "svelte-kit preview"
-    },
-    "type": "module"
+	"dependencies": {
+		"@fullcalendar/daygrid": "^5.10.1",
+		"@fullcalendar/interaction": "^5.10.1",
+		"@fullcalendar/timegrid": "^5.10.1"
+	},
+	"devDependencies": {
+		"@sveltejs/adapter-auto": "next",
+		"@sveltejs/kit": "next",
+		"svelte": "^3.44.0",
+		"svelte-check": "^2.2.6",
+		"svelte-fullcalendar": "workspace:latest",
+		"svelte-preprocess": "^4.10.1",
+		"tslib": "^2.3.1",
+		"typescript": "~4.6.2"
+	},
+	"name": "my-app",
+	"private": true,
+	"scripts": {
+		"build": "svelte-kit build",
+		"check": "svelte-check --tsconfig ./tsconfig.json",
+		"check:watch": "svelte-check --tsconfig ./tsconfig.json --watch",
+		"dev": "svelte-kit dev",
+		"package": "svelte-kit package",
+		"prepare": "svelte-kit sync",
+		"preview": "svelte-kit preview"
+	},
+	"type": "module"
 }

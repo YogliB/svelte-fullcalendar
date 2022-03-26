@@ -37,9 +37,7 @@
 	"scripts": {
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
-		"dev:kit": "pnpm run dev --filter=@examples/kit",
-		"dev:sapper": "pnpm run dev --filter=@examples/sapper",
-		"dev:svelte": "pnpm run dev --filter=@examples/svelte",
+		"dev:kit": "pnpm run dev --filter=my-app",
 		"lint": "eslint --color .",
 		"prepare": "husky install",
 		"test:kit": "start-server-and-test dev:kit http://localhost:3000 cy:run",
