@@ -30,13 +30,11 @@ npm install --save-dev svelte-fullcalendar
 ```
 
 For Svelte:
-
 ```bash
 npm install --save-dev postcss rollup-plugin-postcss
 ```
 
 For SvelteKit:
-
 ```bash
 npm install --save-dev svelte-preprocess
 ```
