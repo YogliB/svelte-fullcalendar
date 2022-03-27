@@ -11,56 +11,46 @@
 
 ### Please @mention me for any issue (I'm unwatching for renovate reasons)
 
-FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [Sapper](https://sapper.svelte.dev) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
-
-This component is released under a MIT license, the same license the standard version of FullCalendar uses.
-
-Examples: (the code in this guide loosely follows them)
-
--   [Svelte example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/svelte)
--   [Sapper example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/sapper)
--   [SvelteKit example project](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit)
+FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
 This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles **(Not necessary in a Sapper project)**:
 
 ```bash
-npm install --save-dev svelte-fullcalendar
-```
-
-For Svelte:
-
-```bash
-npm install --save-dev postcss rollup-plugin-postcss
-```
-
-For SvelteKit:
-
-```bash
-npm install --save-dev svelte-preprocess
+npm install --save-dev svelte-preprocess svelte-fullcalendar
 ```
 
 Then install any additional plugins you plan to use:
 
 ```bash
-npm install --save-dev  @fullcalendar/daygrid
+npm install  @fullcalendar/daygrid
 ```
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/svelte/src/App.svelte)):
+You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/kit/src/routes/index.svelte)):
 
 ```html
 <script>
 	import FullCalendar from 'svelte-fullcalendar';
-	import dayGridPlugin from '@fullcalendar/daygrid';
 
-	let options = { initialView: 'dayGridMonth', plugins: [dayGridPlugin] };
+	let options = { initialView: 'dayGridMonth', plugins: [] };
+
+	onMount(async () => {
+		options = {
+			...options,
+			plugins: [(await import('@fullcalendar/daygrid')).default],
+		};
+	});
 </script>
 
 <FullCalendar {options} />
 ```
 
 You must initialized your calendar with at least one plugin that provides a view!
+
+## Example
+
+[Here you can find a working example](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit).
 
 ## CSS
 
@@ -244,3 +234,7 @@ Here is a simple usage example:
 
 <FullCalendar {options}/>
 ```
+
+## License
+
+This component is released under the MIT license, same as the FullCalendar library.
