@@ -39,7 +39,7 @@
 		"dev": "pnpm run dev --filter=my-app",
 		"lint": "eslint --color .",
 		"prepare": "husky install",
-		"test": "start-server-and-test dev:kit http://localhost:3000 cy:run"
+		"test": "start-server-and-test dev http://localhost:3000 cy:run"
 	},
 	"workspaces": [
 		"packages/*",
