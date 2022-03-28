@@ -30,7 +30,34 @@ Then install any additional plugins you plan to use:
 npm install @fullcalendar/daygrid
 ```
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/kit/src/routes/index.svelte)):
+After that you should update your `svelte.config.js`:
+
+```javascript
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess(),
+
+	kit: {
+		adapter: adapter(),
++++		vite: {
++++			resolve: {
++++				dedupe: ['@fullcalendar/common'],
++++			},
++++			optimizeDeps: ['@fullcalendar/common'],
++++		},
+	},
+};
+
+export default config;
+```
+* This is crutial for the component to work with SvelteKit.
+
+You may then begin to write a parent component that leverages the `<FullCalendar>` component:
 
 ```html
 <script lang='ts'>
@@ -50,7 +77,7 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 <FullCalendar {options} />
 ```
 
-You must initialized your calendar with at least one plugin that provides a view!
+* You must initialized your calendar with at least one plugin that provides a view!
 
 ## Example
 
