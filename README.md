@@ -9,7 +9,7 @@
 
 ## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
 
-### Please @mention me for any issue (I'm unwatching for renovate reasons)
+### Please @mention me for any issue (I'm unwatching for [renovate](https://renovatebot.com) reasons)
 
 FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
 
