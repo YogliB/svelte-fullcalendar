@@ -1,5 +1,4 @@
 {
-	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
 		"@babel/core": "7.17.8",
 		"@babel/eslint-parser": "7.17.0",
