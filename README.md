@@ -13,7 +13,9 @@
 
 FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that matches the functionality of FullCalendar's standard API.
 
-This guide does not go into depth about initializing a Svelte/SvelteKit project. Please consult the example that.
+This guide does not go into depth about initializing a Svelte/SvelteKit project. Please consult [the example](/examples/kit) for that.
+
+## First steps
 
 The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles.
 
@@ -28,7 +30,34 @@ Then install any additional plugins you plan to use:
 npm install @fullcalendar/daygrid
 ```
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/kit/src/routes/index.svelte)):
+After that you should update your `svelte.config.js`:
+
+```javascript
+import adapter from '@sveltejs/adapter-auto';
+import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
+	preprocess: preprocess(),
+
+	kit: {
+		adapter: adapter(),
++++		vite: {
++++			resolve: {
++++				dedupe: ['@fullcalendar/common'],
++++			},
++++			optimizeDeps: ['@fullcalendar/common'],
++++		},
+	},
+};
+
+export default config;
+```
+* This is crutial for the component to work with SvelteKit.
+
+You may then begin to write a parent component that leverages the `<FullCalendar>` component:
 
 ```html
 <script lang='ts'>
@@ -48,35 +77,11 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 <FullCalendar {options} />
 ```
 
-You must initialized your calendar with at least one plugin that provides a view!
+* You must initialized your calendar with at least one plugin that provides a view!
 
 ## Example
 
 [Here you can find a working example](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit).
-
-## CSS
-
-For the styles to work, make sure to enable [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess):
-
-```javascript
-// svelte.config.js
-
-import adapter from '@sveltejs/adapter-auto';
-+++ import preprocess from 'svelte-preprocess';
-
-/** @type {import('@sveltejs/kit').Config} */
-const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-+++	preprocess: preprocess(),
-	kit: {
-		adapter: adapter(),
-	},
-};
-
-export default config;
-
-```
 
 ## Props and Emitted Events
 
