@@ -11,34 +11,36 @@
 
 ### Please @mention me for any issue (I'm unwatching for [renovate](https://renovatebot.com) reasons)
 
-FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that exactly matches the functionality of FullCalendar's standard API.
+FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that matches the functionality of FullCalendar's standard API.
 
-This guide does not go into depth about initializing a Svelte project. Please consult the aforementioned example/runnable projects for that.
+This guide does not go into depth about initializing a Svelte/SvelteKit project. Please consult the example that.
 
-The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles **(Not necessary in a Sapper project)**:
+The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles.
 
 ```bash
+npm install @fullcalendar/core @fullcalendar/common
 npm install --save-dev svelte-preprocess svelte-fullcalendar
 ```
 
 Then install any additional plugins you plan to use:
 
 ```bash
-npm install  @fullcalendar/daygrid
+npm install @fullcalendar/daygrid
 ```
 
 You may then begin to write a parent component that leverages the `<FullCalendar>` component ([App.svelte](https://github.com/YogliB/svelte-fullcalendar/blob/master/examples/kit/src/routes/index.svelte)):
 
 ```html
-<script>
+<script lang='ts'>
 	import FullCalendar from 'svelte-fullcalendar';
+	import type { CalendarOptions } from 'svelte-fullcalendar';
 
-	let options = { initialView: 'dayGridMonth', plugins: [] };
+	let options: CalendarOptions = { initialView: 'dayGridMonth', plugins: [] };
 
 	onMount(async () => {
 		options = {
 			...options,
-			plugins: [(await import('@fullcalendar/daygrid')).default],
+			plugins: [(await import('@fullcalendar/daygrid')).default], // for server-side rendering
 		};
 	});
 </script>
@@ -54,44 +56,27 @@ You must initialized your calendar with at least one plugin that provides a view
 
 ## CSS
 
-All of FullCalendar’s CSS will be automatically loaded as long as your build system is able to process .css file imports. See [Initializing with an ES6 Build System](https://fullcalendar.io/docs/initialize-es6) for more information on configuring your build system.
-
-Note that "vanilla" Svelte users will also need to install `postcss` and configure `Rollup` to use it:
-
-Run:
-
-```bash
-npm install --save-dev postcss rollup-plugin-postcss
-```
-
-Edit `rollup.config.js`:
+For the styles to work, make sure to enable [svelte-preprocess](https://github.com/sveltejs/svelte-preprocess):
 
 ```javascript
-+ import postcss from 'rollup-plugin-postcss';
+// svelte.config.js
 
-...
-svelte({
-	compilerOptions: {
-		// enable run-time checks when not in production
-		dev: !production,
+import adapter from '@sveltejs/adapter-auto';
++++ import preprocess from 'svelte-preprocess';
+
+/** @type {import('@sveltejs/kit').Config} */
+const config = {
+	// Consult https://github.com/sveltejs/svelte-preprocess
+	// for more information about preprocessors
++++	preprocess: preprocess(),
+	kit: {
+		adapter: adapter(),
 	},
-}),
-// we'll extract any component CSS out into
-// a separate file - better for performance
-css({ output: 'bundle.css' }),
+};
 
-// for FullCalendar
-postcss(),
-...
+export default config;
+
 ```
-
-SvelteKit users will need to use `svelte-preprocess`:
-
-```bash
-npm install --save-dev svelte-preprocess
-```
-
-A usage example can be found [here](/examples/kit/svelte.config.js#L6)
 
 ## Props and Emitted Events
 
@@ -106,7 +91,7 @@ For the FullCalendar connector, there is no distinction between props and events
 			{ title: 'event 2', date: '2019-04-02' },
 		],
 		initialView: dayGridMonth,
-		plugins: [dayGridPlugin],
+		plugins: [...],
 	};
 </script>
 
@@ -120,21 +105,22 @@ You can modify your calendar’s options after initialization by reassigning the
 ```html
 <script>
 	import FullCalendar from 'svelte-fullcalendar';
-	import dayGridPlugin from '@fullcalendar/daygrid';
 
 	let options = {
 		initialView: dayGridMonth,
-		plugins: [dayGridPlugin],
+		plugins: [...],
 		weekends: false,
 	};
 
 	function toggleWeekends() {
-		options.weekends = !options.weekends;
-		options = { ...options };
+		options = { 
+				...options,
+				weekends: !options.weekends
+		};
 	}
 </script>
 
-<button on:click="{toggleWeekends}">toggle weekends</button>
+<button on:click={toggleWeekends}>toggle weekends</button>
 <FullCalendar {options} />
 ```
 
@@ -147,7 +133,7 @@ This is especially useful for controlling the current date. The [initialDate](ht
 To do something like this, you’ll need to get ahold of the component’s ref (short for “reference”). In the template:
 
 ```html
-<FullCalendar bind:this="{calendarRef}" {options} />
+<FullCalendar bind:this={calendarRef} {options} />
 ```
 
 Once you have the ref, you can get the underlying Calendar object via the getApi method:
@@ -157,7 +143,7 @@ Once you have the ref, you can get the underlying Calendar object via the getApi
 	let calendarRef;
 
 	function next() {
-		let calendarApi = calendarRef.getAPI();
+		const calendarApi = calendarRef.getAPI();
 		calendarApi.next();
 	}
 </script>
@@ -170,34 +156,11 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 ```html
 <script>
 	import FullCalendar from 'svelte-fullcalendar';
-	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
 	let options = {
-		plugins: [resourceTimelinePlugin],
-		schedulerLicenseKey: 'XXX',
+		plugins: [(await import('@fullcalendar/resource-timeline')).default],
+		schedulerLicenseKey: 'your-license-key',
 	};
-</script>
-
-<FullCalendar {options} />
-```
-
-## SSR
-
-When using server side rendering, it is necessary to load all plugins asynchronously `onMount`.
-
-```html
-<script>
-	import { onMount } from 'svelte';
-	import FullCalendar from 'svelte-fullcalendar';
-
-	let options = { initialView: 'dayGridMonth', plugins: [] };
-
-	onMount(async () => {
-		options.plugins = [
-			(await import('@fullcalendar/daygrid')).default,
-			(await import('@fullcalendar/resource-timeline')).default,
-		];
-	});
 </script>
 
 <FullCalendar {options} />
@@ -218,12 +181,13 @@ Here is a simple usage example:
 ```html
 <script>
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
-	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
-	import interactionPlugin from '@fullcalendar/interaction';
 
 	let options = {
 		schedulerLicenseKey: "XXX",
-		plugins: [resourceTimelinePlugin, interactionPlugin],
+		plugins: [
+				(await import('@fullcalendar/resource-timeline')).default,
+				(await import('@fullcalendar/interaction')).default
+		],
 		droppable: true},
 	};
 </script>
