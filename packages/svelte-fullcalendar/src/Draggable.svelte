@@ -2,7 +2,6 @@
 	import { onMount } from 'svelte';
 	import { filterNullProps } from './helpers.js';
 
-	// general props
 	/** @type {string} */
 	let classes = null;
 	export { classes as class };
@@ -25,8 +24,6 @@
 	let draggable = null;
 
 	onMount(async () => {
-		await import('@fullcalendar/core/vdom.js');
-
 		if (!draggable && elementRef) initDraggable();
 
 		return () => {

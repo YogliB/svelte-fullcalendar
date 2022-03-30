@@ -11,7 +11,7 @@
 		"@sveltejs/kit": "next",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.2.6",
-		"svelte-fullcalendar": "workspace:latest",
+		"svelte-fullcalendar": "workspace:*",
 		"svelte-preprocess": "^4.10.1",
 		"tslib": "^2.3.1",
 		"typescript": "~4.6.2"

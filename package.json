@@ -25,7 +25,7 @@
 			"prettier --write --plugin-search-dir=. ."
 		]
 	},
-	"name": "svelte-fullcalendar",
+	"name": "@svelte-fullcalendar/monorepo",
 	"prettier": {
 		"singleQuote": true,
 		"tabWidth": 4,
@@ -40,9 +40,5 @@
 		"lint": "eslint --color .",
 		"prepare": "husky install",
 		"test": "start-server-and-test dev http://localhost:3000 cy:run"
-	},
-	"workspaces": [
-		"packages/*",
-		"examples/*"
-	]
+	}
 }
