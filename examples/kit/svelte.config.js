@@ -13,7 +13,9 @@ const config = {
 			resolve: {
 				dedupe: ['@fullcalendar/common'],
 			},
-			optimizeDeps: ['@fullcalendar/common'],
+			optimizeDeps: {
+				include: ['@fullcalendar/common'],
+			},
 		},
 	},
 };
