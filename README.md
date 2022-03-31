@@ -65,18 +65,10 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 ```html
 <script lang="ts">
 	import type { CalendarOptions } from 'svelte-fullcalendar';
-	
-	import { onMount } from 'svelte';
 	import FullCalendar from 'svelte-fullcalendar';
+	import daygridPlugin from '@fullcalendar/daygrid';
 
-	let options: CalendarOptions = { initialView: 'dayGridMonth', plugins: [] };
-
-	onMount(async () => {
-		options = {
-			...options,
-			plugins: [(await import('@fullcalendar/daygrid')).default], // for server-side rendering
-		};
-	});
+	let options: CalendarOptions = { initialView: 'dayGridMonth', plugins: [daygridPlugin] };
 </script>
 
 <FullCalendar {options} />
@@ -191,14 +183,13 @@ Here is a simple usage example:
 ```html
 <script>
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
-
+	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+	import interactionPlugin from '@fullcalendar/interaction';
+	
 	let options = {
 		schedulerLicenseKey: "XXX",
-		plugins: [
-				(await import('@fullcalendar/resource-timeline')).default,
-				(await import('@fullcalendar/interaction')).default
-		],
-		droppable: true},
+		plugins: [resourceTimelinePlugin, interactionPlugin],
+		droppable: true
 	};
 </script>
 
