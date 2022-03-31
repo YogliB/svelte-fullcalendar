@@ -158,9 +158,10 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 ```html
 <script>
 	import FullCalendar from 'svelte-fullcalendar';
+	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
 	let options = {
-		plugins: [(await import('@fullcalendar/resource-timeline')).default],
+		plugins: [resourceTimelinePlugin],
 		schedulerLicenseKey: 'your-license-key',
 	};
 </script>
