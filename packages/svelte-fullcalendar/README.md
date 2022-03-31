@@ -48,8 +48,10 @@ const config = {
 +++			resolve: {
 +++				dedupe: ['@fullcalendar/common'],
 +++			},
-+++			optimizeDeps: ['@fullcalendar/common'],
-+++		},
++++			optimizeDeps: {
++++				include: ['@fullcalendar/common'],
++++			},
+		},
 	},
 };
 
@@ -62,8 +64,10 @@ You may then begin to write a parent component that leverages the `<FullCalendar
 
 ```html
 <script lang="ts">
-	import FullCalendar from 'svelte-fullcalendar';
 	import type { CalendarOptions } from 'svelte-fullcalendar';
+	
+	import { onMount } from 'svelte';
+	import FullCalendar from 'svelte-fullcalendar';
 
 	let options: CalendarOptions = { initialView: 'dayGridMonth', plugins: [] };
 
