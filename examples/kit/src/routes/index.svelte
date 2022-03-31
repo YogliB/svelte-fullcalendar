@@ -1,6 +1,9 @@
 <script>
 	import { onMount } from 'svelte';
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
+	import daygridPlugin from '@fullcalendar/daygrid';
+	import timegridPlugin from '@fullcalendar/timegrid';
+	import interactionPlugin from '@fullcalendar/interaction';
 
 	let options = {
 		dateClick: handleDateClick,
@@ -11,7 +14,7 @@
 			{ title: 'New Event', start: new Date() },
 		],
 		initialView: 'dayGridMonth',
-		plugins: [],
+		plugins: [daygridPlugin, timegridPlugin, interactionPlugin],
 		headerToolbar: {
 			left: 'prev,next today',
 			center: 'title',
@@ -22,17 +25,6 @@
 	};
 	let calendarComponentRef;
 	let eventData = { title: 'my event', duration: '02:00' };
-
-	onMount(async () => {
-		options = {
-			...options,
-			plugins: [
-				(await import('@fullcalendar/daygrid')).default,
-				(await import('@fullcalendar/timegrid')).default,
-				(await import('@fullcalendar/interaction')).default,
-			],
-		};
-	});
 
 	function toggleWeekends() {
 		options = { ...options, weekends: !options.weekends };
