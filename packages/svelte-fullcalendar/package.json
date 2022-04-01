@@ -11,7 +11,7 @@
 	"devDependencies": {
 		"@fullcalendar/common": "^5.0.0",
 		"@fullcalendar/core": "^5.0.0",
-		"svelte": "3.46.4"
+		"svelte": "3.46.6"
 	},
 	"exports": {
 		".": "./index.js",

@@ -15,7 +15,7 @@
 		"prettier": "2.6.1",
 		"prettier-plugin-svelte": "2.6.0",
 		"start-server-and-test": "1.14.0",
-		"svelte": "3.46.4"
+		"svelte": "3.46.6"
 	},
 	"lint-staged": {
 		"*.{js, svelte}": [
