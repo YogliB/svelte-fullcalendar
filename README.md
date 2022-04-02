@@ -7,78 +7,72 @@
 
 # svelte-fullcalendar
 
-## A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io)
+A Svelte 3 component-wrapper for [FullCalendar](https://fullcalendar.io).
 
-### Please @mention me for any issue (I'm unwatching for [renovate](https://renovatebot.com) reasons)
+> Please @mention me for any issue (I'm unwatching for [renovate](https://renovatebot.com) reasons)
 
-FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. It provides a component that matches the functionality of FullCalendar's standard API.
+FullCalendar (almost) seamlessly integrates with the [Svelte](https://svelte.dev) JavaScript compiler and the [SvelteKit](https://kit.svelte.dev/) JavaScript framework. This wrapper provides a component that matches the functionality of FullCalendar's standard API.
+## Setup
 
-This guide does not go into depth about initializing a Svelte/SvelteKit project. Please consult [the example](https://github.com/YogliB/svelte-fullcalendar/tree/main/examples/kit) for that.
-
-## First steps
-
-The first step is to install the FullCalendar-related dependencies. You'll need the Svelte adapter and some plugins to handle the styles.
+First install the wrapper and related dependencies:
 
 ```bash
-npm install @fullcalendar/core @fullcalendar/common
-npm install --save-dev svelte-preprocess svelte-fullcalendar
+npm install --save-dev svelte-fullcalendar
+npm install --save-dev @fullcalendar/core @fullcalendar/common
 ```
 
-Then install any additional plugins you plan to use:
+Then install any additional FullCalendar plugins you plan to use:
 
 ```bash
-npm install @fullcalendar/daygrid
+npm install --save-dev @fullcalendar/daygrid
 ```
 
-After that you should update your `svelte.config.js`:
+After that, update your Vite configuration in `svelte.config.js` as shown here:
 
-```javascript
-import adapter from '@sveltejs/adapter-auto';
-import preprocess from 'svelte-preprocess';
-
-/** @type {import('@sveltejs/kit').Config} */
+```diff
 const config = {
-	// Consult https://github.com/sveltejs/svelte-preprocess
-	// for more information about preprocessors
-	preprocess: preprocess(),
+  preprocess: preprocess(),
 
-	kit: {
-		adapter: adapter(),
-+++		vite: {
-+++			resolve: {
-+++				dedupe: ['@fullcalendar/common'],
-+++			},
-+++			optimizeDeps: {
-+++				include: ['@fullcalendar/common'],
-+++			},
-		},
-	},
-};
-
-export default config;
+  kit: {
+-   adapter: adapter()
++   adapter: adapter(),
++   vite: {
++     resolve: {
++       dedupe: ['@fullcalendar/common']
++     },
++     optimizeDeps: {
++       include: ['@fullcalendar/common']
++     }
++   }
+  }
+ };
 ```
 
--   This is crutial for the component to work with SvelteKit.
+This config is required to workaround the `'isHiddenDay' of undefined` issue upstream [as noted by FullCalendar](https://github.com/fullcalendar/fullcalendar/issues/6370).
 
-You may then begin to write a parent component that leverages the `<FullCalendar>` component:
+## Usage
+
+You may then begin to write a parent component that leverages the `FullCalendar` wrapper component, including type definitions if you're using TypeScript:
 
 ```html
 <script lang="ts">
-	import type { CalendarOptions } from 'svelte-fullcalendar';
-	import FullCalendar from 'svelte-fullcalendar';
-	import daygridPlugin from '@fullcalendar/daygrid';
+  import FullCalendar, { type CalendarOptions } from 'svelte-fullcalendar';
+  import daygridPlugin from '@fullcalendar/daygrid';
 
-	let options: CalendarOptions = { initialView: 'dayGridMonth', plugins: [daygridPlugin] };
+  let options: CalendarOptions = {
+    initialView: 'dayGridMonth',
+    plugins: [daygridPlugin]
+  };
 </script>
 
 <FullCalendar {options} />
 ```
 
--   You must initialized your calendar with at least one plugin that provides a view!
+**Note:** You must initialize the calendar with _at least one_ plugin which provides a view.
 
 ## Example
 
-[Here you can find a working example](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit).
+[Here you can find a working SvelteKit example](https://github.com/YogliB/svelte-fullcalendar/tree/master/examples/kit).
 
 ## Props and Emitted Events
 
@@ -86,15 +80,15 @@ For the FullCalendar connector, there is no distinction between props and events
 
 ```html
 <script>
-	let options = {
-		dateClick: (event) => alert('date click! ' + event.dateStr),
-		events: [
-			{ title: 'event 1', date: '2019-04-01' },
-			{ title: 'event 2', date: '2019-04-02' },
-		],
-		initialView: dayGridMonth,
-		plugins: [...],
-	};
+  let options = {
+    dateClick: (event) => alert('date click! ' + event.dateStr),
+    events: [
+      { title: 'event 1', date: '2019-04-01' },
+      { title: 'event 2', date: '2019-04-02' },
+    ],
+    initialView: dayGridMonth,
+    plugins: [...],
+  };
 </script>
 
 <FullCalendar {options} />
@@ -106,20 +100,20 @@ You can modify your calendar’s options after initialization by reassigning the
 
 ```html
 <script>
-	import FullCalendar from 'svelte-fullcalendar';
+  import FullCalendar from 'svelte-fullcalendar';
 
-	let options = {
-		initialView: dayGridMonth,
-		plugins: [...],
-		weekends: false,
-	};
+  let options = {
+    initialView: dayGridMonth,
+    plugins: [...],
+    weekends: false,
+  };
 
-	function toggleWeekends() {
-		options = {
-				...options,
-				weekends: !options.weekends
-		};
-	}
+  function toggleWeekends() {
+    options = {
+      ...options,
+      weekends: !options.weekends
+    };
+  }
 </script>
 
 <button on:click="{toggleWeekends}">toggle weekends</button>
@@ -142,12 +136,12 @@ Once you have the ref, you can get the underlying Calendar object via the getApi
 
 ```html
 <script>
-	let calendarRef;
+  let calendarRef;
 
-	function next() {
-		const calendarApi = calendarRef.getAPI();
-		calendarApi.next();
-	}
+  function next() {
+    const calendarApi = calendarRef.getAPI();
+    calendarApi.next();
+  }
 </script>
 ```
 
@@ -157,17 +151,19 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 
 ```html
 <script>
-	import FullCalendar from 'svelte-fullcalendar';
-	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+  import FullCalendar from 'svelte-fullcalendar';
+  import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
-	let options = {
-		plugins: [resourceTimelinePlugin],
-		schedulerLicenseKey: 'your-license-key',
-	};
+  let options = {
+    plugins: [resourceTimelinePlugin],
+    schedulerLicenseKey: 'your-license-key',
+  };
 </script>
 
 <FullCalendar {options} />
 ```
+
+Until server-side rendering of FullCalendar is fully supported upstream, implementations may decide to share the license key on the client and this is not uncommon. Please note, however, you can still fetch event data and from your own API server-side in order to speed up rendering of your calendar components.
 
 ## Draggable external events
 
@@ -183,19 +179,19 @@ Here is a simple usage example:
 
 ```html
 <script>
-	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
-	import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
-	import interactionPlugin from '@fullcalendar/interaction';
-	
-	let options = {
-		schedulerLicenseKey: "XXX",
-		plugins: [resourceTimelinePlugin, interactionPlugin],
-		droppable: true
-	};
+  import FullCalendar, { Draggable } from 'svelte-fullcalendar';
+  import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
+  import interactionPlugin from '@fullcalendar/interaction';
+  
+  let options = {
+    schedulerLicenseKey: "XXX",
+    plugins: [resourceTimelinePlugin, interactionPlugin],
+    droppable: true
+  };
 </script>
 
 <Draggable eventData={{ title: 'my event', duration: '02:00' }}>
-	Drag me!
+  Drag me!
 </Draggable>
 
 <FullCalendar {options}/>
