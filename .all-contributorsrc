@@ -1,0 +1,24 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "vhscom",
+      "name": "vhs",
+      "avatar_url": "https://avatars.githubusercontent.com/u/97140109?v=4",
+      "profile": "https://vhs.codeberg.page",
+      "contributions": [
+        "doc"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "projectName": "svelte-fullcalendar",
+  "projectOwner": "YogliB",
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "skipCi": true
+}
