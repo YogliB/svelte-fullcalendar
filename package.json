@@ -12,7 +12,7 @@
 		"husky": "7.0.4",
 		"lerna": "4.0.0",
 		"lint-staged": "12.3.7",
-		"prettier": "2.6.1",
+		"prettier": "2.6.2",
 		"prettier-plugin-svelte": "2.6.0",
 		"start-server-and-test": "1.14.0",
 		"svelte": "3.46.6"
