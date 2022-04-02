@@ -170,7 +170,7 @@ Until server-side rendering of FullCalendar is fully supported upstream, impleme
 You'll need to install the `interactionPlugin`:
 
 ```bash
-npm install @fullcalendar/interaction
+npm install --save-dev @fullcalendar/interaction
 ```
 
 See the [official docs](https://fullcalendar.io/docs/external-dragging) for all available props.
