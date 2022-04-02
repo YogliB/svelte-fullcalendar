@@ -116,7 +116,7 @@ You can modify your calendar’s options after initialization by reassigning the
   }
 </script>
 
-<button on:click="{toggleWeekends}">toggle weekends</button>
+<button on:click={toggleWeekends}>toggle weekends</button>
 <FullCalendar {options} />
 ```
 
@@ -129,7 +129,7 @@ This is especially useful for controlling the current date. The [initialDate](ht
 To do something like this, you’ll need to get ahold of the component’s ref (short for “reference”). In the template:
 
 ```html
-<FullCalendar bind:this="{calendarRef}" {options} />
+<FullCalendar bind:this={calendarRef} {options} />
 ```
 
 Once you have the ref, you can get the underlying Calendar object via the getApi method:
