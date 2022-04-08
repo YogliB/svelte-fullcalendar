@@ -19,7 +19,7 @@ importers:
       prettier: 2.6.2
       prettier-plugin-svelte: 2.6.0
       start-server-and-test: 1.14.0
-      svelte: 3.46.6
+      svelte: 3.47.0
     devDependencies:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.9+eslint@8.12.0
@@ -29,14 +29,14 @@ importers:
       eslint: 8.12.0
       eslint-config-prettier: 8.5.0_eslint@8.12.0
       eslint-plugin-cypress: 2.12.1_eslint@8.12.0
-      eslint-plugin-svelte3: 3.4.1_eslint@8.12.0+svelte@3.46.6
+      eslint-plugin-svelte3: 3.4.1_eslint@8.12.0+svelte@3.47.0
       husky: 7.0.4
       lerna: 4.0.0
       lint-staged: 12.3.7
       prettier: 2.6.2
-      prettier-plugin-svelte: 2.6.0_prettier@2.6.2+svelte@3.46.6
+      prettier-plugin-svelte: 2.6.0_prettier@2.6.2+svelte@3.47.0
       start-server-and-test: 1.14.0
-      svelte: 3.46.6
+      svelte: 3.47.0
 
   examples/kit:
     specifiers:
@@ -61,7 +61,7 @@ importers:
       '@fullcalendar/timegrid': 5.10.1
     devDependencies:
       '@sveltejs/adapter-auto': 1.0.0-next.34
-      '@sveltejs/kit': 1.0.0-next.307_svelte@3.46.4
+      '@sveltejs/kit': 1.0.0-next.310_svelte@3.46.4
       svelte: 3.46.4
       svelte-check: 2.3.0_@babel+core@7.17.9+svelte@3.46.4
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -74,13 +74,13 @@ importers:
       '@fullcalendar/common': ^5.0.0
       '@fullcalendar/core': ^5.0.0
       '@fullcalendar/interaction': ^5.0.0
-      svelte: 3.46.6
+      svelte: 3.47.0
     optionalDependencies:
       '@fullcalendar/interaction': 5.10.1
     devDependencies:
       '@fullcalendar/common': 5.10.1
       '@fullcalendar/core': 5.10.1
-      svelte: 3.46.6
+      svelte: 3.47.0
 
 packages:
 
@@ -1366,8 +1366,8 @@ packages:
       esbuild: 0.14.29
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.307_svelte@3.46.4:
-    resolution: {integrity: sha512-dVxSuP0YyGL6/4VVhjLxxj4hHlVscrXJttvsffGnFOUJ1JtrJ496xoxhxB7iSVpYdTMXocjA9w54ZIC59m0J7A==}
+  /@sveltejs/kit/1.0.0-next.310_svelte@3.46.4:
+    resolution: {integrity: sha512-pTyMyaoyHS+V5cQZIQMfQXmLkhw1VaRwT9avOSgwDc0QBpnNw2LdzwoPYsUr96ca5B6cfT3SMUNolxErTNHmPQ==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -2805,7 +2805,7 @@ packages:
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3/3.4.1_eslint@8.12.0+svelte@3.46.6:
+  /eslint-plugin-svelte3/3.4.1_eslint@8.12.0+svelte@3.47.0:
     resolution: {integrity: sha512-7p59WG8qV8L6wLdl4d/c3mdjkgVglQCdv5XOTk/iNPBKXuuV+Q0eFP5Wa6iJd/G2M1qR3BkLPEzaANOqKAZczw==}
     engines: {node: '>=10'}
     peerDependencies:
@@ -2813,7 +2813,7 @@ packages:
       svelte: ^3.2.0
     dependencies:
       eslint: 8.12.0
-      svelte: 3.46.6
+      svelte: 3.47.0
     dev: true
 
   /eslint-scope/5.1.1:
@@ -5111,14 +5111,14 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.6.0_prettier@2.6.2+svelte@3.46.6:
+  /prettier-plugin-svelte/2.6.0_prettier@2.6.2+svelte@3.47.0:
     resolution: {integrity: sha512-NPSRf6Y5rufRlBleok/pqg4+1FyGsL0zYhkYP6hnueeL1J/uCm3OfOZPsLX4zqD9VAdcXfyEL2PYqGv8ZoOSfA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
       prettier: 2.6.2
-      svelte: 3.46.6
+      svelte: 3.47.0
     dev: true
 
   /prettier/2.6.2:
@@ -6062,8 +6062,8 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /svelte/3.46.6:
-    resolution: {integrity: sha512-o9nNft/OzCz/9kJpmWa1S52GAM+huCjPIsNWydYmgei74ZWlOA9/hN9+Z12INdklghu31seEXZMRHhS1+8DETw==}
+  /svelte/3.47.0:
+    resolution: {integrity: sha512-4JaJp3HEoTCGARRWZQIZDUanhYv0iyoHikklVHVLH9xFE9db22g4TDv7CPeNA8HD1JgjXI1vlhR1JZvvhaTu2Q==}
     engines: {node: '>= 8'}
     dev: true
 
