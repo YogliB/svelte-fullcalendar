@@ -17,7 +17,7 @@ importers:
       lerna: 4.0.0
       lint-staged: 12.3.7
       prettier: 2.6.2
-      prettier-plugin-svelte: 2.6.0
+      prettier-plugin-svelte: 2.7.0
       start-server-and-test: 1.14.0
       svelte: 3.47.0
     devDependencies:
@@ -34,7 +34,7 @@ importers:
       lerna: 4.0.0
       lint-staged: 12.3.7
       prettier: 2.6.2
-      prettier-plugin-svelte: 2.6.0_prettier@2.6.2+svelte@3.47.0
+      prettier-plugin-svelte: 2.7.0_prettier@2.6.2+svelte@3.47.0
       start-server-and-test: 1.14.0
       svelte: 3.47.0
 
@@ -5111,8 +5111,8 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.6.0_prettier@2.6.2+svelte@3.47.0:
-    resolution: {integrity: sha512-NPSRf6Y5rufRlBleok/pqg4+1FyGsL0zYhkYP6hnueeL1J/uCm3OfOZPsLX4zqD9VAdcXfyEL2PYqGv8ZoOSfA==}
+  /prettier-plugin-svelte/2.7.0_prettier@2.6.2+svelte@3.47.0:
+    resolution: {integrity: sha512-fQhhZICprZot2IqEyoiUYLTRdumULGRvw0o4dzl5jt0jfzVWdGqeYW27QTWAeXhoupEZJULmNoH3ueJwUWFLIA==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
