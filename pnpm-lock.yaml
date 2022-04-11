@@ -7,7 +7,7 @@ importers:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0
       '@testing-library/cypress': 8.0.2
-      cypress: 9.5.3
+      cypress: 9.5.4
       date-fns: 2.28.0
       eslint: 8.13.0
       eslint-config-prettier: 8.5.0
@@ -23,8 +23,8 @@ importers:
     devDependencies:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.9+eslint@8.13.0
-      '@testing-library/cypress': 8.0.2_cypress@9.5.3
-      cypress: 9.5.3
+      '@testing-library/cypress': 8.0.2_cypress@9.5.4
+      cypress: 9.5.4
       date-fns: 2.28.0
       eslint: 8.13.0
       eslint-config-prettier: 8.5.0_eslint@8.13.0
@@ -1408,7 +1408,7 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.2_cypress@9.5.3:
+  /@testing-library/cypress/8.0.2_cypress@9.5.4:
     resolution: {integrity: sha512-KVdm7n37sg/A4e3wKMD4zUl0NpzzVhx06V9Tf0hZHZ7nrZ4yFva6Zwg2EFF1VzHkEfN/ahUzRtT1qiW+vuWnJw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -1416,7 +1416,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.8
       '@testing-library/dom': 8.12.0
-      cypress: 9.5.3
+      cypress: 9.5.4
     dev: true
 
   /@testing-library/dom/8.12.0:
@@ -2215,8 +2215,8 @@ packages:
       which: 2.0.2
     dev: true
 
-  /cypress/9.5.3:
-    resolution: {integrity: sha512-ItelIVmqMTnKYbo1JrErhsGgQGjWOxCpHT1TfMvwnIXKXN/OSlPjEK7rbCLYDZhejQL99PmUqul7XORI24Ik0A==}
+  /cypress/9.5.4:
+    resolution: {integrity: sha512-6AyJAD8phe7IMvOL4oBsI9puRNOWxZjl8z1lgixJMcgJ85JJmyKeP6uqNA0dI1z14lmJ7Qklf2MOgP/xdAqJ/Q==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
