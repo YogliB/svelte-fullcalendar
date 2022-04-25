@@ -7,7 +7,7 @@ importers:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0
       '@testing-library/cypress': 8.0.2
-      cypress: 9.5.4
+      cypress: 9.6.0
       date-fns: 2.28.0
       eslint: 8.14.0
       eslint-config-prettier: 8.5.0
@@ -23,8 +23,8 @@ importers:
     devDependencies:
       '@babel/core': 7.17.9
       '@babel/eslint-parser': 7.17.0_@babel+core@7.17.9+eslint@8.14.0
-      '@testing-library/cypress': 8.0.2_cypress@9.5.4
-      cypress: 9.5.4
+      '@testing-library/cypress': 8.0.2_cypress@9.6.0
+      cypress: 9.6.0
       date-fns: 2.28.0
       eslint: 8.14.0
       eslint-config-prettier: 8.5.0_eslint@8.14.0
@@ -60,8 +60,8 @@ importers:
       '@fullcalendar/interaction': 5.10.1
       '@fullcalendar/timegrid': 5.10.1
     devDependencies:
-      '@sveltejs/adapter-auto': 1.0.0-next.38
-      '@sveltejs/kit': 1.0.0-next.320_svelte@3.46.4
+      '@sveltejs/adapter-auto': 1.0.0-next.39
+      '@sveltejs/kit': 1.0.0-next.321_svelte@3.46.4
       svelte: 3.46.4
       svelte-check: 2.3.0_@babel+core@7.17.9+svelte@3.46.4
       svelte-fullcalendar: link:../../packages/svelte-fullcalendar
@@ -1337,12 +1337,12 @@ packages:
     resolution: {integrity: sha512-RNiOoTPkptFtSVzQevY/yWtZwf/RxyVnPy/OcA9HBM3MlGDnBEYL5B41H0MTn0Uec8Hi+2qUtTfG2WWZBmMejQ==}
     dev: true
 
-  /@sveltejs/adapter-auto/1.0.0-next.38:
-    resolution: {integrity: sha512-1//aiV/Wzebj+j5X8VLRs0vJUT3andc/0+IRQwy5ykOwjpNo5/Mj2RX8SA+t5nxBFYyJJf2kj6sszKA8LjRAQQ==}
+  /@sveltejs/adapter-auto/1.0.0-next.39:
+    resolution: {integrity: sha512-mscydZQzI9HZ+IjD+/yxyuKKd4/KxZv/M43BaeBvpuhToEe3crmatIHDQIZc0GBZZgTVpvk8yp3yIM8q3RugLw==}
     dependencies:
       '@sveltejs/adapter-cloudflare': 1.0.0-next.18
       '@sveltejs/adapter-netlify': 1.0.0-next.55
-      '@sveltejs/adapter-vercel': 1.0.0-next.49
+      '@sveltejs/adapter-vercel': 1.0.0-next.50
     dev: true
 
   /@sveltejs/adapter-cloudflare/1.0.0-next.18:
@@ -1360,14 +1360,14 @@ packages:
       tiny-glob: 0.2.9
     dev: true
 
-  /@sveltejs/adapter-vercel/1.0.0-next.49:
-    resolution: {integrity: sha512-Me0Zb10iBv+ySVMc0XgI7rdzwiMmeVHq48iVv3oXORa/et/efJVEknVSVk22q15XRqys7DhoPirf54Mz4jElFQ==}
+  /@sveltejs/adapter-vercel/1.0.0-next.50:
+    resolution: {integrity: sha512-yta0AkuWEr7qrm8LB34F4ZdCtMxj+cHD4huwrRYCgjv+PSJHLPwe7aH53+Mhrv6La0TgeyQ/f2lTyhBMXZXn9Q==}
     dependencies:
       esbuild: 0.14.29
     dev: true
 
-  /@sveltejs/kit/1.0.0-next.320_svelte@3.46.4:
-    resolution: {integrity: sha512-BDgF+gd73Gxls65rb3H2oacdQUrK8fM0X174t2kMfGS+MeNN6oZ+Kw+j0IJMzMaZSGco89+/wkPeArvDzM/2MQ==}
+  /@sveltejs/kit/1.0.0-next.321_svelte@3.46.4:
+    resolution: {integrity: sha512-Egdmxc+oxmKKhXAtLLHj6LnZQnfxgk/DpdRitDxDlSQq/hj1zSVswe3kGjPDaquNMkxXbvZcHwhbZvNnVTnWag==}
     engines: {node: '>=14.13'}
     hasBin: true
     peerDependencies:
@@ -1409,7 +1409,7 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.2_cypress@9.5.4:
+  /@testing-library/cypress/8.0.2_cypress@9.6.0:
     resolution: {integrity: sha512-KVdm7n37sg/A4e3wKMD4zUl0NpzzVhx06V9Tf0hZHZ7nrZ4yFva6Zwg2EFF1VzHkEfN/ahUzRtT1qiW+vuWnJw==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -1417,7 +1417,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.17.8
       '@testing-library/dom': 8.12.0
-      cypress: 9.5.4
+      cypress: 9.6.0
     dev: true
 
   /@testing-library/dom/8.12.0:
@@ -2231,8 +2231,8 @@ packages:
       which: 2.0.2
     dev: true
 
-  /cypress/9.5.4:
-    resolution: {integrity: sha512-6AyJAD8phe7IMvOL4oBsI9puRNOWxZjl8z1lgixJMcgJ85JJmyKeP6uqNA0dI1z14lmJ7Qklf2MOgP/xdAqJ/Q==}
+  /cypress/9.6.0:
+    resolution: {integrity: sha512-nNwt9eBQmSENamwa8LxvggXksfyzpyYaQ7lNBLgks3XZ6dPE/6BCQFBzeAyAPt/bNXfH3tKPkAyhiAZPYkWoEg==}
     engines: {node: '>=12.0.0'}
     hasBin: true
     requiresBuild: true
