@@ -36,7 +36,7 @@
 	"scripts": {
 		"cy:open": "cypress open",
 		"cy:run": "cypress run",
-		"dev": "pnpm run dev --filter=my-app",
+		"dev": "pnpm --filter=\"my-app\" dev",
 		"lint": "eslint --color .",
 		"prepare": "husky install",
 		"test": "start-server-and-test dev http://localhost:3000 cy:run"
