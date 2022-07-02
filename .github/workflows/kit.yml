@@ -36,7 +36,9 @@ jobs:
             - name: Setup pnpm cache
               uses: actions/cache@v3
               with:
-                  path: '${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}'
+                  path: |
+                      '${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}'
+                      ~/.cache/Cypress
                   key: "${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}"
                   restore-keys: |
                       ${{ runner.os }}-pnpm-store-
