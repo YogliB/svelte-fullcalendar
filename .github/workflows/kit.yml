@@ -45,4 +45,6 @@ jobs:
               run: pnpm install
 
             - name: Test
-              run: pnpm test
+              uses: cypress-io/github-action@v4
+              start: pnpm dev
+              wait-on: 'http://localhost:3000'
