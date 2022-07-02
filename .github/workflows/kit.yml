@@ -46,5 +46,6 @@ jobs:
 
             - name: Test
               uses: cypress-io/github-action@v4
-              start: pnpm dev
-              wait-on: 'http://localhost:3000'
+			  with:
+                  start: pnpm dev
+                  wait-on: 'http://localhost:3000'
