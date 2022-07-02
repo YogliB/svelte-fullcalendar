@@ -19,8 +19,8 @@ jobs:
               with:
                   node-version: 'lts/*'
 
-            - uses: pnpm/action-setup@v2.0.1
-              name: Install pnpm
+            - name: Install pnpm
+              uses: pnpm/action-setup@v2.0.1
               id: pnpm-install
               with:
                   version: 7
@@ -31,8 +31,8 @@ jobs:
               run: |
                   echo "::set-output name=pnpm_cache_dir::$(pnpm store path)"
 
-            - uses: actions/cache@v3
-              name: Setup pnpm cache
+            - name: Setup pnpm cache
+              uses: actions/cache@v3
               with:
                   path: ${{ steps.pnpm-cache.outputs.pnpm_cache_dir }}
                   key: ${{ runner.os }}-pnpm-store-${{ hashFiles('**/pnpm-lock.yaml') }}
@@ -43,16 +43,16 @@ jobs:
               run: pnpm install
 
     lint:
-	    runs-on: ubuntu-latest
+        runs-on: ubuntu-latest
 
-		steps:
+        steps:
             - name: Checkout
               uses: actions/checkout@v3
 
             - name: Install Node.js
               uses: actions/setup-node@v3
-                with:
-                    node-version: 'lts/*'
+              with:
+                  node-version: 'lts/*'
 
-			- name: Lint
+            - name: Lint
               run: pnpm lint
