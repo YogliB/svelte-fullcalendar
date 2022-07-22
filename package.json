@@ -5,7 +5,7 @@
 		"@testing-library/cypress": "8.0.3",
 		"cypress": "9.7.0",
 		"date-fns": "2.29.1",
-		"eslint": "8.16.0",
+		"eslint": "8.20.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-cypress": "2.12.1",
 		"eslint-plugin-svelte3": "4.0.0",
