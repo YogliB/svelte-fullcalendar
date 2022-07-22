@@ -30,25 +30,24 @@ Then install any additional FullCalendar plugins you plan to use:
 npm install --save-dev @fullcalendar/daygrid
 ```
 
-After that, update your Vite configuration in `svelte.config.js` as shown here:
+After that, update your Vite configuration in `vite.config.js` as shown here:
 
 ```diff
-const config = {
-  preprocess: preprocess(),
+import { sveltekit } from '@sveltejs/kit/vite';
 
-  kit: {
--   adapter: adapter()
-+   adapter: adapter(),
-+   vite: {
-+     resolve: {
-+       dedupe: ['@fullcalendar/common']
-+     },
-+     optimizeDeps: {
-+       include: ['@fullcalendar/common']
-+     }
-+   }
-  }
- };
+/** @type {import('vite').UserConfig} */
+const config = {
+-	plugins: [sveltekit()]
++	plugins: [sveltekit()],
++	resolve: {
++		dedupe: ['@fullcalendar/common'],
++	},
++	optimizeDeps: {
++		include: ['@fullcalendar/common'],
++	}
+};
+
+export default config;
 ```
 
 This config is required to workaround the `'isHiddenDay' of undefined` issue upstream [as noted by FullCalendar](https://github.com/fullcalendar/fullcalendar/issues/6370).
