@@ -9,14 +9,6 @@ const config = {
 
 	kit: {
 		adapter: adapter(),
-		vite: {
-			resolve: {
-				dedupe: ['@fullcalendar/common'],
-			},
-			optimizeDeps: {
-				include: ['@fullcalendar/common'],
-			},
-		},
 	},
 };
 
