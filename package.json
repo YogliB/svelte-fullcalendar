@@ -41,6 +41,6 @@
 		"test": "start-server-and-test dev http://localhost:3000 cy:run"
 	},
 	"volta": {
-		"node": "16.16.0"
+		"node": "16.17.0"
 	}
 }
