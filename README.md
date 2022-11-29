@@ -45,9 +45,9 @@ const config = {
 +	optimizeDeps: {
 +		include: ['@fullcalendar/common'],
 +	},
-+ ssr: {
-+   noExternal: ['@fullcalendar/core']
-+ }
++	ssr: {
++		noExternal: ['@fullcalendar/core']
++	}
 };
 
 export default config;
