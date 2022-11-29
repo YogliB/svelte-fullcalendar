@@ -44,7 +44,10 @@ const config = {
 +	},
 +	optimizeDeps: {
 +		include: ['@fullcalendar/common'],
-+	}
++	},
++ ssr: {
++   noExternal: ['@fullcalendar/core']
++ }
 };
 
 export default config;
@@ -58,6 +61,7 @@ You may then begin to write a parent component that leverages the `FullCalendar`
 
 ```html
 <script lang="ts">
+  import '@fullcalendar/core/vdom';
   import FullCalendar, { type CalendarOptions } from 'svelte-fullcalendar';
   import daygridPlugin from '@fullcalendar/daygrid';
 
@@ -102,6 +106,7 @@ You can modify your calendar’s options after initialization by reassigning the
 
 ```html
 <script>
+  import '@fullcalendar/core/vdom';
   import FullCalendar from 'svelte-fullcalendar';
 
   let options = {
@@ -153,6 +158,7 @@ How do you use [FullCalendar Scheduler's](https://fullcalendar.io/docs/premium) 
 
 ```html
 <script>
+  import '@fullcalendar/core/vdom';
   import FullCalendar from 'svelte-fullcalendar';
   import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
 
@@ -181,10 +187,11 @@ Here is a simple usage example:
 
 ```html
 <script>
+  import '@fullcalendar/core/vdom';
   import FullCalendar, { Draggable } from 'svelte-fullcalendar';
   import resourceTimelinePlugin from '@fullcalendar/resource-timeline';
   import interactionPlugin from '@fullcalendar/interaction';
-  
+
   let options = {
     schedulerLicenseKey: "XXX",
     plugins: [resourceTimelinePlugin, interactionPlugin],

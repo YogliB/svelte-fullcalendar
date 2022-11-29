@@ -1,4 +1,5 @@
 <script>
+	import '@fullcalendar/core/vdom';
 	import FullCalendar, { Draggable } from 'svelte-fullcalendar';
 	import daygridPlugin from '@fullcalendar/daygrid';
 	import timegridPlugin from '@fullcalendar/timegrid';

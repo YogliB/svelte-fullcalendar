@@ -9,6 +9,9 @@ const config = {
 	optimizeDeps: {
 		include: ['@fullcalendar/common'],
 	},
+  ssr: {
+    noExternal: ['@fullcalendar/core']
+  },
 	server: {
 		port: 3000,
 	}
