@@ -1,4 +1,12 @@
 {
+	"name": "my-app",
+	"private": true,
+	"scripts": {
+		"build": "vite build",
+		"dev": "vite dev",
+		"preview": "vite preview"
+	},
+	"type": "module",
 	"dependencies": {
 		"@fullcalendar/common": "^5.10.1",
 		"@fullcalendar/core": "^5.10.1",
@@ -7,20 +15,10 @@
 		"@fullcalendar/timegrid": "^5.10.1"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "next",
-		"@sveltejs/kit": "next",
-		"svelte": "^3.44.0",
+		"@sveltejs/adapter-auto": "^2.0.0",
+		"@sveltejs/kit": "^1.15.7",
+		"svelte": "^3.58.0",
 		"svelte-fullcalendar": "workspace:*",
-		"svelte-preprocess": "^4.10.1",
-		"vite": "^3.0.0"
-	},
-	"name": "my-app",
-	"private": true,
-	"scripts": {
-		"build": "vite build",
-		"dev": "vite dev",
-		"prepare": "svelte-kit sync",
-		"preview": "vite preview"
-	},
-	"type": "module"
+		"vite": "^4.2.1"
+	}
 }
