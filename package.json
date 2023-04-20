@@ -9,7 +9,7 @@
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-cypress": "2.12.1",
 		"eslint-plugin-svelte3": "4.0.0",
-		"husky": "8.0.1",
+		"husky": "8.0.3",
 		"lint-staged": "13.0.3",
 		"prettier": "2.7.1",
 		"prettier-plugin-svelte": "2.7.0",
