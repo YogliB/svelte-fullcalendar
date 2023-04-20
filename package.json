@@ -4,7 +4,7 @@
 		"@babel/eslint-parser": "7.18.9",
 		"@testing-library/cypress": "8.0.7",
 		"cypress": "9.7.0",
-		"date-fns": "2.29.1",
+		"date-fns": "2.29.3",
 		"eslint": "8.22.0",
 		"eslint-config-prettier": "8.5.0",
 		"eslint-plugin-cypress": "2.12.1",
