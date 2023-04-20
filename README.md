@@ -22,7 +22,7 @@ First install the wrapper and related dependencies:
 
 ```bash
 npm install --save-dev svelte-fullcalendar
-npm install --save-dev @fullcalendar/core @fullcalendar/common
+npm install --save-dev @fullcalendar/core
 ```
 
 Then install any additional FullCalendar plugins you plan to use:
@@ -30,28 +30,6 @@ Then install any additional FullCalendar plugins you plan to use:
 ```bash
 npm install --save-dev @fullcalendar/daygrid
 ```
-
-After that, update your Vite configuration in `vite.config.js` as shown here:
-
-```diff
-import { sveltekit } from '@sveltejs/kit/vite';
-
-/** @type {import('vite').UserConfig} */
-const config = {
--	plugins: [sveltekit()]
-+	plugins: [sveltekit()],
-+	resolve: {
-+		dedupe: ['@fullcalendar/common'],
-+	},
-+	optimizeDeps: {
-+		include: ['@fullcalendar/common'],
-+	}
-};
-
-export default config;
-```
-
-This config is required to workaround the `'isHiddenDay' of undefined` issue upstream [as noted by FullCalendar](https://github.com/fullcalendar/fullcalendar/issues/6370).
 
 ## Usage
 

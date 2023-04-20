@@ -52,21 +52,18 @@ importers:
 
   examples/kit:
     dependencies:
-      '@fullcalendar/common':
-        specifier: ^5.10.1
-        version: 5.10.1
       '@fullcalendar/core':
-        specifier: ^5.10.1
-        version: 5.10.1
+        specifier: ^6.0.0
+        version: 6.0.0
       '@fullcalendar/daygrid':
-        specifier: ^5.10.1
-        version: 5.10.1
+        specifier: ^6.0.0
+        version: 6.0.0(@fullcalendar/core@6.0.0)
       '@fullcalendar/interaction':
-        specifier: ^5.10.1
-        version: 5.10.1
+        specifier: ^6.0.0
+        version: 6.0.0(@fullcalendar/core@6.0.0)
       '@fullcalendar/timegrid':
-        specifier: ^5.10.1
-        version: 5.10.1
+        specifier: ^6.0.0
+        version: 6.0.0(@fullcalendar/core@6.0.0)
     devDependencies:
       '@sveltejs/adapter-auto':
         specifier: ^2.0.0
@@ -88,14 +85,11 @@ importers:
     optionalDependencies:
       '@fullcalendar/interaction':
         specifier: ^6.0.0
-        version: 6.0.0(@fullcalendar/core@5.10.1)
+        version: 6.0.0(@fullcalendar/core@6.0.0)
     devDependencies:
-      '@fullcalendar/common':
-        specifier: ^5.0.0
-        version: 5.10.1
       '@fullcalendar/core':
-        specifier: ^5.0.0
-        version: 5.10.1
+        specifier: ^6.0.0
+        version: 6.0.0
       svelte:
         specifier: 3.58.0
         version: 3.58.0
@@ -601,48 +595,34 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /@fullcalendar/common@5.10.1:
-    resolution: {integrity: sha512-EumKIJcQTvQdTs75/9dmeREFgjcRVWzqHJS1Xvlz5mNsmB+w9EINCHETRjChtAQg1WD/lTQyVj4sHsKO7vCMSw==}
+  /@fullcalendar/core@6.0.0:
+    resolution: {integrity: sha512-0lseac4/yJQhT9QjPGlqwEsZsoD0kKjuUI9KNUWMXqBPcK7Gk1pXJyP2Np7k9aqU5yLF7+pKp7fYR4YPiy++ew==}
     dependencies:
-      tslib: 2.3.1
-
-  /@fullcalendar/core@5.10.1:
-    resolution: {integrity: sha512-8sVuC6ywXV+cxqsqTZaR1hgUqeyjVed20NyZ7lGW9AY0kma1GIEwLgqPS5Q6uVhHyin68lmgecKfJCwhxENE8w==}
-    dependencies:
-      '@fullcalendar/common': 5.10.1
       preact: 10.6.4
-      tslib: 2.3.1
 
-  /@fullcalendar/daygrid@5.10.1:
-    resolution: {integrity: sha512-sfUMP+rew0krsBffgNcWWKhBCiyytGfRKZJoc64E8ohX7VWjPcPZuB1xgO5U4wPLmNkT0rZiHoGeQGTXw1+ZKg==}
-    dependencies:
-      '@fullcalendar/common': 5.10.1
-      tslib: 2.3.1
-    dev: false
-
-  /@fullcalendar/interaction@5.10.1:
-    resolution: {integrity: sha512-H1g1QeXg7yXtUcKmVtfg7uzm5R5ElFTvYniiXU+8kJda69IDg7Lee+Y7UDv5dvLb5/HxO86RhPVxRtcOQ8XdXw==}
-    dependencies:
-      '@fullcalendar/common': 5.10.1
-      tslib: 2.3.1
-    dev: false
-
-  /@fullcalendar/interaction@6.0.0(@fullcalendar/core@5.10.1):
-    resolution: {integrity: sha512-fVv1b/HTh8AnPvKD/bFhlcEexVqOnhRNPlJFZtsiM4Ts4kNBIm9m53FHwGTkcV4Xi8lx3I1V1jOQE6OEm0KcQw==}
-    requiresBuild: true
+  /@fullcalendar/daygrid@6.0.0(@fullcalendar/core@6.0.0):
+    resolution: {integrity: sha512-Lzv1saFduDR9amaC1zeHFb+iBBqGF7Gu+j5O6zTSZarCCWlrc9lgTN7sB6VAQE2XIFfz8s9EzK3UYd/goaKMpA==}
     peerDependencies:
       '@fullcalendar/core': ~6.0.0
     dependencies:
-      '@fullcalendar/core': 5.10.1
+      '@fullcalendar/core': 6.0.0
     dev: false
-    optional: true
 
-  /@fullcalendar/timegrid@5.10.1:
-    resolution: {integrity: sha512-0O0m+JzFBlg8gxYr/rIjZViRlbndCtjZlDjjIylQHFBeWC32e3cpHEavKGbTIBLN8SDilUYAJnE21abSqC2G/w==}
+  /@fullcalendar/interaction@6.0.0(@fullcalendar/core@6.0.0):
+    resolution: {integrity: sha512-fVv1b/HTh8AnPvKD/bFhlcEexVqOnhRNPlJFZtsiM4Ts4kNBIm9m53FHwGTkcV4Xi8lx3I1V1jOQE6OEm0KcQw==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.0.0
     dependencies:
-      '@fullcalendar/common': 5.10.1
-      '@fullcalendar/daygrid': 5.10.1
-      tslib: 2.3.1
+      '@fullcalendar/core': 6.0.0
+    dev: false
+
+  /@fullcalendar/timegrid@6.0.0(@fullcalendar/core@6.0.0):
+    resolution: {integrity: sha512-R/IalqJjCG2/l2s2mIBJeq7YYcoShsM6Ee+vVu1wRRfBWDG2mLt1WiWmF74g7RhqPXAHymD6uptA0FlzIDnIxQ==}
+    peerDependencies:
+      '@fullcalendar/core': ~6.0.0
+    dependencies:
+      '@fullcalendar/core': 6.0.0
+      '@fullcalendar/daygrid': 6.0.0(@fullcalendar/core@6.0.0)
     dev: false
 
   /@hapi/hoek@9.2.1:
@@ -1226,7 +1206,7 @@ packages:
     dev: true
 
   /concat-map@0.0.1:
-    resolution: {integrity: sha512-/Srv4dswyQNBfohGpz9o6Yb3Gz3SrUDqBH5rTuhGR7ahtlbYKnVxw2bCFMRljaA7EXHaXZ8wsHdodFvbkhKmqg==}
+    resolution: {integrity: sha1-2Klr13/Wjfd5OnMDajug1UBdR3s=}
     dev: true
 
   /convert-source-map@1.8.0:
@@ -2160,7 +2140,7 @@ packages:
     dev: true
 
   /lazy-ass@1.6.0:
-    resolution: {integrity: sha512-cc8oEVoctTvsFZ/Oje/kGnHbpWHYBe8IAJe4C0QNc3t8uM/0Y8+erSz/7Y1ALuXTEZTMvxXwO6YbX1ey3ujiZw==}
+    resolution: {integrity: sha1-eZllXoZGwX8In90YfRUNMyTVRRM=}
     engines: {node: '> 0.8'}
     dev: true
 
@@ -2215,7 +2195,7 @@ packages:
       log-update: 4.0.0
       p-map: 4.0.0
       rfdc: 1.3.0
-      rxjs: 7.8.0
+      rxjs: 7.5.5
       through: 2.3.8
       wrap-ansi: 7.0.0
     dev: true
@@ -2686,6 +2666,12 @@ packages:
       queue-microtask: 1.2.3
     dev: true
 
+  /rxjs@7.5.5:
+    resolution: {integrity: sha512-sy+H0pQofO95VDmFLzyaw9xNJU4KTRSwQIGM6+iG3SypAtCiLDzpeG8sJrNCWn2Up9km+KhkvTdbkrdy+yzZdw==}
+    dependencies:
+      tslib: 2.3.1
+    dev: true
+
   /rxjs@7.8.0:
     resolution: {integrity: sha512-F2+gxDshqmIub1KdvZkaEfGDwLNpPvk9Fs6LD/MyQxNgMds/WH9OdDDXOmxUZpME+iSK3rQCctkL0DYyytUqMg==}
     dependencies:
@@ -2979,6 +2965,7 @@ packages:
 
   /tslib@2.3.1:
     resolution: {integrity: sha512-77EbyPPpMz+FRFRuAFlWMtmgUWGe9UOG2Z25NqCwiIjRhOf5iKGuzSe5P2w1laq+FkRy4p+PCuVkJSGkzTEKVw==}
+    dev: true
 
   /tunnel-agent@0.6.0:
     resolution: {integrity: sha512-McnNiV1l8RYeY8tBgEpuodCC1mLUdbSN+CYBL7kJsJNInOP8UjDDEwdk6Mw60vdLLrr5NHKZhMAOSrR2NZuQ+w==}
