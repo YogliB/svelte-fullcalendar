@@ -26,8 +26,8 @@ importers:
         specifier: 8.8.0
         version: 8.8.0(eslint@8.38.0)
       eslint-plugin-cypress:
-        specifier: 2.12.1
-        version: 2.12.1(eslint@8.38.0)
+        specifier: 2.13.2
+        version: 2.13.2(eslint@8.38.0)
       eslint-plugin-svelte3:
         specifier: 4.0.0
         version: 4.0.0(eslint@8.38.0)(svelte@3.49.0)
@@ -1459,8 +1459,8 @@ packages:
       eslint: 8.38.0
     dev: true
 
-  /eslint-plugin-cypress@2.12.1(eslint@8.38.0):
-    resolution: {integrity: sha512-c2W/uPADl5kospNDihgiLc7n87t5XhUbFDoTl6CfVkmG+kDAb5Ux10V9PoLPu9N+r7znpc+iQlcmAqT1A/89HA==}
+  /eslint-plugin-cypress@2.13.2(eslint@8.38.0):
+    resolution: {integrity: sha512-LlwjnBTzuKuC0A4H0RxVjs0YeAWK+CD1iM9Dp8un3lzT713ePQxfpPstCD+9HSAss8emuE3b2hCNUST+NrUwKw==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
