@@ -17,8 +17,8 @@ importers:
         specifier: 9.7.0
         version: 9.7.0
       date-fns:
-        specifier: 2.29.1
-        version: 2.29.1
+        specifier: 2.29.3
+        version: 2.29.3
       eslint:
         specifier: 8.22.0
         version: 8.22.0
@@ -1243,8 +1243,8 @@ packages:
       assert-plus: 1.0.0
     dev: true
 
-  /date-fns@2.29.1:
-    resolution: {integrity: sha512-dlLD5rKaKxpFdnjrs+5azHDFOPEu4ANy/LTh04A1DTzMM7qoajmKCBc8pkKRFT41CNzw+4gQh79X5C+Jq27HAw==}
+  /date-fns@2.29.3:
+    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
     engines: {node: '>=0.11'}
     dev: true
 
