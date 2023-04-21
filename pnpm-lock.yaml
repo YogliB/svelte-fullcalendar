@@ -44,8 +44,8 @@ importers:
         specifier: 2.10.0
         version: 2.10.0(prettier@2.8.7)(svelte@3.58.0)
       start-server-and-test:
-        specifier: 1.15.4
-        version: 1.15.4
+        specifier: 2.0.0
+        version: 2.0.0
       svelte:
         specifier: 3.58.0
         version: 3.58.0
@@ -2806,8 +2806,8 @@ packages:
       tweetnacl: 0.14.5
     dev: true
 
-  /start-server-and-test@1.15.4:
-    resolution: {integrity: sha512-ucQtp5+UCr0m4aHlY+aEV2JSYNTiMZKdSKK/bsIr6AlmwAWDYDnV7uGlWWEtWa7T4XvRI5cPYcPcQgeLqpz+Tg==}
+  /start-server-and-test@2.0.0:
+    resolution: {integrity: sha512-UqKLw0mJbfrsG1jcRLTUlvuRi9sjNuUiDOLI42r7R5fA9dsFoywAy9DoLXNYys9B886E4RCKb+qM1Gzu96h7DQ==}
     engines: {node: '>=6'}
     hasBin: true
     dependencies:
