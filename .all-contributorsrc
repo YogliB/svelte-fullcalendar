@@ -13,6 +13,16 @@
       "contributions": [
         "doc"
       ]
+    },
+    {
+      "login": "benmccann",
+      "name": "Ben McCann",
+      "avatar_url": "https://avatars.githubusercontent.com/u/322311?v=4",
+      "profile": "http://www.benmccann.com",
+      "contributions": [
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -20,5 +30,6 @@
   "projectOwner": "YogliB",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
