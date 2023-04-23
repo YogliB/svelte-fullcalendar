@@ -21,10 +21,6 @@
 	let calendar;
 
 	onMount(async () => {
-		await import('@fullcalendar/core/vdom.js');
-
-		if (!canBeInitiated) return;
-
 		initCalendar();
 
 		return () => {
