@@ -212,10 +212,12 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://vhs.codeberg.page"><img src="https://avatars.githubusercontent.com/u/97140109?v=4?s=100" width="100px;" alt=""/><br /><sub><b>vhs</b></sub></a><br /><a href="https://github.com/YogliB/svelte-fullcalendar/commits?author=vhscom" title="Documentation">📖</a></td>
-    <td align="center"><a href="http://www.benmccann.com"><img src="https://avatars.githubusercontent.com/u/322311?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ben McCann</b></sub></a><br /><a href="https://github.com/YogliB/svelte-fullcalendar/commits?author=benmccann" title="Documentation">📖</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://vhs.codeberg.page"><img src="https://avatars.githubusercontent.com/u/97140109?v=4?s=100" width="100px;" alt="vhs"/><br /><sub><b>vhs</b></sub></a><br /><a href="https://github.com/YogliB/svelte-fullcalendar/commits?author=vhscom" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.benmccann.com"><img src="https://avatars.githubusercontent.com/u/322311?v=4?s=100" width="100px;" alt="Ben McCann"/><br /><sub><b>Ben McCann</b></sub></a><br /><a href="https://github.com/YogliB/svelte-fullcalendar/commits?author=benmccann" title="Documentation">📖</a> <a href="https://github.com/YogliB/svelte-fullcalendar/commits?author=benmccann" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->
