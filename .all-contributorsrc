@@ -20,7 +20,8 @@
       "avatar_url": "https://avatars.githubusercontent.com/u/322311?v=4",
       "profile": "http://www.benmccann.com",
       "contributions": [
-        "doc"
+        "doc",
+        "code"
       ]
     }
   ],
@@ -29,5 +30,6 @@
   "projectOwner": "YogliB",
   "repoType": "github",
   "repoHost": "https://github.com",
-  "skipCi": true
+  "skipCi": true,
+  "commitConvention": "angular"
 }
