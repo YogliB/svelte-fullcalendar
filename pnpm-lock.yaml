@@ -17,8 +17,8 @@ importers:
         specifier: 9.7.0
         version: 9.7.0
       date-fns:
-        specifier: 2.29.3
-        version: 2.29.3
+        specifier: 2.30.0
+        version: 2.30.0
       eslint:
         specifier: 8.39.0
         version: 8.39.0
@@ -289,6 +289,13 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.13.9
+    dev: true
+
+  /@babel/runtime@7.21.5:
+    resolution: {integrity: sha512-8jI69toZqqcsnqGGqwGS4Qb1VwLOEp4hz+CXPywcvjs60u3B4Pom/U/7rm4W8tMOYEB+E9wgD0mW1l3r8qlI9Q==}
+    engines: {node: '>=6.9.0'}
+    dependencies:
+      regenerator-runtime: 0.13.11
     dev: true
 
   /@babel/template@7.20.7:
@@ -806,7 +813,7 @@ packages:
     engines: {node: '>=12'}
     dependencies:
       '@babel/code-frame': 7.18.6
-      '@babel/runtime': 7.17.8
+      '@babel/runtime': 7.21.5
       '@types/aria-query': 4.2.2
       aria-query: 5.0.0
       chalk: 4.1.2
@@ -1278,9 +1285,11 @@ packages:
       assert-plus: 1.0.0
     dev: true
 
-  /date-fns@2.29.3:
-    resolution: {integrity: sha512-dDCnyH2WnnKusqvZZ6+jA1O51Ibt8ZMRNkDZdyAyK4YfbDwa/cEmuztzG5pk6hqlp9aSBPYcjOlktquahGwGeA==}
+  /date-fns@2.30.0:
+    resolution: {integrity: sha512-fnULvOpxnC5/Vg3NCiWelDsLiUc9bRwAPs/+LfTLNvetFCtCTN+yQz15C/fs4AwX1R9K5GLtLfn8QW+dWisaAw==}
     engines: {node: '>=0.11'}
+    dependencies:
+      '@babel/runtime': 7.21.5
     dev: true
 
   /dayjs@1.11.0:
@@ -2590,6 +2599,10 @@ packages:
 
   /react-is@17.0.2:
     resolution: {integrity: sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==}
+    dev: true
+
+  /regenerator-runtime@0.13.11:
+    resolution: {integrity: sha512-kY1AZVr2Ra+t+piVaJ4gxaFaReZVH40AKNo7UCX6W+dEwBo/2oZJzqfuN1qLq1oL45o56cPaTXELwrTh8Fpggg==}
     dev: true
 
   /regenerator-runtime@0.13.9:
