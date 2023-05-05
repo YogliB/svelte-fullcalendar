@@ -30,7 +30,7 @@ importers:
         version: 2.13.3(eslint@8.39.0)
       eslint-plugin-svelte3:
         specifier: 4.0.0
-        version: 4.0.0(eslint@8.39.0)(svelte@3.58.0)
+        version: 4.0.0(eslint@8.39.0)(svelte@3.59.0)
       husky:
         specifier: 8.0.3
         version: 8.0.3
@@ -42,13 +42,13 @@ importers:
         version: 2.8.8
       prettier-plugin-svelte:
         specifier: 2.10.0
-        version: 2.10.0(prettier@2.8.8)(svelte@3.58.0)
+        version: 2.10.0(prettier@2.8.8)(svelte@3.59.0)
       start-server-and-test:
         specifier: 2.0.0
         version: 2.0.0
       svelte:
-        specifier: 3.58.0
-        version: 3.58.0
+        specifier: 3.59.0
+        version: 3.59.0
 
   examples/kit:
     dependencies:
@@ -91,8 +91,8 @@ importers:
         specifier: ^6.0.0
         version: 6.0.0
       svelte:
-        specifier: 3.58.0
-        version: 3.58.0
+        specifier: 3.59.0
+        version: 3.59.0
 
 packages:
 
@@ -1453,14 +1453,14 @@ packages:
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3@4.0.0(eslint@8.39.0)(svelte@3.58.0):
+  /eslint-plugin-svelte3@4.0.0(eslint@8.39.0)(svelte@3.59.0):
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
       eslint: '>=8.0.0'
       svelte: ^3.2.0
     dependencies:
       eslint: 8.39.0
-      svelte: 3.58.0
+      svelte: 3.59.0
     dev: true
 
   /eslint-scope@5.1.1:
@@ -2530,14 +2530,14 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte@2.10.0(prettier@2.8.8)(svelte@3.58.0):
+  /prettier-plugin-svelte@2.10.0(prettier@2.8.8)(svelte@3.59.0):
     resolution: {integrity: sha512-GXMY6t86thctyCvQq+jqElO+MKdB09BkL3hexyGP3Oi8XLKRFaJP1ud/xlWCZ9ZIa2BxHka32zhHfcuU+XsRQg==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0
     dependencies:
       prettier: 2.8.8
-      svelte: 3.58.0
+      svelte: 3.59.0
     dev: true
 
   /prettier@2.8.8:
@@ -2904,6 +2904,11 @@ packages:
 
   /svelte@3.58.0:
     resolution: {integrity: sha512-brIBNNB76mXFmU/Kerm4wFnkskBbluBDCjx/8TcpYRb298Yh2dztS2kQ6bhtjMcvUhd5ynClfwpz5h2gnzdQ1A==}
+    engines: {node: '>= 8'}
+    dev: true
+
+  /svelte@3.59.0:
+    resolution: {integrity: sha512-Di1wVPwdWriw5pSyInMRpr5EZmwrzKxtDKv5aXu8A/WDUi59Y5bIvl42eLef0x1vwz+ZtrjdnT8nXir2bDqR/A==}
     engines: {node: '>= 8'}
     dev: true
 
