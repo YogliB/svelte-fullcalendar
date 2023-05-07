@@ -1,7 +1,8 @@
 .DS_Store
+.vscode
+*.log
 **/node_modules/
 **/public/**/bundle.*
 cypress/screenshots/**
 cypress/videos/**
 dist
-*.log
