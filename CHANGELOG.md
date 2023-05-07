@@ -5,6 +5,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [3.0.0] 2023-05-07
+
+### **Breaking changes**
+
+-   `@fullcalendar/core`'s version bumped to v6
+-   `@fullcalendar/common` is no longer a **peerDependencies** and can be removed
+
+### Fixes
+
+-   Integration with SvelteKit should be fixed
+
 ## [2.0.0-beta.0] 2022-04-01
 
 ### **Breaking changes**
