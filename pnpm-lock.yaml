@@ -9,7 +9,7 @@ importers:
       '@testing-library/cypress': 8.0.7
       cypress: 9.7.0
       date-fns: 2.30.0
-      eslint: 8.42.0
+      eslint: 8.43.0
       eslint-config-prettier: 8.8.0
       eslint-plugin-cypress: 2.13.3
       eslint-plugin-svelte3: 4.0.0
@@ -21,14 +21,14 @@ importers:
       svelte: 3.59.1
     devDependencies:
       '@babel/core': 7.22.5
-      '@babel/eslint-parser': 7.22.5_x2nqc5cansj73pf43kd5o2aydq
+      '@babel/eslint-parser': 7.22.5_bbhuympuh45qzeobmpn7t5wluu
       '@testing-library/cypress': 8.0.7_cypress@9.7.0
       cypress: 9.7.0
       date-fns: 2.30.0
-      eslint: 8.42.0
-      eslint-config-prettier: 8.8.0_eslint@8.42.0
-      eslint-plugin-cypress: 2.13.3_eslint@8.42.0
-      eslint-plugin-svelte3: 4.0.0_3vji2slnup2yzxo42w6sbds3sy
+      eslint: 8.43.0
+      eslint-config-prettier: 8.8.0_eslint@8.43.0
+      eslint-plugin-cypress: 2.13.3_eslint@8.43.0
+      eslint-plugin-svelte3: 4.0.0_r2kvwni2gewnb332kcfggjox3a
       husky: 8.0.3
       lint-staged: 13.2.2
       prettier: 2.8.8
@@ -122,7 +122,7 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.22.5_x2nqc5cansj73pf43kd5o2aydq:
+  /@babel/eslint-parser/7.22.5_bbhuympuh45qzeobmpn7t5wluu:
     resolution: {integrity: sha512-C69RWYNYtrgIRE5CmTd77ZiLDXqgBipahJc/jHP3sLcAGj6AJzxNIuKNpVnICqbyK7X3pFUfEvL++rvtbQpZkQ==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
@@ -131,7 +131,7 @@ packages:
     dependencies:
       '@babel/core': 7.22.5
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
-      eslint: 8.42.0
+      eslint: 8.43.0
       eslint-visitor-keys: 2.1.0
       semver: 6.3.0
     dev: true
@@ -562,13 +562,13 @@ packages:
     dev: true
     optional: true
 
-  /@eslint-community/eslint-utils/4.4.0_eslint@8.42.0:
+  /@eslint-community/eslint-utils/4.4.0_eslint@8.43.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
-      eslint: 8.42.0
+      eslint: 8.43.0
       eslint-visitor-keys: 3.4.1
     dev: true
 
@@ -594,8 +594,8 @@ packages:
       - supports-color
     dev: true
 
-  /@eslint/js/8.42.0:
-    resolution: {integrity: sha512-6SWlXpWU5AvId8Ac7zjzmIOqMOba/JWY8XZ4A7q7Gn1Vlfg/SFFIlrtHXt9nPn4op9ZPAkl91Jao+QQv3r/ukw==}
+  /@eslint/js/8.43.0:
+    resolution: {integrity: sha512-s2UHCoiXfxMvmfzqoN+vrQ84ahUSYde9qNO1MdxmoEhyHWsfmwOpFlwYV+ePJEVc7gFnATGUi376WowX1N7tFg==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
@@ -1489,31 +1489,31 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.8.0_eslint@8.42.0:
+  /eslint-config-prettier/8.8.0_eslint@8.43.0:
     resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.42.0
+      eslint: 8.43.0
     dev: true
 
-  /eslint-plugin-cypress/2.13.3_eslint@8.42.0:
+  /eslint-plugin-cypress/2.13.3_eslint@8.43.0:
     resolution: {integrity: sha512-nAPjZE5WopCsgJwl3vHm5iafpV+ZRO76Z9hMyRygWhmg5ODXDPd+9MaPl7kdJ2azj+sO87H3P1PRnggIrz848g==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
-      eslint: 8.42.0
+      eslint: 8.43.0
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3/4.0.0_3vji2slnup2yzxo42w6sbds3sy:
+  /eslint-plugin-svelte3/4.0.0_r2kvwni2gewnb332kcfggjox3a:
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
       eslint: '>=8.0.0'
       svelte: ^3.2.0
     dependencies:
-      eslint: 8.42.0
+      eslint: 8.43.0
       svelte: 3.59.1
     dev: true
 
@@ -1543,15 +1543,15 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /eslint/8.42.0:
-    resolution: {integrity: sha512-ulg9Ms6E1WPf67PHaEY4/6E2tEn5/f7FXGzr3t9cBMugOmf1INYvuUwwh1aXQN4MfJ6a5K2iNwP3w4AColvI9A==}
+  /eslint/8.43.0:
+    resolution: {integrity: sha512-aaCpf2JqqKesMFGgmRPessmVKjcGXqdlAYLLC3THM8t5nBRZRQ+st5WM/hoJXkdioEXLLbXgclUpM0TXo5HX5Q==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0_eslint@8.42.0
+      '@eslint-community/eslint-utils': 4.4.0_eslint@8.43.0
       '@eslint-community/regexpp': 4.5.1
       '@eslint/eslintrc': 2.0.3
-      '@eslint/js': 8.42.0
+      '@eslint/js': 8.43.0
       '@humanwhocodes/config-array': 0.11.10
       '@humanwhocodes/module-importer': 1.0.1
       '@nodelib/fs.walk': 1.2.8
