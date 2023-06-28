@@ -14,7 +14,7 @@ importers:
       eslint-plugin-cypress: 2.13.3
       eslint-plugin-svelte3: 4.0.0
       husky: 8.0.3
-      lint-staged: 13.2.2
+      lint-staged: 13.2.3
       prettier: 2.8.8
       prettier-plugin-svelte: 2.10.1
       start-server-and-test: 2.0.0
@@ -30,7 +30,7 @@ importers:
       eslint-plugin-cypress: 2.13.3_eslint@8.43.0
       eslint-plugin-svelte3: 4.0.0_eslint@8.43.0+svelte@4.0.0
       husky: 8.0.3
-      lint-staged: 13.2.2
+      lint-staged: 13.2.3
       prettier: 2.8.8
       prettier-plugin-svelte: 2.10.1_qjnzte5rqd6zd6el5wewwu2zei
       start-server-and-test: 2.0.0
@@ -2190,8 +2190,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /lint-staged/13.2.2:
-    resolution: {integrity: sha512-71gSwXKy649VrSU09s10uAT0rWCcY3aewhMaHyl2N84oBk4Xs9HgxvUp3AYu+bNsK4NrOYYxvSgg7FyGJ+jGcA==}
+  /lint-staged/13.2.3:
+    resolution: {integrity: sha512-zVVEXLuQIhr1Y7R7YAWx4TZLdvuzk7DnmrsTNL0fax6Z3jrpFcas+vKbzxhhvp6TA55m1SQuWkpzI1qbfDZbAg==}
     engines: {node: ^14.13.1 || >=16.0.0}
     hasBin: true
     dependencies:
