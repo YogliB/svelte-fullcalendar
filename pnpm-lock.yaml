@@ -18,7 +18,7 @@ importers:
       prettier: 2.8.8
       prettier-plugin-svelte: 2.10.1
       start-server-and-test: 2.0.0
-      svelte: 4.0.0
+      svelte: 4.0.1
     devDependencies:
       '@babel/core': 7.22.5
       '@babel/eslint-parser': 7.22.5_bbhuympuh45qzeobmpn7t5wluu
@@ -28,13 +28,13 @@ importers:
       eslint: 8.43.0
       eslint-config-prettier: 8.8.0_eslint@8.43.0
       eslint-plugin-cypress: 2.13.3_eslint@8.43.0
-      eslint-plugin-svelte3: 4.0.0_eslint@8.43.0+svelte@4.0.0
+      eslint-plugin-svelte3: 4.0.0_eslint@8.43.0+svelte@4.0.1
       husky: 8.0.3
       lint-staged: 13.2.3
       prettier: 2.8.8
-      prettier-plugin-svelte: 2.10.1_qjnzte5rqd6zd6el5wewwu2zei
+      prettier-plugin-svelte: 2.10.1_n37r3x4xsm6jko2o4md5blq5dq
       start-server-and-test: 2.0.0
-      svelte: 4.0.0
+      svelte: 4.0.1
 
   examples/kit:
     specifiers:
@@ -63,12 +63,12 @@ importers:
     specifiers:
       '@fullcalendar/core': ^6.0.0
       '@fullcalendar/interaction': ^6.0.0
-      svelte: 4.0.0
+      svelte: 4.0.1
     optionalDependencies:
       '@fullcalendar/interaction': 6.1.6_@fullcalendar+core@6.1.6
     devDependencies:
       '@fullcalendar/core': 6.1.6
-      svelte: 4.0.0
+      svelte: 4.0.1
 
 packages:
 
@@ -828,7 +828,7 @@ packages:
       '@babel/code-frame': 7.21.4
       '@babel/runtime': 7.21.5
       '@types/aria-query': 5.0.1
-      aria-query: 5.2.1
+      aria-query: 5.3.0
       chalk: 4.1.2
       dom-accessibility-api: 0.5.15
       lz-string: 1.4.4
@@ -956,8 +956,8 @@ packages:
     resolution: {integrity: sha512-8+9WqebbFzpX9OR+Wa6O29asIogeRMzcGtAINdpMHHyAg10f05aSFVBbcEqGf/PXw1EjAZ+q2/bEBg3DvurK3Q==}
     dev: true
 
-  /aria-query/5.2.1:
-    resolution: {integrity: sha512-7uFg4b+lETFgdaJyETnILsXgnnzVnkHcgRbwbPwevm5x/LmUlt3MjczMRe1zg824iBgXZNRPTBftNYyRSKLp2g==}
+  /aria-query/5.3.0:
+    resolution: {integrity: sha512-b0P0sZPKtyu8HkeRAfCq0IfURZK+SuwMjY1UXGBU27wpAiTwQAIlq56IbIO+ytk/JjS1fMR14ee5WBBfKi5J6A==}
     dependencies:
       dequal: 2.0.3
     dev: true
@@ -1499,14 +1499,14 @@ packages:
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3/4.0.0_eslint@8.43.0+svelte@4.0.0:
+  /eslint-plugin-svelte3/4.0.0_eslint@8.43.0+svelte@4.0.1:
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
       eslint: '>=8.0.0'
       svelte: ^3.2.0
     dependencies:
       eslint: 8.43.0
-      svelte: 4.0.0
+      svelte: 4.0.1
     dev: true
 
   /eslint-scope/5.1.1:
@@ -2574,14 +2574,14 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.10.1_qjnzte5rqd6zd6el5wewwu2zei:
+  /prettier-plugin-svelte/2.10.1_n37r3x4xsm6jko2o4md5blq5dq:
     resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
     peerDependencies:
       prettier: ^1.16.4 || ^2.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0
     dependencies:
       prettier: 2.8.8
-      svelte: 4.0.0
+      svelte: 4.0.1
     dev: true
 
   /prettier/2.8.8:
@@ -2929,15 +2929,15 @@ packages:
     engines: {node: '>= 8'}
     dev: true
 
-  /svelte/4.0.0:
-    resolution: {integrity: sha512-+yCYu3AEUu9n91dnQNGIbnVp8EmNQtuF/YImW4+FTXRHard7NMo+yTsWzggPAbj3fUEJ1FBJLkql/jkp6YB5pg==}
+  /svelte/4.0.1:
+    resolution: {integrity: sha512-7n2u7A5cu8xCY6MBiXh/Mg6Lh3+Mw2qXlTDBYhzvCvmSM4L4gc4MVo540UtGcjqBiA48E1VDW+EUpBr7iuBlPg==}
     engines: {node: '>=16'}
     dependencies:
       '@ampproject/remapping': 2.2.1
       '@jridgewell/sourcemap-codec': 1.4.15
       '@jridgewell/trace-mapping': 0.3.18
       acorn: 8.9.0
-      aria-query: 5.2.1
+      aria-query: 5.3.0
       axobject-query: 3.2.1
       code-red: 1.0.3
       css-tree: 2.3.1
