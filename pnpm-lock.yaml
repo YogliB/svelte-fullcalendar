@@ -9,7 +9,7 @@ importers:
       '@testing-library/cypress': 8.0.7
       cypress: 9.7.0
       date-fns: 2.30.0
-      eslint: 8.44.0
+      eslint: 8.45.0
       eslint-config-prettier: 8.8.0
       eslint-plugin-cypress: 2.13.3
       eslint-plugin-svelte3: 4.0.0
@@ -21,14 +21,14 @@ importers:
       svelte: 4.0.5
     devDependencies:
       '@babel/core': 7.22.9
-      '@babel/eslint-parser': 7.22.9_qxn6s5ebsfslgpo3co74wkoc4i
+      '@babel/eslint-parser': 7.22.9_mxva3tvsh22zo7fr2tqrirzrru
       '@testing-library/cypress': 8.0.7_cypress@9.7.0
       cypress: 9.7.0
       date-fns: 2.30.0
-      eslint: 8.44.0
-      eslint-config-prettier: 8.8.0_eslint@8.44.0
-      eslint-plugin-cypress: 2.13.3_eslint@8.44.0
-      eslint-plugin-svelte3: 4.0.0_eslint@8.44.0+svelte@4.0.5
+      eslint: 8.45.0
+      eslint-config-prettier: 8.8.0_eslint@8.45.0
+      eslint-plugin-cypress: 2.13.3_eslint@8.45.0
+      eslint-plugin-svelte3: 4.0.0_eslint@8.45.0+svelte@4.0.5
       husky: 8.0.3
       lint-staged: 13.2.3
       prettier: 3.0.0
@@ -127,7 +127,7 @@ packages:
       - supports-color
     dev: true
 
-  /@babel/eslint-parser/7.22.9_qxn6s5ebsfslgpo3co74wkoc4i:
+  /@babel/eslint-parser/7.22.9_mxva3tvsh22zo7fr2tqrirzrru:
     resolution: {integrity: sha512-xdMkt39/nviO/4vpVdrEYPwXCsYIXSSAr6mC7WQsNIlGnuxKyKE7GZjalcnbSWiC4OXGNNN3UQPeHfjSC6sTDA==}
     engines: {node: ^10.13.0 || ^12.13.0 || >=14.0.0}
     peerDependencies:
@@ -136,7 +136,7 @@ packages:
     dependencies:
       '@babel/core': 7.22.9
       '@nicolo-ribaudo/eslint-scope-5-internals': 5.1.1-v1
-      eslint: 8.44.0
+      eslint: 8.45.0
       eslint-visitor-keys: 2.1.0
       semver: 6.3.1
     dev: true
@@ -565,13 +565,13 @@ packages:
     dev: true
     optional: true
 
-  /@eslint-community/eslint-utils/4.4.0_eslint@8.44.0:
+  /@eslint-community/eslint-utils/4.4.0_eslint@8.45.0:
     resolution: {integrity: sha512-1/sA4dwrzBAyeUoQ6oxahHKmrZvsnLCg4RfxW3ZFGGmQkSNQPFNLV9CUEFQP1x9EYXHTo5p6xdhZM1Ne9p/AfA==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     peerDependencies:
       eslint: ^6.0.0 || ^7.0.0 || >=8.0.0
     dependencies:
-      eslint: 8.44.0
+      eslint: 8.45.0
       eslint-visitor-keys: 3.4.1
     dev: true
 
@@ -1468,31 +1468,31 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /eslint-config-prettier/8.8.0_eslint@8.44.0:
+  /eslint-config-prettier/8.8.0_eslint@8.45.0:
     resolution: {integrity: sha512-wLbQiFre3tdGgpDv67NQKnJuTlcUVYHas3k+DZCc2U2BadthoEY4B7hLPvAxaqdyOGCzuLfii2fqGph10va7oA==}
     hasBin: true
     peerDependencies:
       eslint: '>=7.0.0'
     dependencies:
-      eslint: 8.44.0
+      eslint: 8.45.0
     dev: true
 
-  /eslint-plugin-cypress/2.13.3_eslint@8.44.0:
+  /eslint-plugin-cypress/2.13.3_eslint@8.45.0:
     resolution: {integrity: sha512-nAPjZE5WopCsgJwl3vHm5iafpV+ZRO76Z9hMyRygWhmg5ODXDPd+9MaPl7kdJ2azj+sO87H3P1PRnggIrz848g==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
-      eslint: 8.44.0
+      eslint: 8.45.0
       globals: 11.12.0
     dev: true
 
-  /eslint-plugin-svelte3/4.0.0_eslint@8.44.0+svelte@4.0.5:
+  /eslint-plugin-svelte3/4.0.0_eslint@8.45.0+svelte@4.0.5:
     resolution: {integrity: sha512-OIx9lgaNzD02+MDFNLw0GEUbuovNcglg+wnd/UY0fbZmlQSz7GlQiQ1f+yX0XvC07XPcDOnFcichqI3xCwp71g==}
     peerDependencies:
       eslint: '>=8.0.0'
       svelte: ^3.2.0
     dependencies:
-      eslint: 8.44.0
+      eslint: 8.45.0
       svelte: 4.0.5
     dev: true
 
@@ -1522,12 +1522,12 @@ packages:
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     dev: true
 
-  /eslint/8.44.0:
-    resolution: {integrity: sha512-0wpHoUbDUHgNCyvFB5aXLiQVfK9B0at6gUvzy83k4kAsQ/u769TQDX6iKC+aO4upIHO9WSaA3QoXYQDHbNwf1A==}
+  /eslint/8.45.0:
+    resolution: {integrity: sha512-pd8KSxiQpdYRfYa9Wufvdoct3ZPQQuVuU5O6scNgMuOMYuxvH0IGaYK0wUFjo4UYYQQCUndlXiMbnxopwvvTiw==}
     engines: {node: ^12.22.0 || ^14.17.0 || >=16.0.0}
     hasBin: true
     dependencies:
-      '@eslint-community/eslint-utils': 4.4.0_eslint@8.44.0
+      '@eslint-community/eslint-utils': 4.4.0_eslint@8.45.0
       '@eslint-community/regexpp': 4.5.1
       '@eslint/eslintrc': 2.1.0
       '@eslint/js': 8.44.0
@@ -1552,7 +1552,6 @@ packages:
       globals: 13.19.0
       graphemer: 1.4.0
       ignore: 5.2.4
-      import-fresh: 3.3.0
       imurmurhash: 0.1.4
       is-glob: 4.0.3
       is-path-inside: 3.0.3
@@ -1564,7 +1563,6 @@ packages:
       natural-compare: 1.4.0
       optionator: 0.9.3
       strip-ansi: 6.0.1
-      strip-json-comments: 3.1.1
       text-table: 0.2.0
     transitivePeerDependencies:
       - supports-color
