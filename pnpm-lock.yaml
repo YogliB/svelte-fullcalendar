@@ -16,7 +16,7 @@ importers:
       husky: 8.0.3
       lint-staged: 13.2.3
       prettier: 3.0.0
-      prettier-plugin-svelte: 2.10.1
+      prettier-plugin-svelte: 3.0.0
       start-server-and-test: 2.0.0
       svelte: 4.0.5
     devDependencies:
@@ -32,7 +32,7 @@ importers:
       husky: 8.0.3
       lint-staged: 13.2.3
       prettier: 3.0.0
-      prettier-plugin-svelte: 2.10.1_pxnwxaudkxdx33tglfjgr5f46a
+      prettier-plugin-svelte: 3.0.0_pxnwxaudkxdx33tglfjgr5f46a
       start-server-and-test: 2.0.0
       svelte: 4.0.5
 
@@ -2559,10 +2559,10 @@ packages:
     engines: {node: '>= 0.8.0'}
     dev: true
 
-  /prettier-plugin-svelte/2.10.1_pxnwxaudkxdx33tglfjgr5f46a:
-    resolution: {integrity: sha512-Wlq7Z5v2ueCubWo0TZzKc9XHcm7TDxqcuzRuGd0gcENfzfT4JZ9yDlCbEgxWgiPmLHkBjfOtpAWkcT28MCDpUQ==}
+  /prettier-plugin-svelte/3.0.0_pxnwxaudkxdx33tglfjgr5f46a:
+    resolution: {integrity: sha512-l3RQcPty2UBCoRh3yb9c5XCAmxkrc4BptAnbd5acO1gmSJtChOWkiEjnOvh7hvmtT4V80S8gXCOKAq8RNeIzSw==}
     peerDependencies:
-      prettier: ^1.16.4 || ^2.0.0
+      prettier: ^3.0.0
       svelte: ^3.2.0 || ^4.0.0-next.0
     dependencies:
       prettier: 3.0.0
