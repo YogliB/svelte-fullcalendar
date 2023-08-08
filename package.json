@@ -7,7 +7,7 @@
 		"date-fns": "2.30.0",
 		"eslint": "8.46.0",
 		"eslint-config-prettier": "9.0.0",
-		"eslint-plugin-cypress": "2.13.4",
+		"eslint-plugin-cypress": "2.14.0",
 		"eslint-plugin-svelte3": "4.0.0",
 		"husky": "8.0.3",
 		"lint-staged": "13.2.3",
