@@ -11,7 +11,7 @@ importers:
       date-fns: 2.30.0
       eslint: 8.46.0
       eslint-config-prettier: 9.0.0
-      eslint-plugin-cypress: 2.13.3
+      eslint-plugin-cypress: 2.13.4
       eslint-plugin-svelte3: 4.0.0
       husky: 8.0.3
       lint-staged: 13.2.3
@@ -27,7 +27,7 @@ importers:
       date-fns: 2.30.0
       eslint: 8.46.0
       eslint-config-prettier: 9.0.0_eslint@8.46.0
-      eslint-plugin-cypress: 2.13.3_eslint@8.46.0
+      eslint-plugin-cypress: 2.13.4_eslint@8.46.0
       eslint-plugin-svelte3: 4.0.0_eslint@8.46.0+svelte@4.1.2
       husky: 8.0.3
       lint-staged: 13.2.3
@@ -1470,13 +1470,13 @@ packages:
       eslint: 8.46.0
     dev: true
 
-  /eslint-plugin-cypress/2.13.3_eslint@8.46.0:
-    resolution: {integrity: sha512-nAPjZE5WopCsgJwl3vHm5iafpV+ZRO76Z9hMyRygWhmg5ODXDPd+9MaPl7kdJ2azj+sO87H3P1PRnggIrz848g==}
+  /eslint-plugin-cypress/2.13.4_eslint@8.46.0:
+    resolution: {integrity: sha512-A6CMdzFkGMkIWwVmS7DOBJfO1L2V5qcU2svlueycMJHn4MpoIhASxnDt+rI8zeA7qy9ExEGrMj1WhHcde1VrPQ==}
     peerDependencies:
       eslint: '>= 3.2.1'
     dependencies:
       eslint: 8.46.0
-      globals: 11.12.0
+      globals: 13.20.0
     dev: true
 
   /eslint-plugin-svelte3/4.0.0_eslint@8.46.0+svelte@4.1.2:
@@ -1886,6 +1886,13 @@ packages:
 
   /globals/13.19.0:
     resolution: {integrity: sha512-dkQ957uSRWHw7CFXLUtUHQI3g3aWApYhfNR2O6jn/907riyTYKVBmxYVROkBcY614FSSeSJh7Xm7SrUWCxvJMQ==}
+    engines: {node: '>=8'}
+    dependencies:
+      type-fest: 0.20.2
+    dev: true
+
+  /globals/13.20.0:
+    resolution: {integrity: sha512-Qg5QtVkCy/kv3FUSlu4ukeZDVf9ee0iXLAUYX13gbR17bnejFTzr4iS9bY7kwCf1NztRNm1t91fjOiyx4CSwPQ==}
     engines: {node: '>=8'}
     dependencies:
       type-fest: 0.20.2
