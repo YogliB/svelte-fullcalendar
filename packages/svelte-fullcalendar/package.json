@@ -10,7 +10,7 @@
 	"description": "A Svelte component wrapper around FullCalendar",
 	"devDependencies": {
 		"@fullcalendar/core": "^6.0.0",
-		"svelte": "4.1.2"
+		"svelte": "4.2.0"
 	},
 	"exports": {
 		".": "./index.js",
