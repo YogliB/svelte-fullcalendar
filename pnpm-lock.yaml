@@ -14,7 +14,7 @@ importers:
       eslint-plugin-cypress: 2.14.0
       eslint-plugin-svelte3: 4.0.0
       husky: 8.0.3
-      lint-staged: 13.3.0
+      lint-staged: 14.0.0
       prettier: 3.0.1
       prettier-plugin-svelte: 3.0.3
       start-server-and-test: 2.0.0
@@ -30,7 +30,7 @@ importers:
       eslint-plugin-cypress: 2.14.0_eslint@8.47.0
       eslint-plugin-svelte3: 4.0.0_eslint@8.47.0+svelte@4.2.0
       husky: 8.0.3
-      lint-staged: 13.3.0
+      lint-staged: 14.0.0
       prettier: 3.0.1
       prettier-plugin-svelte: 3.0.3_twlfln3xit2b4uhsaa2xide4r4
       start-server-and-test: 2.0.0
@@ -1191,10 +1191,6 @@ packages:
     resolution: {integrity: sha512-dOy+3AuW3a2wNbZHIuMZpTcgjGuLU/uBL/ubcZF9OXbDo8ff4O8yVp5Bf0efS8uEoYo5q4Fx7dY9OgQGXgAsQA==}
     dev: true
 
-  /colorette/2.0.19:
-    resolution: {integrity: sha512-3tlv/dIP7FWvj3BsbHrGLJ6l/oKh1O3TcgBqMn+yyCagOxc23fyzDS6HypQbgxWbkpDnf52p1LuR4eWDQ/K9WQ==}
-    dev: true
-
   /colorette/2.0.20:
     resolution: {integrity: sha512-IfEDxwoWIjkeXL1eXcDiow4UbKjhLdq6/EuSVR9GMN7KVH3r9gQ83e73hsz1Nd1T3ijd5xv1wcWRYO+D6kCI2w==}
     dev: true
@@ -2190,8 +2186,8 @@ packages:
     engines: {node: '>=10'}
     dev: true
 
-  /lint-staged/13.3.0:
-    resolution: {integrity: sha512-mPRtrYnipYYv1FEE134ufbWpeggNTo+O/UPzngoaKzbzHAthvR55am+8GfHTnqNRQVRRrYQLGW9ZyUoD7DsBHQ==}
+  /lint-staged/14.0.0:
+    resolution: {integrity: sha512-0tLf0pqZYkar/wu3nTctk4rVIG+d7PanDYv4/IQR4qwdqfQkTDziLRFnqMcLuLBTuUqmcLwsHPD2EjQ18d/oaA==}
     engines: {node: ^16.14.0 || >=18.0.0}
     hasBin: true
     dependencies:
@@ -2220,7 +2216,7 @@ packages:
         optional: true
     dependencies:
       cli-truncate: 2.1.0
-      colorette: 2.0.19
+      colorette: 2.0.20
       enquirer: 2.3.6
       log-update: 4.0.0
       p-map: 4.0.0
