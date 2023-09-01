@@ -7,7 +7,7 @@ importers:
       '@babel/core': 7.22.11
       '@babel/eslint-parser': 7.22.11
       '@testing-library/cypress': 8.0.7
-      cypress: 13.0.0
+      cypress: 13.1.0
       date-fns: 2.30.0
       eslint: 8.48.0
       eslint-config-prettier: 9.0.0
@@ -22,8 +22,8 @@ importers:
     devDependencies:
       '@babel/core': 7.22.11
       '@babel/eslint-parser': 7.22.11_uigyy4cvxrfgnh6h4oubbidkhu
-      '@testing-library/cypress': 8.0.7_cypress@13.0.0
-      cypress: 13.0.0
+      '@testing-library/cypress': 8.0.7_cypress@13.1.0
+      cypress: 13.1.0
       date-fns: 2.30.0
       eslint: 8.48.0
       eslint-config-prettier: 9.0.0_eslint@8.48.0
@@ -774,7 +774,7 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.7_cypress@13.0.0:
+  /@testing-library/cypress/8.0.7_cypress@13.1.0:
     resolution: {integrity: sha512-3HTV725rOS+YHve/gD9coZp/UcPK5xhr4H0GMnq/ni6USdtzVtSOG9WBFtd8rYnrXk8rrGD+0toRFYouJNIG0Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -782,7 +782,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@testing-library/dom': 8.19.1
-      cypress: 13.0.0
+      cypress: 13.1.0
     dev: true
 
   /@testing-library/dom/8.19.1:
@@ -1242,8 +1242,8 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /cypress/13.0.0:
-    resolution: {integrity: sha512-nWHU5dUxP2Wm/zrMd8SWTTl706aJex/l+H4vi/tbu2SWUr17BUcd/sIYeqyxeoSPW1JFV2pT1pf4JEImH/POMg==}
+  /cypress/13.1.0:
+    resolution: {integrity: sha512-LUKxCYlB973QBFls1Up4FAE9QIYobT+2I8NvvAwMfQS2YwsWbr6yx7y9hmsk97iqbHkKwZW3MRjoK1RToBFVdQ==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
@@ -2396,10 +2396,6 @@ packages:
       brace-expansion: 1.1.11
     dev: true
 
-  /minimist/1.2.7:
-    resolution: {integrity: sha512-bzfL1YUZsP41gmu/qjrEk0Q6i2ix/cVeAhbCbqH9u3zYutS1cLg00qhrD0M2MVdCcx4Sc0UpP2eBWo9rotpq6g==}
-    dev: true
-
   /minimist/1.2.8:
     resolution: {integrity: sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA==}
     dev: true
@@ -3202,7 +3198,7 @@ packages:
       axios: 0.27.2_debug@4.3.4
       joi: 17.7.0
       lodash: 4.17.21
-      minimist: 1.2.7
+      minimist: 1.2.8
       rxjs: 7.8.0
     transitivePeerDependencies:
       - debug
