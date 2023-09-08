@@ -1,6 +1,6 @@
 {
 	"devDependencies": {
-		"@babel/core": "7.22.15",
+		"@babel/core": "7.22.17",
 		"@babel/eslint-parser": "7.22.15",
 		"@testing-library/cypress": "8.0.7",
 		"cypress": "13.1.0",
