@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@babel/core': 7.22.17
       '@babel/eslint-parser': 7.22.15
-      '@testing-library/cypress': 8.0.7
+      '@testing-library/cypress': 9.0.0
       cypress: 13.1.0
       date-fns: 2.30.0
       eslint: 8.49.0
@@ -22,7 +22,7 @@ importers:
     devDependencies:
       '@babel/core': 7.22.17
       '@babel/eslint-parser': 7.22.15_z7qcusqsdlzskthz764wigfwuq
-      '@testing-library/cypress': 8.0.7_cypress@13.1.0
+      '@testing-library/cypress': 9.0.0_cypress@13.1.0
       cypress: 13.1.0
       date-fns: 2.30.0
       eslint: 8.49.0
@@ -252,13 +252,6 @@ packages:
     hasBin: true
     dependencies:
       '@babel/types': 7.22.17
-    dev: true
-
-  /@babel/runtime/7.20.7:
-    resolution: {integrity: sha512-UF0tvkUtxwAgZ5W/KrkHf0Rn0fdnLDU9ScxBrEVNUprE/MzirjK4MJUX1/BVDv00Sv8cljtukVK1aky++X1SjQ==}
-    engines: {node: '>=6.9.0'}
-    dependencies:
-      regenerator-runtime: 0.13.11
     dev: true
 
   /@babel/runtime/7.21.5:
@@ -774,13 +767,13 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.7_cypress@13.1.0:
-    resolution: {integrity: sha512-3HTV725rOS+YHve/gD9coZp/UcPK5xhr4H0GMnq/ni6USdtzVtSOG9WBFtd8rYnrXk8rrGD+0toRFYouJNIG0Q==}
+  /@testing-library/cypress/9.0.0_cypress@13.1.0:
+    resolution: {integrity: sha512-c1XiCGeHGGTWn0LAU12sFUfoX3qfId5gcSE2yHode+vsyHDWraxDPALjVnHd4/Fa3j4KBcc5k++Ccy6A9qnkMA==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
-      cypress: ^2.1.0 || ^3.0.0 || ^4.0.0 || ^5.0.0 || ^6.0.0 || ^7.0.0 || ^8.0.0 || ^9.0.0 || ^10.0.0 || ^11.0.0
+      cypress: ^12.0.0
     dependencies:
-      '@babel/runtime': 7.20.7
+      '@babel/runtime': 7.21.5
       '@testing-library/dom': 8.19.1
       cypress: 13.1.0
     dev: true
