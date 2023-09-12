@@ -3,7 +3,7 @@
 		"@babel/core": "7.22.17",
 		"@babel/eslint-parser": "7.22.15",
 		"@testing-library/cypress": "8.0.7",
-		"cypress": "13.1.0",
+		"cypress": "13.2.0",
 		"date-fns": "2.30.0",
 		"eslint": "8.49.0",
 		"eslint-config-prettier": "9.0.0",
