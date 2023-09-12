@@ -7,7 +7,7 @@ importers:
       '@babel/core': 7.22.17
       '@babel/eslint-parser': 7.22.15
       '@testing-library/cypress': 8.0.7
-      cypress: 13.1.0
+      cypress: 13.2.0
       date-fns: 2.30.0
       eslint: 8.49.0
       eslint-config-prettier: 9.0.0
@@ -22,8 +22,8 @@ importers:
     devDependencies:
       '@babel/core': 7.22.17
       '@babel/eslint-parser': 7.22.15_z7qcusqsdlzskthz764wigfwuq
-      '@testing-library/cypress': 8.0.7_cypress@13.1.0
-      cypress: 13.1.0
+      '@testing-library/cypress': 8.0.7_cypress@13.2.0
+      cypress: 13.2.0
       date-fns: 2.30.0
       eslint: 8.49.0
       eslint-config-prettier: 9.0.0_eslint@8.49.0
@@ -774,7 +774,7 @@ packages:
       - supports-color
     dev: true
 
-  /@testing-library/cypress/8.0.7_cypress@13.1.0:
+  /@testing-library/cypress/8.0.7_cypress@13.2.0:
     resolution: {integrity: sha512-3HTV725rOS+YHve/gD9coZp/UcPK5xhr4H0GMnq/ni6USdtzVtSOG9WBFtd8rYnrXk8rrGD+0toRFYouJNIG0Q==}
     engines: {node: '>=12', npm: '>=6'}
     peerDependencies:
@@ -782,7 +782,7 @@ packages:
     dependencies:
       '@babel/runtime': 7.20.7
       '@testing-library/dom': 8.19.1
-      cypress: 13.1.0
+      cypress: 13.2.0
     dev: true
 
   /@testing-library/dom/8.19.1:
@@ -811,8 +811,8 @@ packages:
     resolution: {integrity: sha512-LG4opVs2ANWZ1TJoKc937iMmNstM/d0ae1vNbnBvBhqCSezgVUOzcLCqbI5elV8Vy6WKwKjaqR+zO9VKirBBCA==}
     dev: true
 
-  /@types/node/16.18.46:
-    resolution: {integrity: sha512-Mnq3O9Xz52exs3mlxMcQuA7/9VFe/dXcrgAyfjLkABIqxXKOgBRjyazTxUbjsxDa4BP7hhPliyjVTP9RDP14xg==}
+  /@types/node/18.17.15:
+    resolution: {integrity: sha512-2yrWpBk32tvV/JAd3HNHWuZn/VDN1P+72hWirHnvsvTGSqbANi+kSeuQR9yAHnbvaBvHDsoTdXV0Fe+iRtHLKA==}
     dev: true
 
   /@types/sinonjs__fake-timers/8.1.1:
@@ -827,7 +827,7 @@ packages:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
     requiresBuild: true
     dependencies:
-      '@types/node': 16.18.46
+      '@types/node': 18.17.15
     dev: true
     optional: true
 
@@ -1242,15 +1242,15 @@ packages:
       source-map-js: 1.0.2
     dev: true
 
-  /cypress/13.1.0:
-    resolution: {integrity: sha512-LUKxCYlB973QBFls1Up4FAE9QIYobT+2I8NvvAwMfQS2YwsWbr6yx7y9hmsk97iqbHkKwZW3MRjoK1RToBFVdQ==}
+  /cypress/13.2.0:
+    resolution: {integrity: sha512-AvDQxBydE771GTq0TR4ZUBvv9m9ffXuB/ueEtpDF/6gOcvFR96amgwSJP16Yhqw6VhmwqspT5nAGzoxxB+D89g==}
     engines: {node: ^16.0.0 || ^18.0.0 || >=20.0.0}
     hasBin: true
     requiresBuild: true
     dependencies:
       '@cypress/request': 3.0.0
       '@cypress/xvfb': 1.2.4_supports-color@8.1.1
-      '@types/node': 16.18.46
+      '@types/node': 18.17.15
       '@types/sinonjs__fake-timers': 8.1.1
       '@types/sizzle': 2.3.3
       arch: 2.2.0
